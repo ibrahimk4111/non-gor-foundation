@@ -45,9 +45,9 @@ const DonateForm: React.FC = () => {
   }
 
   return (
-    <div className=" max-w-[1280px] mx-auto shadow-lg shadow-slate-300 rounded-md">
+    <div className=" max-w-[1280px] mx-auto shadow-lg shadow-slate-300 rounded-md bg-white py-5">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className=" flex justify-start items-center p-5 gap-5">
+        <form onSubmit={form.handleSubmit(onSubmit)} className=" flex justify-start items-start p-5 gap-5 ">
           <FormField
             control={form.control}
             name="username"
@@ -100,7 +100,7 @@ const DonateForm: React.FC = () => {
           />
 
           <div>
-            <button type="submit" className="py-3 px-5 text-white bg-green-900 rounded-md ">Submit</button>
+            <button type="submit" className="py-2 px-5 text-white bg-green-900 rounded-md ">Submit</button>
           </div>
         </form>
       </Form>
