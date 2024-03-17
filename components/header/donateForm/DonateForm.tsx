@@ -100,7 +100,7 @@ const DonateForm: React.FC = () => {
           />
 
           <div>
-            <button type="submit" className="py-2 px-5 text-white bg-green-900 rounded-md ">Submit</button>
+            <button type="submit" className="py-2 px-5 text-white bg-green-900 rounded-md ">Donate</button>
           </div>
         </form>
       </Form>
