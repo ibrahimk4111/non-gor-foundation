@@ -23,32 +23,41 @@ import {
 import Link from "next/link";
 
 const NavBar: React.FC = () => {
+  const navItemClassNames =
+    " py-2 hover:border-b-2 border-green-500 text-white text-lg hover:text-green-500 transition-all duration-500 ease-in-out";
+
   return (
-    <>
-      <Menubar className=" border-none bg-green-700 ">
-        <MenubarMenu>
-          <MenubarTrigger><Link href='#'>Home</Link></MenubarTrigger>
-          <MenubarTrigger><Link href='#'>About</Link></MenubarTrigger>
-          <MenubarTrigger><Link href='#'>Projects</Link></MenubarTrigger>
-          <MenubarTrigger><Link href='#'>Donor</Link></MenubarTrigger>
-          <MenubarTrigger><Link href='#'>Gallery</Link></MenubarTrigger>
-          <MenubarTrigger><Link href='#'>Video</Link></MenubarTrigger>
-          <MenubarTrigger><Link href='#'>Voluteer Registration</Link></MenubarTrigger>
-          <MenubarTrigger><Link href='#'>News</Link></MenubarTrigger>
-          <MenubarTrigger><Link href='#'>Contact</Link></MenubarTrigger>
-          {/* <MenubarContent>
-            <MenubarItem>
-              New Tab <MenubarShortcut>⌘T</MenubarShortcut>
-            </MenubarItem>
-            <MenubarItem>New Window</MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem>Share</MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem>Print</MenubarItem>
-          </MenubarContent> */}
-        </MenubarMenu>
-      </Menubar>
-    </>
+    <div className=" bg-green-900 my-7 tracking-wider">
+      <ul className="max-w-[1280px] mx-auto flex justify-between items-center h-14">
+        <li >
+          <Link href="#" className={navItemClassNames} >Home</Link>
+        </li>
+        <li>
+          <Link href="#" className={navItemClassNames}>About</Link>
+        </li>
+        <li>
+          <Link href="#" className={navItemClassNames}>Projects</Link>
+        </li>
+        <li>
+          <Link href="#" className={navItemClassNames}>Donor and lifetime Member</Link>
+        </li>
+        <li>
+          <Link href="#" className={navItemClassNames}>Gallery</Link>
+        </li>
+        <li>
+          <Link href="#" className={navItemClassNames}>Video</Link>
+        </li>
+        <li>
+          <Link href="#" className={navItemClassNames}>Voluteer Registration</Link>
+        </li>
+        <li>
+          <Link href="#" className={navItemClassNames}>News</Link>
+        </li>
+        <li>
+          <Link href="#" className={navItemClassNames}>Contact</Link>
+        </li>
+      </ul>
+    </div>
   );
 };
 

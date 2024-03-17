@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 const EngBnToggle = () => {
   const [activeBtn, setActiveBtn] = useState<string>("eng");
-  const activeBtnClasses = (action: string) => `cursor-pointer px-2 py-1 ${activeBtn === action ? "text-white bg-green-700 " : " bg-slate-100 "}`
+  const activeBtnClasses = (action: string) => `cursor-pointer p-1 ${activeBtn === action ? "text-white bg-green-900 " : " bg-slate-100 "}`
 
   return (
     <div>

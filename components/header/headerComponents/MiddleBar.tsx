@@ -4,10 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const MiddleBar = () => {
-  const activeBtnClasses = " px-3 py-2 text-white bg-green-700 rounded-md"
+  const activeBtnClasses = " py-3 px-5 text-white bg-green-900 rounded-md "
   
   return (
-    <section className=" flex justify-between items-center h-16 my-5">
+    <section className=" flex justify-between items-center h-20 max-w-[1280px] mx-auto ">
       <div className="h-full overflow-hidden">
         <Image src={logo} alt="logo" className=" h-full w-auto" />
       </div>
