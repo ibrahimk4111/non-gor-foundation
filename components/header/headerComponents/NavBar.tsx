@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const NavBar: React.FC = () => {
   const navItemClassNames =
-    " py-2 hover:border-b-2 border-green-500 text-white text-lg hover:text-green-500 transition-all duration-500 ease-in-out";
+    " py-2 hover:border-b-2 border-green-500 text-white hover:text-green-500 transition-all duration-500 ease-in-out";
 
   return (
     <div className=" bg-green-900 mb-7 tracking-wider">

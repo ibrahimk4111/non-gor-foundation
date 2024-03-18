@@ -9,11 +9,11 @@ import { useState } from "react";
 const DrawerNavBar: React.FC = () => {
     const [activeBtn, setActiveBtn] = useState<string>('Home')
   const navItemClassNames = (btnName: string) =>
-    `${activeBtn === btnName? "bg-green-900 text-white": "hover:text-green-700 w-full bg-slate-200/80"} text-center text-xl p-2 rounded-md`;
+    `${activeBtn === btnName? "bg-green-700 text-white": "hover:text-green-700 w-full bg-slate-200/80"} text-center text-xl p-2 rounded-md`;
 
   return (
     <Drawer>
-      <DrawerTrigger className=" flex justify-center items-center bg-green-700 hover:bg-green-900 text-white p-2 rounded-full ">
+      <DrawerTrigger className=" flex justify-center items-center bg-green-700 hover:bg-green-700 text-white p-2 rounded-full ">
         <RxHamburgerMenu className=" md:text-xl text-base " />
       </DrawerTrigger>
       <DrawerContent>
