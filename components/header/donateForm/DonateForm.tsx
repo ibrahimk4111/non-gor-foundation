@@ -23,7 +23,7 @@ const formSchema = z.object({
   }),
   number: z.number().min(2, {
     message: "Minimum Donation 10 taka.",
-  })
+  }),
 });
 
 const DonateForm: React.FC = () => {
@@ -33,7 +33,7 @@ const DonateForm: React.FC = () => {
     defaultValues: {
       username: "",
       email: "",
-      number: 10
+      number: 10,
     },
   });
 
@@ -45,14 +45,18 @@ const DonateForm: React.FC = () => {
   }
 
   return (
-    <div className=" max-w-[1280px] mx-auto shadow-lg shadow-slate-300 rounded-md bg-white py-5">
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className=" flex justify-start items-start p-5 gap-5 ">
-          <FormField
-            control={form.control}
-            name="username"
-            render={({ field }) => (
-              <FormItem >
+    <section className=" px-5 ">
+      <div className=" container mx-auto shadow-lg shadow-slate-300 rounded-md bg-white py-5">
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className=" flex justify-start items-start p-5 gap-5 "
+          >
+            <FormField
+              control={form.control}
+              name="username"
+              render={({ field }) => (
+                <FormItem>
                   <FormControl>
                     <Input
                       placeholder="Your Name"
@@ -61,15 +65,15 @@ const DonateForm: React.FC = () => {
                     />
                   </FormControl>
                   <FormMessage />
-              </FormItem>
-            )}
-          />
+                </FormItem>
+              )}
+            />
 
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem >
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
                   <FormControl>
                     <Input
                       placeholder="Email / Phone"
@@ -78,15 +82,15 @@ const DonateForm: React.FC = () => {
                     />
                   </FormControl>
                   <FormMessage />
-              </FormItem>
-            )}
-          />
+                </FormItem>
+              )}
+            />
 
-          <FormField
-            control={form.control}
-            name="number"
-            render={({ field }) => (
-              <FormItem >
+            <FormField
+              control={form.control}
+              name="number"
+              render={({ field }) => (
+                <FormItem>
                   <FormControl>
                     <Input
                       placeholder="Donation Amount"
@@ -95,16 +99,22 @@ const DonateForm: React.FC = () => {
                     />
                   </FormControl>
                   <FormMessage />
-              </FormItem>
-            )}
-          />
+                </FormItem>
+              )}
+            />
 
-          <div>
-            <button type="submit" className="py-2 px-5 text-white bg-green-900 rounded-md ">Donate</button>
-          </div>
-        </form>
-      </Form>
-    </div>
+            <div>
+              <button
+                type="submit"
+                className="py-2 px-5 text-white bg-green-900 rounded-md "
+              >
+                Donate
+              </button>
+            </div>
+          </form>
+        </Form>
+      </div>
+    </section>
   );
 };
 

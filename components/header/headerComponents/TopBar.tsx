@@ -9,7 +9,7 @@ const TopBar: React.FC = () => {
   let size = 20;
   return (
     <section className=" py-5 bg-white ">
-      <div className=" flex justify-end items-center gap-3 max-w-[1280px] mx-auto ">
+      <div className=" flex justify-end items-center gap-3 container mx-auto ">
         <Link href="https://facebook.com" target="_blank">
           <FaFacebookSquare size={size} fill="blue " />
         </Link>

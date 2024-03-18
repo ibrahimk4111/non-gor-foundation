@@ -9,7 +9,7 @@ const About: React.FC = () => {
   const linkClassNames =
     " flex justify-start items-center gap-2 text-green-800 font-semibold";
   return (
-    <div className="  max-w-[1280px] mx-auto p-5 py-10 grid grid-cols-12 gap-5">
+    <div className="  container mx-auto p-5 py-10 grid grid-cols-12 gap-5">
       <div className=" lg:col-span-5 flex justify-center items-center">
         <div className=" h-70 w-96 rounded-full overflow-hidden flex items-center">
           <Image src={golden_gate} alt="golden gate" height={500} />

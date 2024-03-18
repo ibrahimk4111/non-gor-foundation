@@ -4,7 +4,7 @@ import DonateCards from "./donateCards/DonateCards";
 const Donate = () => {
   return (
     <div className=" py-10 bg-slate-100">
-      <div className=" max-w-[1280px] mx-auto">
+      <div className=" container mx-auto">
         <h1 className=" text-2xl text-center mb-10">
           Together Let’s make a change
         </h1>

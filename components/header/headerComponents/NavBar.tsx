@@ -1,25 +1,5 @@
 "use client";
 
-// import {
-//   NavigationMenu,
-//   NavigationMenuContent,
-//   NavigationMenuIndicator,
-//   NavigationMenuItem,
-//   NavigationMenuLink,
-//   NavigationMenuList,
-//   NavigationMenuTrigger,
-//   NavigationMenuViewport,
-// } from "@/components/ui/navigation-menu";
-
-import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarTrigger,
-} from "@/components/ui/menubar";
 import Link from "next/link";
 
 const NavBar: React.FC = () => {
@@ -28,33 +8,61 @@ const NavBar: React.FC = () => {
 
   return (
     <div className=" bg-green-900 mb-7 tracking-wider">
-      <ul className="max-w-[1280px] mx-auto flex justify-between items-center h-14">
-        <li >
-          <Link href="#" className={navItemClassNames} >Home</Link>
+      <ul className="container mx-auto hidden lg:flex justify-start items-center gap-x-10 h-14 ">
+        <li>
+          <Link href="#" className={navItemClassNames}>
+            Home
+          </Link>
         </li>
         <li>
-          <Link href="#" className={navItemClassNames}>About</Link>
+          <Link href="#" className={navItemClassNames}>
+            About
+          </Link>
         </li>
         <li>
-          <Link href="#" className={navItemClassNames}>Projects</Link>
+          <Link href="#" className={navItemClassNames}>
+            Projects
+          </Link>
+        </li>
+        <li className=" xl:block hidden">
+          <Link href="#" className={navItemClassNames}>
+            Donor and lifetime Member
+          </Link>
+        </li>
+        <li className=" xl:hidden block">
+          <Link href="#" className={navItemClassNames}>
+            Donor
+          </Link>
         </li>
         <li>
-          <Link href="#" className={navItemClassNames}>Donor and lifetime Member</Link>
+          <Link href="#" className={navItemClassNames}>
+            Gallery
+          </Link>
         </li>
         <li>
-          <Link href="#" className={navItemClassNames}>Gallery</Link>
+          <Link href="#" className={navItemClassNames}>
+            Video
+          </Link>
+        </li>
+        <li className=" xl:block hidden">
+          <Link href="#" className={navItemClassNames}>
+            Volunteer Register
+          </Link>
+        </li>
+        <li className=" xl:hidden block">
+          <Link href="#" className={navItemClassNames}>
+            Volunteer
+          </Link>
         </li>
         <li>
-          <Link href="#" className={navItemClassNames}>Video</Link>
+          <Link href="#" className={navItemClassNames}>
+            News
+          </Link>
         </li>
         <li>
-          <Link href="#" className={navItemClassNames}>Voluteer Registration</Link>
-        </li>
-        <li>
-          <Link href="#" className={navItemClassNames}>News</Link>
-        </li>
-        <li>
-          <Link href="#" className={navItemClassNames}>Contact</Link>
+          <Link href="#" className={navItemClassNames}>
+            Contact
+          </Link>
         </li>
       </ul>
     </div>
