@@ -39,18 +39,16 @@ const DonateForm: React.FC = () => {
 
   // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
     console.log("form values");
   }
 
   return (
-    <section className=" px-5 ">
-      <div className=" container mx-auto shadow-lg shadow-slate-300 rounded-md bg-white py-5">
+    <section className="px-5">
+      <div className=" container mx-auto border-2 rounded-md bg-white py-5">
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className=" flex justify-start items-start p-5 gap-5 "
+            className=" flex md:flex-row flex-col justify-start items-start md:gap-5 gap-2 "
           >
             <FormField
               control={form.control}

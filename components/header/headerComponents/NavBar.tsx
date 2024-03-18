@@ -26,12 +26,12 @@ const NavBar: React.FC = () => {
         </li>
         <li className=" xl:block hidden">
           <Link href="#" className={navItemClassNames}>
-            Donor and lifetime Member
+            Donate and lifetime Member
           </Link>
         </li>
         <li className=" xl:hidden block">
           <Link href="#" className={navItemClassNames}>
-            Donor
+            Donate
           </Link>
         </li>
         <li>
