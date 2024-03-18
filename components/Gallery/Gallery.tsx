@@ -5,9 +5,9 @@ import ImageComp from "./imageComp/ImageComp";
 const Gallery = () => {
   return (
     <div className=" py-10 bg-slate-100 ">
-      <div className=" max-w-[1280px] mx-auto">
+      <div className="container mx-auto">
         <h1 className=" text-2xl text-center mb-10">Gallery</h1>
-        <div className=" grid lg:grid-cols-4 gap-5 ">
+        <div className=" grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 ">
           <ImageComp />
           <ImageComp />
           <ImageComp />
