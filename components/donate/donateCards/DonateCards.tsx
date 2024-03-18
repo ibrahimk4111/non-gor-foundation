@@ -13,7 +13,7 @@ const DonateCards = () => {
         <h1 className=" text-2xl text-center text-green-700">
           As-Sunnah Foundation Masjid Complex
         </h1>
-        <p className=" overflow-auto h-28">
+        <p className=" overflow-auto h-28 px-2">
           The As-Sunnah Foundation Masjid Complex will be the focal point of the
           multi-faceted activities of the As-Sunnah Foundation for the welfare
           of the country, nation and ummah. In-Sha-Allah it will be the center
