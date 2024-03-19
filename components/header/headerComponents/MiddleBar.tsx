@@ -6,7 +6,7 @@ import Link from "next/link";
 import DrawerNavBar from "../drawerNavBar/DrawerNavBar";
 
 const MiddleBar = () => {
-  const activeBtnClasses = " text-center md:w-36 w-24 text-xs md:text-base md:py-3 py-2 md:px-5 text-white bg-green-700 rounded-md ";
+  const activeBtnClasses = " text-center w-auto text-xs md:text-base md:py-3 py-2 md:px-5 text-white bg-green-700 rounded-md ";
 
   return (
     <div className=" bg-white lg:pb-10 ">
