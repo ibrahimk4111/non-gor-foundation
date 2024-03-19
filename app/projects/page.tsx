@@ -8,41 +8,46 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const projects = () => {
   const [activeTab, setActiveTab] = useState<Number>(1);
   return (
-    <div className=" container mx-auto ">
-      <div className=" grid grid-cols-12 gap-5">
-        <Tabs
-          defaultValue="account"
-          className=" lg:col-span-4 flex gap-2 flex-col "
-        >
-          {ProjectDatas.map((project, index) => (
-            <div key={index}>
-              <TabsList>
-                <TabsTrigger
-                  value={project.name}
-                  onClick={() => setActiveTab(project._id)}
-                >
-                  {project.name}
-                </TabsTrigger>
-              </TabsList>
-            </div>
-          ))}
-        </Tabs>
-        <section className="lg:col-span-8 border rounded-lg bg-slate-100 p-5">
-          <div  className=" bg-white rounded-md p-3">
-            {ProjectDatas.map(
-              (project, index) =>
-                project._id == activeTab && (
-                  <div key={index}>
-                    <div className=" p-3 ">
-                      <Link href={`prjects/${project._id}`}>
-                        {project.description}
-                      </Link>
+    <div>
+      <div className=" bg-green-700">
+        <h1 className=" py-5 text-center lg:text-4xl md:text-2xl text-white font-bold tracking-widest ">
+          Projects
+        </h1>
+      </div>
+      <div className=" container mx-auto my-10">
+        <div className=" grid grid-cols-12 gap-5">
+          <Tabs
+            defaultValue={ProjectDatas[0].name}
+            className=" flex flex-col gap-3 lg:col-span-4 overflow-auto max-h-[50vh] "
+          >
+            {ProjectDatas.map((project, index) => (
+              <div key={index}>
+                <TabsList>
+                  <TabsTrigger
+                    value={project.name}
+                    onClick={() => setActiveTab(project._id)}
+                  >
+                    {project.name}
+                  </TabsTrigger>
+                </TabsList>
+              </div>
+            ))}
+          </Tabs>
+          <section className="lg:col-span-8 border rounded-lg bg-slate-100 p-5 max-h-[50vh] overflow-auto">
+            <div className=" bg-white rounded-md p-3">
+              {ProjectDatas.map(
+                (project, index) =>
+                  project._id == activeTab && (
+                    <div key={index}>
+                      <div className=" p-3 ">
+                        <div>{project.description}</div>
+                      </div>
                     </div>
-                  </div>
-                )
-            )}
-          </div>
-        </section>
+                  )
+              )}
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   );

@@ -43,7 +43,7 @@ const DonateForm: React.FC = () => {
   }
 
   return (
-    <section className="px-5">
+    <section className="mt-8 px-5">
       <div className=" container mx-auto border-2 rounded-md bg-white py-5">
         <Form {...form}>
           <form
