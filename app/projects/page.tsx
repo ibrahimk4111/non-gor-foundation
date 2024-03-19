@@ -8,17 +8,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const projects = () => {
   const [activeTab, setActiveTab] = useState<Number>(1);
   return (
-    <div>
+    <div className=" bg-slate-100 ">
       <div className=" bg-green-700">
         <h1 className=" py-5 text-center lg:text-4xl text-2xl text-white font-bold tracking-widest ">
           Projects
         </h1>
       </div>
-      <div className=" container mx-auto my-10">
-        <div className=" grid grid-cols-12 gap-5">
+      <div className=" container mx-auto py-10">
+        <div className=" grid grid-cols-12">
           <Tabs
             defaultValue={ProjectDatas[0].name}
-            className=" flex flex-col gap-3 lg:col-span-4 col-span-12 overflow-auto lg:h-[65vh] h-[40vh] "
+            className=" flex flex-col lg:col-span-4 col-span-12 "
           >
             {ProjectDatas.map((project, index) => (
               <div key={index}>
@@ -33,7 +33,7 @@ const projects = () => {
               </div>
             ))}
           </Tabs>
-          <section className="lg:col-span-8 col-span-12 border rounded-lg bg-slate-100 p-5 h-[65vh] overflow-auto">
+          <section className="lg:col-span-8 col-span-12 border-l bg-slate-100 p-5 overflow-auto">
             <div className=" bg-white rounded-md p-3">
               {ProjectDatas.map(
                 (project, index) =>
