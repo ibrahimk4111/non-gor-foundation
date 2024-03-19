@@ -6,12 +6,12 @@ import Link from "next/link";
 import DrawerNavBar from "../drawerNavBar/DrawerNavBar";
 
 const MiddleBar = () => {
-  const activeBtnClasses = " text-center md:w-36 w-24 text-xs md:text-base md:py-3 py-2 md:px-5 text-white bg-green-700 rounded-md ";
+  const activeBtnClasses = " text-center w-auto text-xs md:text-base md:py-3 p-2 md:px-5 text-white bg-green-700 rounded-md ";
 
   return (
     <div className=" bg-white lg:pb-10 ">
       <div className=" container mx-auto">
-        <div className=" flex justify-between items-center gap-5">
+        <div className=" flex justify-between items-center gap-3">
           {/* logo section */}
           <div className=" flex md:justify-start justify-between items-center h-20 md:gap-5 gap-2">
             <div className=" lg:hidden block ">
@@ -24,7 +24,7 @@ const MiddleBar = () => {
           </div>
 
           {/* button section */}
-          <div className=" flex justify-between items-center gap-3 ">
+          <div className=" flex justify-between items-center gap-2 ">
             <Link href="#" className={activeBtnClasses}>
               My Account
             </Link>

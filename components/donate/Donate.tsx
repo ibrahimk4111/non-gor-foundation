@@ -5,7 +5,7 @@ const Donate = () => {
   return (
     <div className=" py-10 bg-slate-100">
       <div className=" container mx-auto">
-        <h1 className=" text-2xl text-center mb-10">
+        <h1 className=" lg:text-2xl text-xl text-center mb-10">
           Together Let’s make a change
         </h1>
         <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 ">
@@ -19,7 +19,7 @@ const Donate = () => {
         <div className=" flex justify-center items-center py-5 mt-5">
           <button
             type="submit"
-            className="py-3 px-32 text-white bg-green-700 rounded-lg "
+            className="py-3 lg:px-32 px-20 text-white bg-green-700 rounded-lg "
           >
             More
           </button>

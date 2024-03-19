@@ -8,8 +8,8 @@ import Link from "next/link";
 const TopBar: React.FC = () => {
   let size = 20;
   return (
-    <section className=" py-5 bg-white ">
-      <div className=" flex justify-end items-center gap-3 container mx-auto ">
+    <section className=" py-2 bg-white ">
+      <div className=" flex justify-end items-center gap-2 container mx-auto ">
         <Link href="https://facebook.com" target="_blank">
           <FaFacebookSquare size={size} fill="blue " />
         </Link>
