@@ -5,7 +5,7 @@ const OnGoinProjects: React.FC = () => {
   return (
     <div className=" py-10 bg-white">
       <div className=" container mx-auto">
-        <h1 className=" text-2xl text-center mb-10">
+        <h1 className=" lg:text-2xl text-xl text-center mb-10">
           On Going Projects
         </h1>
         <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 ">

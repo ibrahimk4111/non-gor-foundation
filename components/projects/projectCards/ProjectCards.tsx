@@ -4,7 +4,7 @@ const ProjectCards:React.FC = () => {
   return (
     <div className=" p-3 text-white rounded-lg overflow-hidden bg-gradient-to-br from-green-500 to-green-700">
       <section className="p-5 flex flex-col justify-between items-start gap-5">
-        <h1 className=" text-3xl text-center font-bold">
+        <h1 className=" text-xl lg:text-2xl text-center font-bold">
           As-Sunnah Foundation Masjid Complex
         </h1>
         <p className=" overflow-auto text-justify">
