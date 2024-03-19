@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
     <div className=" bg-green-900 mb-7 tracking-wider">
       <ul className="container mx-auto hidden lg:flex justify-start items-center gap-x-10 h-14 ">
         <li>
-          <Link href="#" className={navItemClassNames}>
+          <Link href="/" className={navItemClassNames}>
             Home
           </Link>
         </li>
@@ -20,7 +20,7 @@ const NavBar: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link href="#" className={navItemClassNames}>
+          <Link href="/projects" className={navItemClassNames}>
             Projects
           </Link>
         </li>
