@@ -10,7 +10,7 @@ const projects = () => {
   return (
     <div>
       <div className=" bg-green-700">
-        <h1 className=" py-5 text-center lg:text-4xl md:text-2xl text-white font-bold tracking-widest ">
+        <h1 className=" py-5 text-center lg:text-4xl text-2xl text-white font-bold tracking-widest ">
           Projects
         </h1>
       </div>
@@ -18,7 +18,7 @@ const projects = () => {
         <div className=" grid grid-cols-12 gap-5">
           <Tabs
             defaultValue={ProjectDatas[0].name}
-            className=" flex flex-col gap-3 lg:col-span-4 overflow-auto max-h-[50vh] "
+            className=" flex flex-col gap-3 lg:col-span-4 col-span-12 overflow-auto lg:h-[50vh] h-[40vh] "
           >
             {ProjectDatas.map((project, index) => (
               <div key={index}>
@@ -33,7 +33,7 @@ const projects = () => {
               </div>
             ))}
           </Tabs>
-          <section className="lg:col-span-8 border rounded-lg bg-slate-100 p-5 max-h-[50vh] overflow-auto">
+          <section className="lg:col-span-8 col-span-12 border rounded-lg bg-slate-100 p-5 lg:h-[50vh] h-[60vh] overflow-auto">
             <div className=" bg-white rounded-md p-3">
               {ProjectDatas.map(
                 (project, index) =>

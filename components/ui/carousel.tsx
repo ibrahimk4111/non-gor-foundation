@@ -203,10 +203,10 @@ export const CarouselPrevious = React.forwardRef<HTMLButtonElement, React.Compon
       variant={variant}
       size={size}
       className={cn(
-        "absolute  h-12 w-12 rounded-full",
+        "absolute lg:h-12 h-8 lg:w-12 w-8 rounded-full",
         orientation === "horizontal"
-          ? "-left-6 top-1/2 -translate-y-1/2"
-          : "-top-6 left-1/2 -translate-x-1/2 rotate-90",
+          ? "lg:-left-6 -left-4 top-1/2 -translate-y-1/2"
+          : "lg:-top-6 -top-4 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
       disabled={!canScrollPrev}
@@ -232,9 +232,9 @@ export const CarouselNext = React.forwardRef<HTMLButtonElement,React.ComponentPr
       variant={variant}
       size={size}
       className={cn(
-        "absolute h-12 w-12 rounded-full",
+        "absolute lg:h-12 h-8 lg:w-12 w-8 rounded-full",
         orientation === "horizontal"
-          ? "-right-6 top-1/2 -translate-y-1/2"
+          ? "lg:-right-6 -right-4 top-1/2 -translate-y-1/2"
           : "-bottom-6 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
