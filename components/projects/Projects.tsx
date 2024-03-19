@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCards from "./projectCards/ProjectCards";
+import Link from "next/link";
 
 const Projects = () => {
   return (
@@ -12,9 +13,9 @@ const Projects = () => {
           <ProjectCards />
         </div>
         <div className=" flex justify-center items-center mt-8">
-          <button className="py-3 px-32 text-white bg-green-700 rounded-lg ">
+          <Link href='/projects' className="py-3 px-32 text-white bg-green-700 rounded-lg ">
             More
-          </button>
+          </Link>
         </div>
       </div>
     </div>
