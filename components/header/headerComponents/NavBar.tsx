@@ -35,7 +35,7 @@ const NavBar: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link href="/gallery" className={navItemClassNames}>
+          <Link href="/gallery/iftar-distribution" className={navItemClassNames}>
             Gallery
           </Link>
         </li>
