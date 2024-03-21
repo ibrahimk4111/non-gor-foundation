@@ -13,7 +13,7 @@ const MiddleBar = () => {
       <div className=" container mx-auto">
         <div className=" flex justify-between items-center gap-3">
           {/* logo section */}
-          <div className=" flex md:justify-start justify-between items-center lg:h-20 h-12 md:gap-5 gap-2">
+          <div className=" flex md:justify-start justify-between items-center lg:h-20 h-16 md:gap-5 gap-2">
             <div className=" lg:hidden block ">
               <DrawerNavBar />
             </div>

@@ -15,7 +15,7 @@ const NavBar: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link href="#" className={navItemClassNames}>
+          <Link href="/about" className={navItemClassNames}>
             About
           </Link>
         </li>
@@ -25,13 +25,13 @@ const NavBar: React.FC = () => {
           </Link>
         </li>
         <li className=" xl:block hidden">
-          <Link href="#" className={navItemClassNames}>
-            Donate and lifetime Member
+          <Link href="/donore" className={navItemClassNames}>
+            Donore and lifetime Member
           </Link>
         </li>
         <li className=" xl:hidden block">
-          <Link href="#" className={navItemClassNames}>
-            Donate
+          <Link href="/donore" className={navItemClassNames}>
+            Donore
           </Link>
         </li>
         <li>
@@ -55,7 +55,7 @@ const NavBar: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link href="#" className={navItemClassNames}>
+          <Link href="/news" className={navItemClassNames}>
             News
           </Link>
         </li>

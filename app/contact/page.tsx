@@ -1,6 +1,6 @@
 import ContactForm from "@/components/contactForm/ContactForm";
 
-const page: React.FC = () => {
+const Contact:React.FC = () => {
   return (
     <section className="my-8 lg:px-5">
       <div className=" container mx-auto ">
@@ -51,4 +51,4 @@ const page: React.FC = () => {
   );
 };
 
-export default page;
+export default Contact;

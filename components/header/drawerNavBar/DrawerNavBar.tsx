@@ -28,14 +28,14 @@ const DrawerNavBar: React.FC = () => {
             <Link href="/">
               <li onClick={()=>setActiveBtn('Home')} className={navItemClassNames('Home')}><DrawerClose className=" w-full h-full p-2" >Home</DrawerClose></li>
             </Link>
-            <Link href="#">
+            <Link href="/about">
               <li onClick={()=>setActiveBtn('About')} className={navItemClassNames('About')}><DrawerClose className=" w-full h-full p-2">About</DrawerClose></li>
             </Link>
             <Link href="/projects" >
               <li onClick={()=>setActiveBtn('Projects')} className={navItemClassNames('Projects')}><DrawerClose className=" w-full h-full p-2">Projects</DrawerClose></li>
             </Link>
-            <Link href="#">
-              <li onClick={()=>setActiveBtn('Donate')} className={navItemClassNames('Donate')}><DrawerClose className=" w-full h-full p-2">Donate</DrawerClose></li>
+            <Link href="/donore">
+              <li onClick={()=>setActiveBtn('Donore')} className={navItemClassNames('Donore')}><DrawerClose className=" w-full h-full p-2">Donore</DrawerClose></li>
             </Link>
             <Link href="#">
               <li onClick={()=>setActiveBtn('Gallery')} className={navItemClassNames('Gallery')}><DrawerClose className=" w-full h-full p-2">Gallery</DrawerClose></li>
@@ -46,7 +46,7 @@ const DrawerNavBar: React.FC = () => {
             <Link href="#">
               <li onClick={()=>setActiveBtn('Volunteer')} className={navItemClassNames('Volunteer')}><DrawerClose className=" w-full h-full p-2">Volunteer</DrawerClose></li>
             </Link>
-            <Link href="#">
+            <Link href="/news">
               <li onClick={()=>setActiveBtn('News')} className={navItemClassNames('News')}><DrawerClose className=" w-full h-full p-2">News</DrawerClose></li>
             </Link>
             <Link href="/contact">
