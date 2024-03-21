@@ -5,20 +5,26 @@ import Link from "next/link";
 import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
+import logoName from '@/public/Nogor Foundation.jpg'
+import Image from "next/image";
 
 const DrawerNavBar: React.FC = () => {
     const [activeBtn, setActiveBtn] = useState<string>('Home')
   const navItemClassNames = (btnName: string) =>
-    `${activeBtn === btnName? "bg-green-700 text-white": "hover:text-green-700 w-full bg-slate-200/80"} text-center text-xl rounded-md`;
+    `${activeBtn === btnName? "bg-green-700 text-white": "hover:text-green-700 w-full"} rounded-md`;
 
   return (
     <Drawer>
-      <DrawerTrigger className=" flex justify-center items-center hover:bg-green-700 p-2 rounded-full ">
-        <RxHamburgerMenu className=" md:text-xl text-base " />
+      <DrawerTrigger className="  p-2 ">
+        <RxHamburgerMenu className=" text-xl " />
       </DrawerTrigger>
       <DrawerContent>
         <div>
-          <ul className=" flex flex-col gap-3 p-10 ">
+          <ul className=" gap-1 py-5 w-full ">
+            <li className=" flex justify-center items-center h-10 overflow-hidden mb-5 px-10">
+              <Image src={logoName} alt="..." className=" h-full w-auto "/>
+            </li>
+            
             <Link href="/">
               <li onClick={()=>setActiveBtn('Home')} className={navItemClassNames('Home')}><DrawerClose className=" w-full h-full p-2" >Home</DrawerClose></li>
             </Link>
@@ -43,7 +49,7 @@ const DrawerNavBar: React.FC = () => {
             <Link href="#">
               <li onClick={()=>setActiveBtn('News')} className={navItemClassNames('News')}><DrawerClose className=" w-full h-full p-2">News</DrawerClose></li>
             </Link>
-            <Link href="#">
+            <Link href="/contact">
               <li onClick={()=>setActiveBtn('Contact')} className={navItemClassNames('Contact')}><DrawerClose className=" w-full h-full p-2">Contact</DrawerClose></li>
             </Link>
           </ul>

@@ -60,7 +60,7 @@ const NavBar: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link href="#" className={navItemClassNames}>
+          <Link href="/contact" className={navItemClassNames}>
             Contact
           </Link>
         </li>
