@@ -2,22 +2,13 @@
 
 import React, { use, useState } from "react";
 import { ProjectDatas } from "@/api/projects/ProjectData";
-import Link from "next/link";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 
 const projects = () => {
   const [activeTab, setActiveTab] = useState< string >(ProjectDatas[0].name);
 
-  // const handleOption = (value:string) =>{
-  //   const selectedValue = 
-  // }
+
   return (
     <div className=" bg-slate-100 ">
       <div className=" bg-green-700">
