@@ -9,11 +9,11 @@ const MiddleBar = () => {
   const activeBtnClasses = " text-center w-auto text-xs md:text-base md:py-3 p-2 md:px-5 text-white bg-green-700 rounded-md ";
 
   return (
-    <div className=" bg-white lg:pb-10 ">
+    <div className=" bg-white lg:pb-10 py-3 ">
       <div className=" container mx-auto">
         <div className=" flex justify-between items-center gap-3">
           {/* logo section */}
-          <div className=" flex md:justify-start justify-between items-center h-20 md:gap-5 gap-2">
+          <div className=" flex md:justify-start justify-between items-center lg:h-20 h-12 md:gap-5 gap-2">
             <div className=" lg:hidden block ">
               <DrawerNavBar />
             </div>

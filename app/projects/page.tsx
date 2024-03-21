@@ -4,9 +4,20 @@ import React, { use, useState } from "react";
 import { ProjectDatas } from "@/api/projects/ProjectData";
 import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const projects = () => {
-  const [activeTab, setActiveTab] = useState<Number>(1);
+  const [activeTab, setActiveTab] = useState< string >(ProjectDatas[0].name);
+
+  // const handleOption = (value:string) =>{
+  //   const selectedValue = 
+  // }
   return (
     <div className=" bg-slate-100 ">
       <div className=" bg-green-700">
@@ -18,14 +29,14 @@ const projects = () => {
         <div className=" grid grid-cols-12">
           <Tabs
             defaultValue={ProjectDatas[0].name}
-            className=" flex flex-col lg:col-span-4 col-span-12 "
+            className=" flex lg:flex-col flex-row lg:col-span-4 col-span-12 overflow-auto"
           >
             {ProjectDatas.map((project, index) => (
               <div key={index}>
                 <TabsList>
                   <TabsTrigger
                     value={project.name}
-                    onClick={() => setActiveTab(project._id)}
+                    onClick={() => setActiveTab(project.name)}
                   >
                     {project.name}
                   </TabsTrigger>
@@ -33,13 +44,16 @@ const projects = () => {
               </div>
             ))}
           </Tabs>
-          <section className="lg:col-span-8 col-span-12 border-l bg-slate-100 p-5 overflow-auto">
+          <section className="lg:col-span-8 col-span-12 lg:border-l bg-slate-100 lg:px-5 py-5 overflow-auto">
             <div className=" bg-white rounded-md p-3">
               {ProjectDatas.map(
                 (project, index) =>
-                  project._id == activeTab && (
+                  project.name === activeTab && (
                     <div key={index}>
                       <div className=" p-3 ">
+                        <h1 className=" text-green-700 lg:text-3xl text-xl font-semibold mb-5 ">
+                          {project.name}
+                        </h1>
                         <div>{project.description}</div>
                       </div>
                     </div>
