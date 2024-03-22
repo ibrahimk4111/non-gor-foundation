@@ -13,7 +13,7 @@ const DrawerNavBar: React.FC = () => {
 
   return (
     <Drawer>
-      <DrawerTrigger className=" flex justify-center items-center bg-green-700 hover:bg-green-700 text-white p-2 rounded-full ">
+      <DrawerTrigger className=" flex justify-center items-center hover:bg-green-700 p-2 rounded-full ">
         <RxHamburgerMenu className=" md:text-xl text-base " />
       </DrawerTrigger>
       <DrawerContent>
