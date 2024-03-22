@@ -1,19 +1,17 @@
 "use client";
 
-import React, { use, useState } from "react";
+import React, { useState } from "react";
 import { ProjectDatas } from "@/api/projects/ProjectData";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-
-const projects = () => {
-  const [activeTab, setActiveTab] = useState< string >(ProjectDatas[0].name);
-
+const About: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<string>(ProjectDatas[0].name);
 
   return (
     <div className=" bg-slate-100 ">
       <div className=" bg-green-700">
         <h1 className=" py-5 text-center lg:text-4xl text-2xl text-white font-bold tracking-widest ">
-          Projects
+          About Us
         </h1>
       </div>
       <div className=" container mx-auto py-10">
@@ -58,4 +56,4 @@ const projects = () => {
   );
 };
 
-export default projects;
+export default About;
