@@ -18,12 +18,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <body className={inter.className}>
         <div className="bg-[#f8f6f6]">
           <Header />
           {children}
           <Footer />
         </div>
+=======
+      <body suppressHydrationWarning={true} className={inter.className}>
+        <Header />
+        {children}
+        <Footer />
+>>>>>>> 263c667123cd85c277f49f9ec88c80a3de09bfc7
       </body>
     </html>
   );
