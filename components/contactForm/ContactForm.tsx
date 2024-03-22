@@ -81,7 +81,7 @@ const ContactForm = () => {
             <FormField
               key={index}
               control={form.control}
-              name={fieldData.fieldName}
+              name={fieldData.fieldName as 'name'}
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className=" text-xl text-slate-500">
