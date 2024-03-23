@@ -35,7 +35,7 @@ const NavBar: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link href="#" className={navItemClassNames}>
+          <Link href="/gallery" className={navItemClassNames}>
             Gallery
           </Link>
         </li>
