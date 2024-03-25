@@ -14,11 +14,11 @@ const DrawerNavBar: React.FC = () => {
     `${activeBtn === btnName? "bg-green-700 text-white": "hover:text-green-700 w-full"} rounded-md`;
 
   return (
-    <Drawer>
+    <Drawer direction='left'>
       <DrawerTrigger className="  p-2 ">
         <RxHamburgerMenu className=" text-xl " />
       </DrawerTrigger>
-      <DrawerContent>
+      <DrawerContent >
         <div>
           <ul className=" gap-1 py-5 w-full ">
             <li className=" flex justify-center items-center h-10 overflow-hidden mb-5 px-10">
