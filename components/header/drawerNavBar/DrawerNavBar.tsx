@@ -14,7 +14,7 @@ const DrawerNavBar: React.FC = () => {
     `${activeBtn === btnName ? "bg-green-700 text-white" : "hover:text-green-700 w-full"} rounded-md`;
 
   return (
-    <Drawer>
+    <Drawer direction="left">
       <DrawerTrigger className="  p-2 ">
         <RxHamburgerMenu className=" text-xl " />
       </DrawerTrigger>
