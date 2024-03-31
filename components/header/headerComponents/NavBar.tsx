@@ -22,10 +22,10 @@ import { paths } from "@/utils/paths";
 
 const NavBar: React.FC = () => {
   const navItemClassNames =
-    " cursor-pointer py-2 text-white hover:text-green-500 transition-all duration-500 ease-in-out";
+    " cursor-pointer py-2 text-black hover:text-white transition-all duration-500 ease-in-out";
 
   return (
-    <div className=" bg-green-900 mb-2 tracking-wider">
+    <div className=" bg-green-500 mb-2 tracking-wider">
       <ul className="container mx-auto hidden lg:flex justify-start items-center gap-x-10 h-14 ">
         <li>
           <Link href={paths.home} className={navItemClassNames}>
