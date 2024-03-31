@@ -38,12 +38,12 @@ export const paths = {
     structure: "/news"
   },
   activites: {
-    human_needs: "/news",
-    education: "/news",
-    health: "/news",
-    training: "/news",
-    the_culture: "/news",
-    awareness: "/news",
+    human_needs: "/gallery",
+    education: "/gallery",
+    health: "/gallery",
+    training: "/gallery",
+    the_culture: "/gallery",
+    awareness: "/gallery",
   },
   campaign: "/projects",
   news: "/news",
