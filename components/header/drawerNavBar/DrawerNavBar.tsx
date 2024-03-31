@@ -27,7 +27,7 @@ const DrawerNavBar: React.FC = () => {
       activeBtn === btnName
         ? "bg-green-700 text-white"
         : "hover:text-green-700 w-full"
-    } rounded-md p-2`;
+    } rounded-md p-2 font-semibold`;
 
   return (
     <Drawer direction="left">
@@ -60,42 +60,42 @@ const DrawerNavBar: React.FC = () => {
                 <AccordionContent>
                   <Link href={paths.information.introduction}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Introduction
                       </DrawerClose>
                     </li>
                   </Link>
                   <Link href={paths.information.nature_of_the_organization}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Nature of the organization
                       </DrawerClose>
                     </li>
                   </Link>
                   <Link href={paths.information.arena_limits}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Arena limits
                       </DrawerClose>
                     </li>
                   </Link>
                   <Link href={paths.information.aims_and_objectives}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Aims and Objectives
                       </DrawerClose>
                     </li>
                   </Link>
                   <Link href={paths.information.slogan}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Slogan
                       </DrawerClose>
                     </li>
                   </Link>
                   <Link href={paths.information.vision}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Vision
                       </DrawerClose>
                     </li>
@@ -113,42 +113,42 @@ const DrawerNavBar: React.FC = () => {
                 <AccordionContent>
                   <Link href={paths.information.introduction}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Human needs (Food, Housing, Clothing)
                       </DrawerClose>
                     </li>
                   </Link>
                   <Link href={paths.information.nature_of_the_organization}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Nature of the organization
                       </DrawerClose>
                     </li>
                   </Link>
                   <Link href={paths.information.arena_limits}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Arena limits
                       </DrawerClose>
                     </li>
                   </Link>
                   <Link href={paths.information.aims_and_objectives}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Aims and Objectives
                       </DrawerClose>
                     </li>
                   </Link>
                   <Link href={paths.information.slogan}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Slogan
                       </DrawerClose>
                     </li>
                   </Link>
                   <Link href={paths.information.vision}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Vision
                       </DrawerClose>
                     </li>
@@ -166,42 +166,42 @@ const DrawerNavBar: React.FC = () => {
                 <AccordionContent>
                   <Link href={paths.information.introduction}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Introduction
                       </DrawerClose>
                     </li>
                   </Link>
                   <Link href={paths.information.nature_of_the_organization}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Nature of the organization
                       </DrawerClose>
                     </li>
                   </Link>
                   <Link href={paths.information.arena_limits}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Arena limits
                       </DrawerClose>
                     </li>
                   </Link>
                   <Link href={paths.information.aims_and_objectives}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Aims and Objectives
                       </DrawerClose>
                     </li>
                   </Link>
                   <Link href={paths.information.slogan}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Slogan
                       </DrawerClose>
                     </li>
                   </Link>
                   <Link href={paths.information.vision}>
                     <li>
-                      <DrawerClose className=" w-full h-full p-2 hover:text-green-700 text-start ">
+                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
                         Vision
                       </DrawerClose>
                     </li>
