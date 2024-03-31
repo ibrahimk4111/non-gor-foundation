@@ -1,0 +1,58 @@
+export const paths = {
+  // home: "/",
+  // information: {
+  //   introduction: "/Introduction",
+  //   nature_of_the_organization: "/Nature of the organization",
+  //   arena_limits: "/Arena limits",
+  //   aims_and_objectives: "/Aims and Objectives",
+  //   slogan: "/slogan",
+  //   vision: "/vision",
+  //   structure: "/structure"
+  // },
+  // activites: {
+  //   human_needs: "/Human needs (Food, Housing, Clothing)",
+  //   education: "/education",
+  //   health: "/health",
+  //   training: "/training",
+  //   the_culture: "/The culture",
+  //   awareness: "/awareness",
+  // },
+  // campaign: "/campaign",
+  // news: "/news",
+  // registration: {
+  //   volunteer: "/volunteer",
+  //   ordinary_member: "/Ordinary member",
+  //   lifetime_member: "/Lifetime Member",
+  //   donor_member: "/donor member",
+  // },
+  // donate: "/donate",
+  // contact: "/contact",
+  home: "/",
+  information: {
+    introduction: "/news",
+    nature_of_the_organization: "/news",
+    arena_limits: "/news",
+    aims_and_objectives: "/news",
+    slogan: "/news",
+    vision: "/news",
+    structure: "/news"
+  },
+  activites: {
+    human_needs: "/gallery",
+    education: "/gallery",
+    health: "/gallery",
+    training: "/gallery",
+    the_culture: "/gallery",
+    awareness: "/gallery",
+  },
+  campaign: "/projects",
+  news: "/news",
+  registration: {
+    volunteer: "/news",
+    ordinary_member: "/news",
+    lifetime_member: "/news",
+    donor_member: "/news",
+  },
+  donate: "/news",
+  contact: "/contact",
+};
