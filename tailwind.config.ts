@@ -18,7 +18,7 @@ const config = {
         md: "80%",
         lg: "900px",
         xl: "1050px",
-        xxl: "1150px",
+        xxl: "1100px",
       },
     },
     extend: {
