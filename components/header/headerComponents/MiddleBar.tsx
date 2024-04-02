@@ -22,16 +22,6 @@ const MiddleBar = () => {
               <Image src={logo} alt="logo" className=" md:hidden block max-h-full h-auto w-auto " />
             </div>
           </div>
-
-          {/* button section */}
-          <div className=" flex justify-between items-center gap-2 ">
-            <Link href="#" className={activeBtnClasses}>
-              My Account
-            </Link>
-            <Link href="#" className={activeBtnClasses}>
-              Donate
-            </Link>
-          </div>
         </div>
       </div>
     </div>
