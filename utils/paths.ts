@@ -29,13 +29,13 @@ export const paths = {
   // contact: "/contact",
   home: "/",
   information: {
-    introduction: "/news",
+    introduction: "/about",
     nature_of_the_organization: "/news",
     arena_limits: "/news",
     aims_and_objectives: "/news",
     slogan: "/news",
     vision: "/news",
-    structure: "/news"
+    structure: "/structure",
   },
   activites: {
     human_needs: "/gallery",
