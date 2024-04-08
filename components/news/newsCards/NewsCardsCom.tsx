@@ -1,8 +1,9 @@
 import React from "react";
 import member from '@/public/member-conference-2024-1.jpeg';
 import Image from "next/image";
+import Link from "next/link";
 
-const NewsCardsCom:React.FC = () => {
+const NewsCardsCom: React.FC = () => {
   return (
     <div className=" rounded-lg overflow-hidden bg-white">
       <section>
@@ -13,13 +14,12 @@ const NewsCardsCom:React.FC = () => {
         <h1 className=" text-xl text-center text-green-700">
           As-Sunnah Foundation Masjid Complex
         </h1>
-        <p className=" overflow-auto h-36 px-2">
+        <p className="h-32 px-2">
           The As-Sunnah Foundation Masjid Complex will be the focal point of the
           multi-faceted activities of the As-Sunnah Foundation for the welfare
-          of the country, nation and ummah. In-Sha-Allah it will be the center
-          of various humanitarian and public welfare projects, including an
-          ideal mosque, a modern madrasah with an integrated syllabus aimed at
-          creating an Islamic scholar to meet the needs of the age.
+          of the country, nation...<Link href="#" className="py-3 px-5 underline text-red-600 text-sm font-semibold">
+            Read More
+          </Link>
         </p>
       </section>
     </div>

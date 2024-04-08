@@ -18,7 +18,7 @@ const CarouselPage: React.FC = () => {
           <CarouselContent className=" max-h-[60vh] h-auto ">
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem key={index} className=" overflow-hidden flex justify-center items-center rounded-lg">
-                  <Image src={ass} alt="img1" className=" w-full h-auto " />
+                <Image src={ass} alt="img1" className=" w-full h-auto " />
               </CarouselItem>
             ))}
           </CarouselContent>
