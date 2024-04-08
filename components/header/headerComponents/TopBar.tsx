@@ -1,6 +1,6 @@
 import { AiFillMail } from "react-icons/ai";
 import { IoCall } from "react-icons/io5";
-import { ExternalLink, ShareIcon } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const TopBar: React.FC = () => {
 

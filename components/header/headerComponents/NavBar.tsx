@@ -1,17 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import React from "react";
+import { ChevronDown } from "lucide-react";
 
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuPortal,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
