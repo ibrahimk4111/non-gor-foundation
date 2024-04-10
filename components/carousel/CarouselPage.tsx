@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 
 const CarouselPage: React.FC = () => {
+
   return (
     <div className="container mx-auto mt-5">
       <div className=" flex justify-center items-center ">
