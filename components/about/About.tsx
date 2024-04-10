@@ -10,15 +10,15 @@ const About: React.FC = () => {
     " flex justify-start items-center gap-2 text-green-800 font-semibold";
   return (
     <div className="  container mx-auto p-5 py-10 grid grid-cols-12 gap-5">
-      <div className=" lg:col-span-5 col-span-12 flex justify-center items-center">
-        <div className=" h-70 w-96 rounded-full overflow-hidden flex items-center">
-          <Image src={golden_gate} alt="golden gate" height={500} />
+      <div className=" lg:col-span-4 col-span-12 flex justify-center items-center">
+        <div className=" h-70 w-96 overflow-hidden flex items-center">
+          <Image src={golden_gate} alt="golden gate" />
         </div>
       </div>
-      <div className=" lg:col-span-7 col-span-12 px-5">
+      <div className=" lg:col-span-8 col-span-12 px-5">
         <h1 className=" text-2xl text-green-700 ">Nongor Foundation</h1>
         <hr className=" h-1 bg-slate-300 my-3" />
-        <p className=" py-5 ">
+        <p className=" py-5 text-justify">
           "Eternal conviction in building a prosperous society" - With this
           motto in mind, this progress is aimed at building a prosperous society
           in the service of humanity and the implementation of welfare work

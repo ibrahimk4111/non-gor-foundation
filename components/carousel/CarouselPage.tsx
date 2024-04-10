@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from "react";
 import ass from "@/public/assunnah-complex.jpg";
 
@@ -10,12 +12,14 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 
+import Autoplay from "embla-carousel-autoplay";
+
 const CarouselPage: React.FC = () => {
 
   return (
     <div className="container mx-auto mt-5">
       <div className=" flex justify-center items-center ">
-        <Carousel>
+        <Carousel plugins={[Autoplay({ delay: 2000, stopOnInteraction: false })]}>
           <CarouselContent className=" max-h-[60vh] h-auto ">
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem key={index} className=" overflow-hidden flex justify-center items-center rounded-lg">
