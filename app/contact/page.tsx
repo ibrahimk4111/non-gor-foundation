@@ -28,20 +28,19 @@ const Contact: React.FC = () => {
               <hr className=" h-1 " />
               <div>
                 <h1 className=" font-semibold">Address</h1>
-                <p className=" text-sm ">As-Sunnah Foundation</p>
+                <p className=" text-sm ">Nongor Foundation,</p>
                 <p className=" text-sm ">
-                  Plot-60, Road-3, Block-C, (Opposite Siraj Convention Center)
-                  Aftabnagar, Dhaka-1212
+                  Nangla Bazar, Debhata-9430, Debhata, Satkhira.
                 </p>
               </div>
 
               <div>
                 <h1 className=" font-semibold">Phone</h1>
-                <p className=" text-sm ">+88-09610-001089</p>
+                <p className=" text-sm ">+88 01720-424 282, +88 01568-777 768</p>
               </div>
               <div>
                 <h1 className=" font-semibold">Email</h1>
-                <p className=" text-sm ">assunnahfoundationbd@gmail.com</p>
+                <p className=" text-sm ">nongorfoundation@gmail.com</p>
               </div>
             </div>
           </section>
