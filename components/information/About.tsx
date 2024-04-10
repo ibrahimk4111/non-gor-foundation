@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AboutData } from "@/api/about/About";
+import Link from "next/link";
 
 const About: React.FC = () => {
     const [activeTab, setActiveTab] = useState<string>(AboutData[0].name);
@@ -19,7 +20,7 @@ const About: React.FC = () => {
                             className="flex lg:flex-col flex-row lg:col-span-3 col-span-12 overflow-auto"
                         >
                             {AboutData.map((data, index) => (
-                                <div key={index}>
+                                <Link href={`#${data.name}`} key={index}>
                                     <TabsList>
                                         <TabsTrigger
                                             value={data.name}
@@ -28,16 +29,17 @@ const About: React.FC = () => {
                                             {data.name}
                                         </TabsTrigger>
                                     </TabsList>
-                                </div>
+                                </Link>
                             ))}
                         </Tabs>
                         <section className="lg:col-span-9 col-span-12 lg:border-l bg-slate-100 lg:px-5 py-5 overflow-auto">
-                            <div className="bg-white rounded-sm p-3">
+                            <div className="bg-white rounded-md p-3">
                                 {AboutData.map(
                                     (data, index) =>
                                         data.name === activeTab && (
                                             <div key={index}>
-                                                <p>{data.description}</p>
+                                                <h1 className=" text-2xl text-green-600 mb-5 ">{data.name}</h1>
+                                                <p id={data.name}>{data.description}</p>
                                             </div>
                                         )
                                 )}

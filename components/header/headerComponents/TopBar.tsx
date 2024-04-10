@@ -3,7 +3,6 @@ import { IoCall } from "react-icons/io5";
 import { ExternalLink } from "lucide-react";
 
 const TopBar: React.FC = () => {
-
   let size = 15;
   return (
     <section className=" pt-2 bg-white ">

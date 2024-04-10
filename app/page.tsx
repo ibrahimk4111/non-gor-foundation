@@ -3,7 +3,7 @@ import About from "@/components/about/About";
 import Activites from "@/components/activites/Activites";
 import Campaign from "@/components/campaign/Campaign";
 import CarouselPage from "@/components/carousel/CarouselPage";
-import TopButton from "@/components/ui/TopButton";
+
 
 export default function Home() {
   return (
@@ -13,7 +13,6 @@ export default function Home() {
       <Activites />
       <Campaign />
       <Gallery />
-      <TopButton />
     </main>
   );
 }
