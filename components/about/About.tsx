@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import golden_gate from "@/public/golden-gate.jpg";
+import golden_gate from "@/public/Profile Photo logo.jpg";
 import Link from "next/link";
 
 const About: React.FC = () => {
@@ -16,19 +16,24 @@ const About: React.FC = () => {
         </div>
       </div>
       <div className=" lg:col-span-7 col-span-12 px-5">
-        <h1 className=" text-2xl text-green-700 ">As-Sunnah Foundation</h1>
+        <h1 className=" text-2xl text-green-700 ">Nongor Foundation</h1>
         <hr className=" h-1 bg-slate-300 my-3" />
         <p className=" py-5 ">
-          As-Sunnah Foundation is a non-profit, non-political, and entirely
-          charitable organization dedicated to human welfare. Following the
-          ideals and footsteps of the teacher of humanity, liberator of mankind,
-          and role model of generosity Prophet Muhammad (Saw), this organization
-          is engaged in social reform, inculcation of great morality,
-          establishing employment, poverty alleviation, low cost or free health
-          care, expansion of Islamic teachings and culture, conducting
-          multidisciplinary education projects, continuous program in building a
-          clean mindset, above all using oral, written and modern media to make
-          people obey Allah and abide by His Messenger (Saw).
+          "Eternal conviction in building a prosperous society" - With this
+          motto in mind, this progress is aimed at building a prosperous society
+          in the service of humanity and the implementation of welfare work
+          through cooperation. Social development is only possible with
+          organized cooperation in this era of globalization. Therefore, if we
+          can do something creative for the welfare of the socialized people by
+          utilizing the development of thoughts, consciousness, and intellect of
+          the organized people, the society will be prosperous, and the nation
+          and the next generation will benefit. With the unwavering support and
+          cooperation of the people from all walks of life in the area by
+          incorporating the organizational wisdom of the people engaged in the
+          work of building the society, this organization called "Nongor
+          Foundation" was established, which will be operated as a
+          non-political, non-profit voluntary social welfare organization
+          InshaAllah.
         </p>
         <section className=" relative ">
           <div className=" space-y-4">

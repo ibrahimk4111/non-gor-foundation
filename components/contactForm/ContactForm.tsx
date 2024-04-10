@@ -66,8 +66,8 @@ const ContactForm = () => {
   }
 
   return (
-    <div>
-      <h1 className=" text-xl font-semibold lg:pt-5">
+    <div className=" border p-2 rounded-md">
+      <h1 className=" text-xl font-semibold">
         Feel free to contact us
       </h1>
       <hr className=" h-1 my-5" />
@@ -75,7 +75,7 @@ const ContactForm = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className=" flex flex-col md:gap-5 gap-2 w-full"
+          className=" flex flex-col gap-2 w-full"
         >
           {formFieldData.map((fieldData, index) => (
             <FormField
@@ -84,14 +84,14 @@ const ContactForm = () => {
               name={fieldData.fieldName as 'name'}
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className=" text-xl text-slate-500">
+                  <FormLabel className=" text-sm text-slate-500">
                     {fieldData.label} <span className=" text-red-500 ">*</span>
                   </FormLabel>
                   <FormControl>
                     <Input
                       placeholder={fieldData.placeholder}
                       {...field}
-                      className=" text-xl focus-visible:outline-none"
+                      className=" text-sm focus-visible:outline-none"
                     />
                   </FormControl>
                   <FormMessage />
@@ -105,15 +105,15 @@ const ContactForm = () => {
             name="message"
             render={({ field }) => (
               <FormItem className=" flex flex-col">
-                <FormLabel className=" text-xl text-slate-500">
+                <FormLabel className=" text-sm text-slate-500">
                   Message
                 </FormLabel>
                 <FormControl>
                   <textarea
                     placeholder="Type your message here."
-                    rows={7}
+                    rows={5}
                     {...field}
-                    className=" text-xl border rounded-md p-2 focus-visible:outline-none"
+                    className=" text-sm border rounded-md p-2 focus-visible:outline-none"
                   />
                 </FormControl>
                 <FormMessage />
@@ -124,7 +124,7 @@ const ContactForm = () => {
           <div>
             <button
               type="submit"
-              className="py-2 px-5 text-white bg-green-700 rounded-md "
+              className="py-1 px-3 text-white bg-green-700 rounded-md "
             >
               Sent
             </button>
