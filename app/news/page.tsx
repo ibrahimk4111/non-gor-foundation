@@ -1,11 +1,12 @@
 import React from 'react'
+import News from '@/components/news/News'
 
-const News = () => {
+const NewsPage = () => {
   return (
-    <div className=' container mx-auto py-10'>
-        <h1 className=' text-center text-2xl font-bold '>Donore page will come soon if the client interested.</h1>
+    <div>
+        <News />
     </div>
   )
 }
 
-export default News
+export default NewsPage

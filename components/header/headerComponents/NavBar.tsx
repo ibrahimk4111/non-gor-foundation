@@ -1,17 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import React from "react";
+import { ChevronDown } from "lucide-react";
 
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuPortal,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
@@ -25,7 +21,7 @@ const NavBar: React.FC = () => {
     " cursor-pointer py-2 text-white transition-all duration-500 ease-in-out";
 
   return (
-    <div className=" bg-gradient-to-b from-green-700 to-green-400 mb-2 tracking-wider">
+    <div className=" bg-gradient-to-b from-green-400 to-green-600 mb-2 tracking-wider">
       <ul className="container mx-auto hidden lg:flex justify-start items-center gap-x-10 h-14 ">
         <li>
           <Link href={paths.home} className={navItemClassNames}>
