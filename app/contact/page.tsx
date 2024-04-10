@@ -2,13 +2,13 @@ import ContactForm from "@/components/contactForm/ContactForm";
 
 const Contact: React.FC = () => {
   return (
-    <section className="my-8 lg:px-5">
+    <section className=" mb-10 ">
       <div className=" container mx-auto ">
-        <div className=" grid lg:grid-cols-2 grid-cols-1 gap-5 ">
+        <div className=" grid lg:grid-cols-2 grid-cols-1 gap-2 ">
           <ContactForm />
           <section>
             {/* map section */}
-            <div className=" border-2 rounded-lg p-2">
+            <div className=" border rounded-lg p-2">
               <h1 className=" text-xl font-semibold mb-2">Where we are ?</h1>
               <div className=" h-56 ">
                 <iframe
@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
             </div>
 
             {/* contact address section */}
-            <div className=" border-2 rounded-lg p-2 flex flex-col gap-1 mt-2 ">
+            <div className=" border rounded-lg p-2 flex flex-col gap-1 mt-2 ">
               <h1 className=" text-xl font-semibold">Contact Details</h1>
               <hr className=" h-1 " />
               <div>
