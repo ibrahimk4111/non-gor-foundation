@@ -1,8 +1,8 @@
 import Gallery from "@/components/Gallery/Gallery";
 import About from "@/components/about/About";
 import Activites from "@/components/activites/Activites";
+import Campaign from "@/components/campaign/Campaign";
 import CarouselPage from "@/components/carousel/CarouselPage";
-import OnGoinProjects from "@/components/onGoinProjects/OnGoinProjects";
 import TopButton from "@/components/ui/TopButton";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       <CarouselPage />
       <About />
       <Activites />
-      <OnGoinProjects />
+      <Campaign />
       <Gallery />
       <TopButton />
     </main>

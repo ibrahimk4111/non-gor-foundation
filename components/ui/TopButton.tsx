@@ -4,15 +4,20 @@ import { ArrowBigUp } from "lucide-react";
 import React, { useState } from "react";
 
 const TopButton = () => {
-  const [isVisible, setVisible] = useState<boolean>(false);
 
-  window.onscroll = () => {
-    if (document.documentElement.scrollTop > 300) {
-      setVisible(true);
-    } else {
-      setVisible(false);
-    }
-  };
+  const [isVisible, setVisible] = useState<boolean>(false);
+  const isBrowser = () => typeof window !== 'undefined';
+
+  if(!isBrowser){
+    window.onscroll = () => {
+      if (document.documentElement.scrollTop > 300) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    };
+  }
+    
   const backToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

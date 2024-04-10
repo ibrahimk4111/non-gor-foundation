@@ -14,8 +14,9 @@ const Activites = () => {
         </h1>
         <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2">
           {activitesData &&
-            activitesData.map((data) => (
+            activitesData.map((data, index) => (
               <ActivityCard
+                key={index}
                 image={data.img}
                 header={data.header}
                 text={data.text}

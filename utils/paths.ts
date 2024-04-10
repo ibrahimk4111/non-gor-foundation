@@ -45,7 +45,7 @@ export const paths = {
     the_culture: "/#activities",
     awareness: "/#activities",
   },
-  campaign: "/projects",
+  campaign: "/#campagin",
   news: "/news",
   registration: {
     volunteer: "/news",
