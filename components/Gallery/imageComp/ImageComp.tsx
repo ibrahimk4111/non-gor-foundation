@@ -18,8 +18,8 @@ import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 
 import image1 from '@/public/gallery/pimg1.jpg';
-import image2 from '@/public/gallery/pimg2.jpg';
-import image3 from '@/public/gallery/pimg3.jpg';
+import image2 from '@/public/gallery/images/pimg2.jpg';
+import image3 from '@/public/gallery/images/pimg3.jpg';
 import image4 from '@/public/gallery/pimg4.jpg';
 import image5 from '@/public/gallery/pimg5.jpg';
 import image6 from '@/public/gallery/pimg6.jpg';
