@@ -7,7 +7,7 @@ const Gallery = () => {
         <h1 className=" underline underline-offset-8 text-2xl text-center mb-10">
           Gallery
         </h1>
-        <div className=" grid grid-cols-4 gap-1 ">
+        <div className=" grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-1 ">
           <ImageComp />
         </div>
         <div className=" flex justify-center items-center mt-5">
