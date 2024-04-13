@@ -4,12 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface propsType {
-    image: any;
-    header: string;
-    text: string;
+  image: any;
+  header: string;
+  text: string;
 }
 
-const CampaignCards = ({image, header, text}: propsType) => {
+const CampaignCards = ({ image, header, text }: propsType) => {
   return (
     <div className=" border-2 rounded-lg ">
       <section className=" h-auto overflow-hidden flex justify-center items-center rounded-t-lg">
@@ -24,11 +24,11 @@ const CampaignCards = ({image, header, text}: propsType) => {
         <h1 className=" text-xl text-center text-green-700">
           {header}
         </h1>
-        <p className=" px-2 text-sm text-justify">
+        <div className=" px-2 text-sm text-justify">
           {
-            text.length > 200 ? (<div>{text.slice(0,200)+"....."}<button className=" text-green-400">Read More</button></div>) : text
+            text.length > 200 ? (<div>{text.slice(0, 200) + "....."}<button className=" text-green-400">Read More</button></div>) : text
           }
-        </p>
+        </div>
       </section>
     </div>
   )
