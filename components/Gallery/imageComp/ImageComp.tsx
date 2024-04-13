@@ -17,7 +17,7 @@ import lgZoom from "lightgallery/plugins/zoom";
 
 import image1 from "@/public/gallery/pimg1.jpg";
 import image2 from "@/public/gallery/pimg2.jpg";
-import image3 from "@/public/gallery/img/pimg3.jpg";
+import image3 from "@/public/gallery/pimg3.jpg";
 import image4 from "@/public/gallery/pimg4.jpg";
 import image5 from "@/public/gallery/pimg5.jpg";
 import image6 from "@/public/gallery/pimg6.jpg";
@@ -27,6 +27,7 @@ import image9 from "@/public/gallery/pimg9.jpg";
 import image10 from "@/public/gallery/pimg10.jpg";
 import image11 from "@/public/gallery/pimg11.jpg";
 import image12 from "@/public/gallery/pimg12.jpg";
+import Image from "next/image";
 
 const galleryImages = [
   image1,
@@ -53,7 +54,7 @@ const ImageComp: React.FC = () => {
       >
         {galleryImages.map((img, index) => (
           <a key={index} href={img.src}>
-            <img alt={`img${index}`} src={img.src} className=" w-full h-full rounded-md" />
+            <Image alt={`img${index}`} src={img.src} className=" w-full h-full rounded-md" />
           </a>
         ))}
       </LightGallery>
