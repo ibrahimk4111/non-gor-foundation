@@ -25,6 +25,6 @@ export const paths = {
     lifetime_member: "/contact",
     donor_member: "/contact",
   },
-  donate: "/gallery",
+  donate: "/donate",
   contact: "/contact",
 };
