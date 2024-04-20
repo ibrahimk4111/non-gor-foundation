@@ -1,3 +1,4 @@
+import Faq from "@/components/Faq/Faq";
 import Gallery from "@/components/Gallery/Gallery";
 import About from "@/components/about/About";
 import Activites from "@/components/activites/Activites";
@@ -13,6 +14,7 @@ export default function Home() {
       <Activites />
       <Campaign />
       <Gallery />
+      <Faq />
     </main>
   );
 }
