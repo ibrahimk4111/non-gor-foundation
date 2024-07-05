@@ -5,7 +5,7 @@ import { campaignDatas } from "@/api/campaign/campaignData";
 const Campaign = () => {
   return (
     <div id="campagin">
-      <div className=" py-5 bg-white">
+      <div className=" py-20 bg-white">
         <div className=" container mx-auto">
           <h1 className=" lg:text-2xl text-xl text-center text-green-700 mb-5 underline underline-offset-8 ">Campaign</h1>
           <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2">

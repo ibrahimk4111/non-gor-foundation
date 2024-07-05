@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Activites = () => {
   return (
-    <div className=" py-5 bg-slate-100" id="activities">
+    <div className=" py-20 bg-slate-100" id="activities">
       <div className=" container mx-auto">
         <h1 className=" lg:text-2xl text-xl text-center mb-5 underline underline-offset-4 ">
           Activites
