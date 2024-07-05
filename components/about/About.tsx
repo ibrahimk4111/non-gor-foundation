@@ -8,7 +8,7 @@ const About: React.FC = () => {
   const linkPointsClassNames =
     " h-3 w-3 bg-white group-hover:bg-green-800 border-2 border-green-700 rounded-full z-10 transition-all duration-500 ease-in";
   const linkClassNames =
-    " group flex justify-start items-center gap-2 text-green-800 font-semibold";
+    " group flex justify-start items-center gap-2 hover:text-green-800 ";
   return (
     <div className=" px-5 py-20 grid grid-cols-12 gap-5">
       <div className=" lg:col-span-5 col-span-12 flex justify-center items-center">
@@ -41,8 +41,12 @@ const About: React.FC = () => {
           non-political, non-profit voluntary social welfare organization
           InshaAllah.
         </p>
+        <h1>
+          <span className=" text-xl font-bold tracking-wider ">Our Activites</span>
+        </h1>
+        <hr className=" bg-slate-300 my-3" />
         <section className=" relative flex justify-start items-center gap-5 ">
-          <div className=" space-y-4">
+          <div className=" space-y-2">
             <div className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
               <Link href="#">Human needs (Food, Housing, Clothing)</Link>
@@ -56,7 +60,7 @@ const About: React.FC = () => {
               <Link href="#">Health</Link>
             </div>
           </div>
-          <div className=" space-y-4">
+          <div className=" space-y-2">
             <div className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
               <Link href="#">Training</Link>

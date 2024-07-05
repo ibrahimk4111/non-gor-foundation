@@ -28,8 +28,10 @@ const NavBar: React.FC = () => {
   return (
     <div>
       <div className=" flex justify-start gap-5">
-        <div className="p-5 flex gap-10 md:hidden ">
-          <DrawerNavBar />
+        <div className="p-2 flex gap-10 h-full w-auto ">
+          <div className=" md:hidden block">
+            <DrawerNavBar />
+          </div>
           <Image src={Name_logo} alt="logo" className=" h-auto md:w-96 w-60" />
         </div>
         <div className=" w-full hidden lg:flex flex-col justify-start">

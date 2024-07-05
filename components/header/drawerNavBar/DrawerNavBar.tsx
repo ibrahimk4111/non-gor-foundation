@@ -30,7 +30,7 @@ const DrawerNavBar: React.FC = () => {
     } rounded-md p-2 font-semibold`;
 
   return (
-    <Drawer direction="left">
+    <Drawer direction="left" >
       <DrawerTrigger>
         <RxHamburgerMenu className=" w-12 h-12 hover:bg-slate-200 p-2  " />
       </DrawerTrigger>
