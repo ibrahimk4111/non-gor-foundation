@@ -1,46 +1,34 @@
-import { AiFillFacebook, AiFillMail } from "react-icons/ai";
-import { IoCall, IoLogoWhatsapp } from "react-icons/io5";
-import { FaSquareInstagram, FaYoutube, FaXTwitter } from "react-icons/fa6";
-import { RxInstagramLogo } from "react-icons/rx";
-import { FaTelegramPlane } from "react-icons/fa";
-
+import {MdMail} from 'react-icons/md'
+import {HiLocationMarker} from 'react-icons/hi'
+import {RiFacebookFill} from 'react-icons/ri'
+import { AiOutlineWhatsApp } from "react-icons/ai";
 
 import Link from "next/link";
 
 const TopBar: React.FC = () => {
-  let size = 20;
+  let size = 16;
   return (
-    <section className=" pt-2 bg-white">
-      <div className=" flex justify-end items-center gap-2 container ">
-        <Link href="https://www.facebook.com/nongor.official" target="_blank">
-          <AiFillFacebook size={size} fill="blue"/>
-        </Link>
-        <Link
-          href="https://www.youtube.com/channel/UChhf0WXsZ2hfZVw5-xqSstw"
-          target="_blank"
-        >
-          <FaYoutube size={size} fill="red"/>
-        </Link>
-        <Link href="https://twitter.com/nongor21" target="_blank">
-          <FaXTwitter size={size} />
-        </Link>
-        <Link
-          href="https://www.instagram.com/nongorfoundation/"
-          target="_blank"
-        >
-          <FaSquareInstagram size={size} fill="red"/>
-        </Link>
-        <Link
-          href="https://whatsapp.com/channel/0029VaFbIou5kg6xKkI05T2Q"
-          target="_blank"
-        >
-          <IoLogoWhatsapp size={size} fill="green"/>
-        </Link>
-        <Link href="https://t.me/foundationnongor" target="_blank">
-          <FaTelegramPlane size={size} fill="cyan" />
-        </Link>
+      <div className=" bg-green-900 w-full flex justify-between items-center gap-2 px-5 py-1">
+        <div className='flex justify-start items-center gap-2 '>
+          <p className=' text-slate-300 '>connect with us: </p>
+          <Link href="https://www.facebook.com/nongor.official" >
+            <RiFacebookFill size={size} className=' text-white hover:text-amber-600 transition-all duration-500 ease-in-out' />
+          </Link>
+          <Link href="#">
+            <AiOutlineWhatsApp size={size} className='text-white cursor-pointer hover:text-amber-600 transition-all duration-500 ease-in-out' />
+          </Link>
+        </div>
+        <div className='flex justify-end items-center gap-4 '>
+          <Link href="#" className=' group flex items-center gap-2 '>
+            <HiLocationMarker size={size} className='text-white group-hover:text-amber-600 transition-all duration-500 ease-in-out' />
+            <span className=' text-slate-300 text-sm '>Debhata, Satkhira, Bangladesh.</span>
+          </Link>
+          <Link href="#" className='group flex items-center gap-2 '>
+            <MdMail size={size} className='text-white group-hover:text-amber-600 transition-all duration-500 ease-in-out' />
+            <span className=' text-slate-300 text-sm '>nongorfoundation@gmail.com</span>
+          </Link>
+        </div>
       </div>
-    </section>
   );
 };
 

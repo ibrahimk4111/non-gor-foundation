@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/drawer";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
-import logoName from "@/public/Nogor Foundation.jpg";
+import logoName from "@/public/Nogor-Foundation.png";
 import Image from "next/image";
 import { paths } from "@/utils/paths";
 
