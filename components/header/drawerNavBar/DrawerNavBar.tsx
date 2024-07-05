@@ -31,13 +31,13 @@ const DrawerNavBar: React.FC = () => {
 
   return (
     <Drawer direction="left">
-      <DrawerTrigger className="  p-2 ">
-        <RxHamburgerMenu className=" text-xl " />
+      <DrawerTrigger>
+        <RxHamburgerMenu className=" w-12 h-12 hover:bg-slate-200 p-2  " />
       </DrawerTrigger>
       <DrawerContent className=" list-none ">
         <div>
           <ul className=" gap-1 py-5 w-full ">
-            <li className=" flex justify-center items-center h-10 overflow-hidden mb-5 px-10">
+            <li className=" flex justify-center items-center h-10 overflow-hidden mb-5 ">
               <Image src={logoName} alt="..." className=" h-full w-auto " />
             </li>
 

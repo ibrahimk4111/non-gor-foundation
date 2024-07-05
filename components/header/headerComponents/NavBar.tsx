@@ -18,6 +18,7 @@ import Link from "next/link";
 import { paths } from "@/utils/paths";
 import Image from "next/image";
 import TopBar from "./TopBar";
+import DrawerNavBar from "../drawerNavBar/DrawerNavBar";
 // import MiddleBar from "./MiddleBar";
 
 const NavBar: React.FC = () => {
@@ -27,8 +28,9 @@ const NavBar: React.FC = () => {
   return (
     <div>
       <div className=" flex justify-start gap-5">
-        <div className="p-5">
-          <Image src={Name_logo} alt="logo" className=" h-auto w-96" />
+        <div className="p-5 flex gap-10 md:hidden ">
+          <DrawerNavBar />
+          <Image src={Name_logo} alt="logo" className=" h-auto md:w-96 w-60" />
         </div>
         <div className=" w-full hidden lg:flex flex-col justify-start">
           <TopBar />

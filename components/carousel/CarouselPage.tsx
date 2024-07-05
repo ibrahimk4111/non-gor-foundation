@@ -26,7 +26,7 @@ const CarouselPage: React.FC = () => {
           {carouselDatas.map((item, index) => (
             <CarouselItem
               key={index}
-              className=" relative flex items-center justify-center md:h-[90vh] h-[70vh] overflow-hidden "
+              className=" relative flex items-center justify-center md:h-screen h-[70vh] overflow-hidden "
               style={{
                 backgroundImage: `url(${item.img.src})`,
                 backgroundSize: "cover",

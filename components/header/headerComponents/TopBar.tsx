@@ -16,11 +16,11 @@ const TopBar: React.FC = () => {
         <div className='flex justify-end items-center gap-4 '>
           <Link href="#" className=' group flex items-center gap-2 '>
             <HiLocationMarker size={size} className={classNameforIcon} />
-            <span className=' text-slate-400 text-sm '>Debhata, Satkhira, Bangladesh.</span>
+            <span className=' text-slate-300 text-sm '>Debhata, Satkhira, Bangladesh.</span>
           </Link>
           <Link href="#" className='group flex items-center gap-2 '>
             <MdMail size={size} className={classNameforIcon}/>
-            <span className=' text-slate-400 text-sm '>nongorfoundation@gmail.com</span>
+            <span className=' text-slate-300 text-sm '>nongorfoundation@gmail.com</span>
           </Link>
           <Link href="https://www.facebook.com/nongor.official" >
             <RiFacebookFill size={size} className={classNameforIcon} />

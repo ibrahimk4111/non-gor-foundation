@@ -1,24 +1,30 @@
 import Image from "next/image";
 import React from "react";
 import golden_gate from "@/public/Profile Photo logo.jpg";
+import office from "@/public/campaignImg/office.jpeg";
 import Link from "next/link";
 
 const About: React.FC = () => {
   const linkPointsClassNames =
-    " h-3 w-3 bg-white border-2 border-green-700 rounded-full z-10";
+    " h-3 w-3 bg-white group-hover:bg-green-800 border-2 border-green-700 rounded-full z-10 transition-all duration-500 ease-in";
   const linkClassNames =
-    " flex justify-start items-center gap-2 text-green-800 font-semibold";
+    " group flex justify-start items-center gap-2 text-green-800 font-semibold";
   return (
-    <div className="  container mx-auto p-5 py-10 grid grid-cols-12 gap-5">
-      <div className=" lg:col-span-4 col-span-12 flex justify-center items-center">
-        <div className=" h-70 w-96 overflow-hidden flex items-center">
-          <Image src={golden_gate} alt="golden gate" />
-        </div>
+    <div className=" px-5 py-20 grid grid-cols-12 gap-5">
+      <div className=" lg:col-span-5 col-span-12 flex justify-center items-center">
+        <div className=" h-full w-full rounded-md overflow-hidden " style={{ backgroundImage: `url(${office.src})`, backgroundSize:"cover", backgroundPosition: "center"}}></div>
       </div>
-      <div className=" lg:col-span-8 col-span-12 px-5">
-        <h1 className=" text-2xl text-green-700 ">Nongor Foundation</h1>
-        <hr className=" h-1 bg-slate-300 my-3" />
-        <p className=" py-5 text-justify">
+      <div className=" lg:col-span-7 col-span-12 md:px-5">
+        <h1 className=" text-2xl text-green-700 flex gap-5 items-center  ">
+          <Image
+            src={golden_gate}
+            alt="foundation logo"
+            className=" h-14 w-auto"
+          />
+          <span className=" text-4xl font-bold tracking-wider ">Nongor Foundation</span>
+        </h1>
+        <hr className=" bg-slate-300 my-3" />
+        <p className=" py-2 text-justify">
           "Eternal conviction in building a prosperous society" - With this
           motto in mind, this progress is aimed at building a prosperous society
           in the service of humanity and the implementation of welfare work
@@ -35,22 +41,36 @@ const About: React.FC = () => {
           non-political, non-profit voluntary social welfare organization
           InshaAllah.
         </p>
-        <section className=" relative ">
+        <section className=" relative flex justify-start items-center gap-5 ">
           <div className=" space-y-4">
             <div className={linkClassNames}>
-              <p className={linkPointsClassNames}></p>{" "}
+              <p className={linkPointsClassNames}></p>
+              <Link href="#">Human needs (Food, Housing, Clothing)</Link>
+            </div>
+            <div className={linkClassNames}>
+              <p className={linkPointsClassNames}></p>
               <Link href="#">Education</Link>
             </div>
             <div className={linkClassNames}>
-              <p className={linkPointsClassNames}></p>{" "}
-              <Link href="#">Charity</Link>
-            </div>
-            <div className={linkClassNames}>
-              <p className={linkPointsClassNames}></p>{" "}
-              <Link href="#">Dawah</Link>
+              <p className={linkPointsClassNames}></p>
+              <Link href="#">Health</Link>
             </div>
           </div>
-          <div className=" h-20 bg-slate-300 absolute top-2 left-[6px] w-[1px] "></div>
+          <div className=" space-y-4">
+            <div className={linkClassNames}>
+              <p className={linkPointsClassNames}></p>
+              <Link href="#">Training</Link>
+            </div>
+            <div className={linkClassNames}>
+              <p className={linkPointsClassNames}></p>
+              <Link href="#">The Culture</Link>
+            </div>
+            <div className={linkClassNames}>
+              <p className={linkPointsClassNames}></p>
+              <Link href="#">Awareness</Link>
+            </div>
+          </div>
+          {/* <div className=" h-20 bg-slate-300 absolute top-2 left-[6px] w-[1px] "></div> */}
         </section>
       </div>
     </div>
