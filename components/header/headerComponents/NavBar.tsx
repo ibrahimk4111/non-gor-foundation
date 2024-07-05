@@ -26,11 +26,11 @@ const NavBar: React.FC = () => {
 
   return (
     <div>
-      <div className=" flex justify-start gap-5 h-26 ">
+      <div className=" flex justify-start gap-5">
         <div className="p-5">
           <Image src={Name_logo} alt="logo" className=" h-auto w-96" />
         </div>
-        <div className=" w-full hidden lg:flex flex-col justify-start gap-3">
+        <div className=" w-full hidden lg:flex flex-col justify-start">
           <TopBar />
           <div className=" flex justify-between items-center p-2">
             <ul className=" flex justify-start items-center p-2">
@@ -133,8 +133,8 @@ const NavBar: React.FC = () => {
               <li >
                 <DropdownMenu modal={false}>
                   <DropdownMenuTrigger asChild>
-                    <p className=" cursor-pointer py-2 px-5 text-white rounded-md bg-green-500 hover:bg-green-600 transition-all duration-300 ease-in">
-                      Registration
+                    <p className=" cursor-pointer py-2 px-5 text-white rounded-md bg-orange-500 hover:bg-orange-600 transition-all duration-300 ease-in">
+                      Register Now
                     </p>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-56">
@@ -153,8 +153,8 @@ const NavBar: React.FC = () => {
                   </DropdownMenuContent>
                 </DropdownMenu>
               </li>
-              <li className=" cursor-pointer py-2 px-5 text-white rounded-md bg-green-500 hover:bg-green-600 transition-all duration-300 ease-in">
-                <Link href={paths.donate}>Donate</Link>
+              <li className=" cursor-pointer py-2 px-5 text-white rounded-md bg-orange-500 hover:bg-orange-600 transition-all duration-300 ease-in">
+                <Link href={paths.donate}>Donate Now</Link>
               </li>
             </ul>
           </div>
