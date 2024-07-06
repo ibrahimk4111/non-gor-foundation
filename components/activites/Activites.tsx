@@ -1,9 +1,6 @@
 import React from "react";
 import ActivityCard from "./activitycards/ActivityCard";
-import ActivityImage1 from "@/public/activitiesLogo/Activities-1.png";
-
 import { activitesData } from "@/api/activities/Activities";
-import Link from "next/link";
 
 const Activites = () => {
   return (

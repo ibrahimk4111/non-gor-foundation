@@ -34,16 +34,16 @@ const CarouselPage: React.FC = () => {
                 backgroundPosition: "center",
               }}
             >
-              <div className=" absolute left-0 top-0 flex justify-center items-center md:p-32 p-10 bg-gradient-to-r from-sky-950 via-sky-800/90 to-transparent w-full h-full">
+              <div className=" absolute left-0 top-0 flex justify-center items-center md:p-32 p-10 bg-gradient-to-r from-green-950 via-sky-800/90 to-transparent w-full h-full">
                 <div className=" text-white md:space-y-5 space-y-3 w-full relative">
-                  <span className=" bg-sky-800/40 backdrop-blur-sm py-2 md:px-8 px-3 rounded-md md:text-base text-sm ">
+                  <span className=" bg-green-800/40 backdrop-blur-sm py-2 md:px-8 px-3 rounded-md md:text-base text-sm ">
                     {item.title}
                   </span>
                   <h1 className=" md:text-7xl text-5xl font-semibold flex flex-col md:gap-3 md:w-[40vw]">
                     <span>{item.desc}</span>
                   </h1>
                   <div className=" flex justify-start items-center gap-10 relative w-96">
-                    <button className=" cursor-pointer md:p-5 p-2 text-white rounded-md bg-orange-500 hover:bg-orange-600 transition-all duration-300 ease-in">
+                    <button className=" cursor-pointer md:p-5 p-2 text-white rounded-md bg-sky-500 hover:bg-orange-600 transition-all duration-300 ease-in">
                       <Link href={paths.donate}>Donate Now</Link>
                     </button>
                     <Image
