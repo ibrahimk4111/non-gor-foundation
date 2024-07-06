@@ -43,7 +43,7 @@ const CarouselPage: React.FC = () => {
                     <span>{item.desc}</span>
                   </h1>
                   <div className=" flex justify-start items-center gap-10 relative w-96">
-                    <button className=" cursor-pointer md:p-5 p-2 text-white rounded-md bg-sky-500 hover:bg-orange-600 transition-all duration-300 ease-in">
+                    <button className=" cursor-pointer md:p-5 p-2 text-white rounded-md bg-orange-500 hover:bg-orange-600 transition-all duration-300 ease-in">
                       <Link href={paths.donate}>Donate Now</Link>
                     </button>
                     <Image

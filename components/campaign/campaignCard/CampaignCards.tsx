@@ -12,7 +12,7 @@ interface propsType {
 
 const CampaignCards = ({ image, header, text, logo }: propsType) => {
   return (
-    <div className=" border-2 rounded-lg ">
+    <div className=" rounded-lg bg-white hover:outline hover:outline-lime-700 transition-all duration-300 ease-in ">
       <section className=" h-auto overflow-hidden flex justify-center items-center rounded-t-lg">
         <Image src={image} alt="campaign image" className=" h-auto w-auto " />
       </section>

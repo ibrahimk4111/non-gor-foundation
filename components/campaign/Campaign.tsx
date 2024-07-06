@@ -8,10 +8,10 @@ import { cardDatas } from "@/api/campaign/cardsData";
 
 const Campaign = () => {
   return (
-    <div id="campagin">
+    <div id="campagin" >
       <div className=" py-20">
         <div className=" container mx-auto">
-          <div className=" grid grid-cols-12 ">
+          <div className=" grid md:grid-cols-12 gap-y-5 ">
              <div className=" md:col-span-5">
               <h1 className=" lg:text-2xl text-xl underline mb-5 text-green-800 ">Current Campaign</h1>
               <p className=" text-justify ">Lorem ipsum dolor sit amet  consequuntur reprehenderit, laboriosam laborum quas quae dicta deserunt alias, magni quos dolores esse veniam. Numquam beatae minus reprehenderit explicabo!</p>
