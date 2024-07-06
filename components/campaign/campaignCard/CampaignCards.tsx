@@ -18,14 +18,14 @@ const CampaignCards = ({ image, header, text, logo }: propsType) => {
       </section>
 
       <section className=" relative p-2 ">
-        <div className=" flex justify-center items-center ">
+        {/* <div className=" flex justify-center items-center ">
           <Image
             src={logo}
             alt="logo"
             className=" absolute -top-5 w-10 h-auto rounded-full shadow-md shadow-black "
           />
-        </div>
-        <h1 className=" text-center text-green-700 mt-10 mb-5 ">{header}</h1>
+        </div> */}
+        <h1 className=" text-center text-green-700 my-5 ">{header}</h1>
         <p className=" px-2 text-sm text-justify line-clamp-4">
           {text} 
         </p>
