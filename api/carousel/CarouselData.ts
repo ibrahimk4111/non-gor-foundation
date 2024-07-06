@@ -7,7 +7,7 @@ export const carouselDatas = [
         id: 1,
         img: campaignImage1,
         title: "Self-supporting project-2",
-        desc : "With the motto 'Constant commi."
+        desc : "Construction of rich libra."
     },
     {
         id: 2,
