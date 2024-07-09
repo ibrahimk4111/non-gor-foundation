@@ -1,37 +1,63 @@
 import React from "react";
-import small_business from '@/public/small-business-management.jpg';
 import Image from "next/image";
-import Link from "next/link";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { campaignDatas } from "@/api/campaign/campaignData";
 
-interface propsType {
-  image: any;
-  header: string;
-  text: string;
-}
-
-const CampaignCards = ({ image, header, text }: propsType) => {
+const CampaignCards = () => {
   return (
-    <div className=" border-2 rounded-lg ">
-      <section className=" h-auto overflow-hidden flex justify-center items-center rounded-t-lg">
-        <Image
-          src={image}
-          alt="assunnah_complex"
-          className=" h-auto w-auto"
-        />
-      </section>
+    <>
+      {campaignDatas &&
+        campaignDatas.map((item, index) => (
+          <div className=" rounded-lg bg-white ">
+            <div className=" h-52 overflow-hidden flex justify-center items-center rounded-md">
+              <Image src={item.img} alt="campaign image" />
+            </div>
 
-      <section className="p-2 space-y-2">
-        <h1 className=" text-xl text-center text-green-700">
-          {header}
-        </h1>
-        <div className=" px-2 text-sm text-justify">
-          {
-            text.length > 200 ? (<div>{text.slice(0, 200) + "....."}<button className=" text-green-400">Read More</button></div>) : text
-          }
-        </div>
-      </section>
-    </div>
-  )
-}
+            <div className=" relative p-2 ">
+              <h1 className=" text-center text-green-700 my-5 ">
+                {item.header}
+              </h1>
+              <p className=" px-2 text-sm text-center line-clamp-4">
+                {item.text}
+              </p>
 
-export default CampaignCards
+              <div className=" flex justify-center items-center w-full ">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <h1 className=" mt-5 cursor-pointer hover:underline hover:text-green-700 hover:scale-110 transition-all duration-300 ease-in text-center">
+                      Read More
+                    </h1>
+                  </DialogTrigger>
+                  <DialogContent className=" overflow-y-scroll h-[90vh]">
+                    <div className=" flex justify-center items-center rounded-md">
+                      <Image
+                        src={item.img}
+                        alt="assunnah_complex"
+                        className=" h-auto w-full"
+                      />
+                    </div>
+
+                    <DialogTitle className=" leading-6 text-green-700 ">
+                      {item.header}
+                    </DialogTitle>
+                    <DialogDescription className=" leading-6 ">
+                      {item.text}
+                    </DialogDescription>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </div>
+          </div>
+        ))}
+    </>
+  );
+};
+
+export default CampaignCards;

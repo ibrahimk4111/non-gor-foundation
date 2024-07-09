@@ -54,7 +54,7 @@ const ImageComp: React.FC = () => {
       >
         {galleryImages.map((img, index) => (
           <a key={index} href={img.src}>
-            <Image alt={`img${index}`} src={img} className=" w-full h-full rounded-md" />
+            <Image alt={`img${index}`} src={img} className=" hover:scale-125 w-full h-full rounded-md transition-all duration-300 ease-in" />
           </a>
         ))}
       </LightGallery>
