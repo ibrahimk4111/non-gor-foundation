@@ -38,16 +38,7 @@ const Campaign = () => {
           
           <h1 className=" text-center font-semibold text-xl my-20 ">Campaigns</h1>
           <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
-            {campaignDatas &&
-              campaignDatas.map((data) => (
-                <CampaignCards
-                  key={data.id}
-                  image={data.img}
-                  header={data.header}
-                  text={data.text}
-                  logo={data.logo}
-                />
-              ))}
+            <CampaignCards />
           </div>
         </div>
       </div>

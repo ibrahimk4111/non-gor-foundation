@@ -26,7 +26,7 @@ const NavBar: React.FC = () => {
     " cursor-pointer py-2 px-3 text-slate-500 hover:text-black hover:bg-slate-200 rounded-md transition-all duration-500 ease-in-out";
 
   return (
-    <div>
+    <div className=" border-b-2 ">
       <div className=" flex justify-start gap-5">
         <div className="p-2 flex gap-10 h-full w-auto ">
           <div className=" md:hidden block">
@@ -97,26 +97,26 @@ const NavBar: React.FC = () => {
                     </div>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-56">
-                    <Link href={paths.activites.human_needs}>
+                    <Link href={paths.activites.human_needs} scroll={true}>
                       <DropdownMenuItem>
                         Human needs (Food, Housing, Clothing)
                       </DropdownMenuItem>
                     </Link>
-                    <Link href={paths.activites.education}>
+                    <Link href={paths.activites.education} scroll={true}>
                       <DropdownMenuItem>
                         Education Health Training The Culture
                       </DropdownMenuItem>
                     </Link>
-                    <Link href={paths.activites.health}>
+                    <Link href={paths.activites.health} scroll={true}>
                       <DropdownMenuItem>Health</DropdownMenuItem>
                     </Link>
-                    <Link href={paths.activites.training}>
+                    <Link href={paths.activites.training} scroll={true}>
                       <DropdownMenuItem>Training</DropdownMenuItem>
                     </Link>
-                    <Link href={paths.activites.the_culture}>
+                    <Link href={paths.activites.the_culture} scroll={true}>
                       <DropdownMenuItem>The Culture</DropdownMenuItem>
                     </Link>
-                    <Link href={paths.activites.awareness}>
+                    <Link href={paths.activites.awareness} scroll={true}>
                       <DropdownMenuItem>Awareness</DropdownMenuItem>
                     </Link>
                   </DropdownMenuContent>
@@ -130,14 +130,14 @@ const NavBar: React.FC = () => {
                 <Link href={paths.news}>News</Link>
               </li>
               <li className={navItemClassNames}>
-                <Link href={paths.contact}>Contact</Link>
+                <Link href={paths.contact} >Contact</Link>
               </li>
             </ul>
             <ul className=" flex justify-start items-center gap-2 p-2">
               <li >
                 <DropdownMenu modal={false}>
                   <DropdownMenuTrigger asChild>
-                    <p className=" cursor-pointer py-2 px-5 text-white rounded-md bg-orange-500 hover:bg-sky-600 transition-all duration-300 ease-in">
+                    <p className=" cursor-pointer py-2 px-5 text-white rounded-md bg-green-800 hover:bg-sky-600 transition-all duration-300 ease-in">
                       Register Now
                     </p>
                   </DropdownMenuTrigger>
@@ -157,7 +157,7 @@ const NavBar: React.FC = () => {
                   </DropdownMenuContent>
                 </DropdownMenu>
               </li>
-              <li className=" cursor-pointer py-2 px-5 text-white rounded-md bg-orange-500 hover:bg-sky-600 transition-all duration-300 ease-in">
+              <li className=" cursor-pointer py-2 px-5 text-white rounded-md bg-green-800 hover:bg-sky-600 transition-all duration-300 ease-in">
                 <Link href={paths.donate}>Donate Now</Link>
               </li>
             </ul>

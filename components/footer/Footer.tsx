@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <div className=" bg-gradient-to-t from-green-200 to-green-50">
       <div className=" py-20 ">
-        <div className=" container mx-auto grid grid-cols-12 ">
-          <div className=" md:col-span-5 ">
+        <div className=" container mx-auto md:grid grid-cols-12 md:gap-0 ">
+          <div className=" md:col-span-5 p-4">
             <h1 className=" text-3xl font-bold mb-5 ">Newsletter</h1>
             <form action="" className=" flex justify-start items-center">
               <input
@@ -19,9 +19,9 @@ const Footer = () => {
               </button>
             </form>
           </div>
-          <div className=" col-span-2 md:block hidden "></div>
-          <div className=" md:col-span-5 ">
-            <h1 className=" text-4xl text-center font-bold tracking-wider">Stay Connected With Us. May Allah Bless You All. </h1>
+          <div className=" md:col-span-2 "></div>
+          <div className=" md:col-span-5 md:mt-0 mt-10 ">
+            <h1 className=" text-4xl text-center font-bold tracking-wider leading-10">Stay Connected With Us. May Allah Bless Us All. </h1>
           </div>
         </div>
       </div>

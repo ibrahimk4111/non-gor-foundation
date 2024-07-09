@@ -3,6 +3,7 @@ import React from "react";
 import golden_gate from "@/public/Profile Photo logo.jpg";
 import office from "@/public/campaignImg/office.jpeg";
 import Link from "next/link";
+import { paths } from "@/utils/paths";
 
 const About: React.FC = () => {
   const linkPointsClassNames =
@@ -41,6 +42,9 @@ const About: React.FC = () => {
           non-political, non-profit voluntary social welfare organization
           InshaAllah.
         </p>
+
+
+        {/* activites in about page */}
         <h1>
           <span className=" text-xl font-bold tracking-wider ">Our Activites</span>
         </h1>
@@ -49,29 +53,29 @@ const About: React.FC = () => {
           <div className=" space-y-2">
             <div className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
-              <Link href="#">Human needs (Food, Housing, Clothing)</Link>
+              <Link href={paths.activites.human_needs} scroll={true}>Human needs (Food, Housing, Clothing)</Link>
             </div>
             <div className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
-              <Link href="#">Education</Link>
+              <Link href={paths.activites.education} scroll={true}>Education</Link>
             </div>
             <div className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
-              <Link href="#">Health</Link>
+              <Link href={paths.activites.health} scroll={true}>Health</Link>
             </div>
           </div>
           <div className=" space-y-2">
             <div className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
-              <Link href="#">Training</Link>
+              <Link href={paths.activites.training} scroll={true}>Training</Link>
             </div>
             <div className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
-              <Link href="#">The Culture</Link>
+              <Link href={paths.activites.the_culture} scroll={true}>The Culture</Link>
             </div>
             <div className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
-              <Link href="#">Awareness</Link>
+              <Link href={paths.activites.awareness} scroll={true}>Awareness</Link>
             </div>
           </div>
           {/* <div className=" h-20 bg-slate-300 absolute top-2 left-[6px] w-[1px] "></div> */}
