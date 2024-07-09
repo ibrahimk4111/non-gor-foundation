@@ -1,29 +1,64 @@
-import React from "react";
-import member from '@/public/member-conference-2024-1.jpeg';
+import { newsDatas } from "@/api/news/News";
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
+
 import Image from "next/image";
-import Link from "next/link";
+
 
 const NewsCardsCom: React.FC = () => {
   return (
-    <div className=" rounded-lg overflow-hidden bg-white">
-      <section>
-        <Image src={member} alt="assunnah_complex" />
-      </section>
+    <>
+      {newsDatas &&
+        newsDatas.map((item, index) => (
+          <div className=" rounded-lg overflow-hidden bg-white" key={index}>
+            <div className=" h-48 overflow-hidden flex justify-center items-center ">
+              <Image
+                src={item.img}
+                alt="assunnah_complex"
+                className=" h-auto w-full"
+              />
+            </div>
 
-      <section className="p-5 flex flex-col justify-between items-start gap-3">
-        <h1 className=" text-xl text-center text-green-700">
-          As-Sunnah Foundation Masjid Complex
-        </h1>
-        <p className="h-32 px-2">
-          The As-Sunnah Foundation Masjid Complex will be the focal point of the
-          multi-faceted activities of the As-Sunnah Foundation for the welfare
-          of the country, nation...<Link href="#" className="py-3 px-5 underline text-red-600 text-sm font-semibold">
-            Read More
-          </Link>
-        </p>
-      </section>
-    </div>
-  )
-}
+            <div className="p-4 flex flex-col justify-between items-start gap-3">
+              <h1 className=" text-green-700">{item.title}</h1>
+              <p className=" line-clamp-4 text-sm">{item.desc}</p>
+              <div className=" flex justify-center items-center w-full ">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <h1 className=" cursor-pointer hover:underline hover:text-green-700 hover:scale-110 transition-all duration-300 ease-in text-center">
+                      Read More
+                    </h1>
+                  </DialogTrigger>
+                  <DialogContent className=" overflow-y-scroll h-[90vh] ">
+                    <div className=" flex justify-center items-center rounded-md">
+                      <Image
+                        src={item.img}
+                        alt="assunnah_complex"
+                        className=" h-auto w-full"
+                      />
+                    </div>
+                    <DialogHeader>
+                      <DialogTitle className=" py-4 leading-6 text-green-700 ">{item.title}</DialogTitle>
+                      <DialogDescription className=" leading-6 " >
+                        {item.desc}
+                      </DialogDescription>
+                    </DialogHeader>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </div>
+          </div>
+        ))}
+    </>
+  );
+};
 
-export default NewsCardsCom
+export default NewsCardsCom;

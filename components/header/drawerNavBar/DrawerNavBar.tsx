@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/drawer";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
-import logoName from "@/public/Nogor Foundation.jpg";
+import logoName from "@/public/Nogor-Foundation.png";
 import Image from "next/image";
 import { paths } from "@/utils/paths";
 
@@ -30,14 +30,14 @@ const DrawerNavBar: React.FC = () => {
     } rounded-md p-2 font-semibold`;
 
   return (
-    <Drawer direction="left">
-      <DrawerTrigger className="  p-2 ">
-        <RxHamburgerMenu className=" text-xl " />
+    <Drawer direction="left" >
+      <DrawerTrigger>
+        <RxHamburgerMenu className=" w-12 h-12 hover:bg-slate-200 p-2  " />
       </DrawerTrigger>
       <DrawerContent className=" list-none ">
         <div>
           <ul className=" gap-1 py-5 w-full ">
-            <li className=" flex justify-center items-center h-10 overflow-hidden mb-5 px-10">
+            <li className=" flex justify-center items-center h-10 overflow-hidden mb-5 ">
               <Image src={logoName} alt="..." className=" h-full w-auto " />
             </li>
 

@@ -1,15 +1,12 @@
 import React from "react";
 import ActivityCard from "./activitycards/ActivityCard";
-import ActivityImage1 from "@/public/activitiesLogo/Activities-1.png";
-
 import { activitesData } from "@/api/activities/Activities";
-import Link from "next/link";
 
 const Activites = () => {
   return (
-    <div className=" py-5 bg-slate-100" id="activities">
+    <div className=" py-20 bg-green-50" id="activities">
       <div className=" container mx-auto">
-        <h1 className=" lg:text-2xl text-xl text-center mb-5 underline underline-offset-4 ">
+        <h1 className=" text-xl text-center mb-10 font-bold">
           Activites
         </h1>
         <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2">
