@@ -6,17 +6,9 @@ import Link from "next/link";
 const page = () => {
   return (
     <div>
-      <div>
-        <Footstep>
-          <Link
-            href={paths.home}
-            className=" cursor-pointer hover:text-green-800 "
-          >
-            Home
-          </Link>{" "}
-          / <span className=" text-green-800 ">Activities</span>
-        </Footstep>
-      </div>
+      <Footstep>
+        <Link href={paths.home} className=" cursor-pointer hover:text-green-800 ">Home</Link> / <span className=" text-green-800 ">Activities</span>
+      </Footstep>
       <Activites />
     </div>
   );
