@@ -3,6 +3,9 @@ import { Input } from "../ui/input";
 import ImageComp from "../Gallery/imageComp/ImageComp";
 
 const Footer = () => {
+
+  const liClassNames = " hover:text-green-500 hover:translate-x-3 transition-all duration-300 ease-in-out"
+
   return (
     <div className=" bg-green-950 text-white py-16 ">
       <div className=" container mx-auto grid md:grid-cols-4 gap-10  ">
@@ -18,13 +21,13 @@ const Footer = () => {
         <div>
           <h1 className=" mb-5 text-2xl font-bold">Elements</h1>
           
-          <ul>
-            <li className=" hover:text-green-500 hover:translate-x-3 transition-all duration-300 ease-in-out"><a href="#">* Out Events</a></li>
-            <li className=" hover:text-green-500 hover:translate-x-3 transition-all duration-300 ease-in-out"><a href="#">* Ask any Question</a></li>
-            <li className=" hover:text-green-500 hover:translate-x-3 transition-all duration-300 ease-in-out"><a href="#">* Refund Policy</a></li>
-            <li className=" hover:text-green-500 hover:translate-x-3 transition-all duration-300 ease-in-out"><a href="#">* Payment Options</a></li>
-            <li className=" hover:text-green-500 hover:translate-x-3 transition-all duration-300 ease-in-out"><a href="#">* Privacy Policy</a></li>
-            <li className=" hover:text-green-500 hover:translate-x-3 transition-all duration-300 ease-in-out"><a href="#">* Terms & Conditions</a></li>
+          <ul className=" space-y-3 ">
+            <li className={liClassNames}><a href="#">* Out Events</a></li>
+            <li className={liClassNames}><a href="#">* Ask any Question</a></li>
+            <li className={liClassNames}><a href="#">* Refund Policy</a></li>
+            <li className={liClassNames}><a href="#">* Payment Options</a></li>
+            <li className={liClassNames}><a href="#">* Privacy Policy</a></li>
+            <li className={liClassNames}><a href="#">* Terms & Conditions</a></li>
           </ul>
         </div>
 
@@ -32,19 +35,19 @@ const Footer = () => {
         <div>
           <h1 className=" mb-5 text-2xl font-bold">Quick Links</h1>
           
-          <ul>
-            <li className=" hover:text-green-500 hover:translate-x-3 transition-all duration-300 ease-in-out"><a href="#">* Activities</a></li>
-            <li className=" hover:text-green-500 hover:translate-x-3 transition-all duration-300 ease-in-out"><a href="#">* Volunteer</a></li>
-            <li className=" hover:text-green-500 hover:translate-x-3 transition-all duration-300 ease-in-out"><a href="#">* Campaigns</a></li>
-            <li className=" hover:text-green-500 hover:translate-x-3 transition-all duration-300 ease-in-out"><a href="#">* Contact</a></li>
-            <li className=" hover:text-green-500 hover:translate-x-3 transition-all duration-300 ease-in-out"><a href="#">* Register</a></li>
+          <ul className=" space-y-3">
+            <li className={liClassNames}><a href="#">* Activities</a></li>
+            <li className={liClassNames}><a href="#">* Volunteer</a></li>
+            <li className={liClassNames}><a href="#">* Campaigns</a></li>
+            <li className={liClassNames}><a href="#">* Contact</a></li>
+            <li className={liClassNames}><a href="#">* Register</a></li>
           </ul>
         </div>
         
         {/* newsletter */}
         <div>
-          <h1 className=" mb-5 text-2xl font-bold">Newsletter</h1>
-          
+          <h1 className=" text-2xl font-bold">Newsletter</h1>
+          <p className=" my-5">Lorem ipsum dolor sit amet.</p>
           <form action="" className=" flex flex-col justify-start items-start gap-5">
             <input
               type="email"

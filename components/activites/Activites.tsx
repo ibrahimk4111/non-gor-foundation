@@ -4,8 +4,8 @@ import { activitesData } from "@/api/activities/Activities";
 
 const Activites = () => {
   return (
-    <div className=" py-20 bg-green-50" id="activities">
-      <div className=" container mx-auto">
+    <div id="activities">
+      <div className=" container mx-auto bg-green-50 py-20">
         <h1 className=" text-xl text-center mb-10 font-bold">
           Activites
         </h1>

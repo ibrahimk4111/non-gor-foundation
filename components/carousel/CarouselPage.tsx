@@ -34,31 +34,20 @@ const CarouselPage: React.FC = () => {
                 backgroundPosition: "center",
               }}
             >
-              <div className=" absolute left-0 top-0 flex justify-center items-center md:p-32 p-10 bg-gradient-to-r from-green-950 via-sky-800/90 to-transparent w-full h-full">
-                <div className=" text-white md:space-y-5 space-y-3 w-full relative">
-                  <span className=" bg-green-800/40 backdrop-blur-sm py-2 md:px-8 px-3 rounded-md md:text-base text-sm ">
-                    {item.title}
-                  </span>
-                  <h1 className=" md:text-7xl text-5xl font-semibold flex flex-col md:gap-3 md:w-[40vw]">
-                    <span>{item.desc}</span>
-                  </h1>
-                  <div className=" flex justify-start items-center gap-10 relative w-96">
-                    <button className=" cursor-pointer md:p-5 p-2 text-white rounded-md bg-green-500 hover:bg-orange-600 transition-all duration-300 ease-in">
-                      <Link href={paths.donate}>Donate Now</Link>
-                    </button>
-                    <Image
-                      src={sliderShape}
-                      alt="img"
-                      className=" absolute -top-10 right-0 md:block hidden"
-                    />
-                  </div>
+              <div className=" md:p-24 p-10 bg-black/20 absolute left-0 top-0 flex justify-center items-end w-full h-full">
+                <div className=" text-white flex flex-col gap-7 justify-center items-center w-full md:max-w-[50vw]">
+                  <span className="  md:text-base text-sm ">{item.title}</span>
+                  <h1 className=" md:text-6xl text-4xl font-semibold text-center">{item.desc}</h1>
+                  <button className=" cursor-pointer p-2 text-white rounded-md bg-green-700 hover:bg-orange-600 transition-all duration-300 ease-in">
+                    <Link href={paths.donate}>Donate Now</Link>
+                  </button>
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        {/* <CarouselPrevious />
-        <CarouselNext /> */}
+        <CarouselPrevious className="md:flex hidden" />
+        <CarouselNext className=" md:flex hidden " />
       </Carousel>
     </div>
   );

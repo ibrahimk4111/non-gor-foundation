@@ -206,7 +206,7 @@ export const CarouselPrevious = React.forwardRef<HTMLButtonElement, React.Compon
         "absolute lg:h-12 h-8 lg:w-12 w-8 rounded-full bg-slate-900/50 backdrop-blur-sm text-white ",
         orientation === "horizontal"
           ? "lg:left-10 -left-4 top-1/2 -translate-y-1/2"
-          : "lg:-top-6 -top-4 left-1/2 -translate-x-1/2 rotate-90",
+          : "lg:top-6 top-4 left-1/2 -translate-x-1/2",
         className
       )}
       disabled={!canScrollPrev}

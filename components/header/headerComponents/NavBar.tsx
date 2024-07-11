@@ -137,7 +137,7 @@ const NavBar: React.FC = () => {
               <li >
                 <DropdownMenu modal={false}>
                   <DropdownMenuTrigger asChild>
-                    <p className=" cursor-pointer py-2 px-5 text-white rounded-md bg-green-800 hover:bg-sky-600 transition-all duration-300 ease-in">
+                    <p className=" cursor-pointer py-2 px-5 text-white rounded-md bg-green-800 hover:bg-green-700 transition-all duration-300 ease-in">
                       Register Now
                     </p>
                   </DropdownMenuTrigger>
@@ -157,7 +157,7 @@ const NavBar: React.FC = () => {
                   </DropdownMenuContent>
                 </DropdownMenu>
               </li>
-              <li className=" cursor-pointer py-2 px-5 text-white rounded-md bg-green-800 hover:bg-sky-600 transition-all duration-300 ease-in">
+              <li className=" cursor-pointer py-2 px-5 text-white rounded-md bg-green-800 hover:bg-green-700 transition-all duration-300 ease-in">
                 <Link href={paths.donate}>Donate Now</Link>
               </li>
             </ul>
