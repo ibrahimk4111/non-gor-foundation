@@ -1,13 +1,13 @@
 import {MdMail} from 'react-icons/md'
 import {HiLocationMarker} from 'react-icons/hi'
-import {RiFacebookFill} from 'react-icons/ri'
+import {RiFacebookFill, RiInstagramFill} from 'react-icons/ri'
 import { AiOutlineWhatsApp } from "react-icons/ai";
 
 import Link from "next/link";
 import { IoLogoYoutube } from 'react-icons/io';
 
 const TopBar: React.FC = () => {
-  const classNameforIcon=' text-slate-500 hover:text-green-800 group-hover:text-green-800 transition-all duration-500 ease-in-out'
+  const classNameforIcon=' text-slate-500 hover:scale-125 hover:text-amber-800 group-hover:text-amber-800 transition-all duration-500 ease-in-out'
   const classNameforText = ' text-slate-600 text-sm hover:underline hover:text-green-800 group-hover:text-green-800 transition-all duration-500 ease-in-out';
   let size = 16;
   return (
@@ -22,6 +22,9 @@ const TopBar: React.FC = () => {
           </Link>
           <Link href="https://www.facebook.com/nongor.official" >
             <IoLogoYoutube size={size} className={classNameforIcon} />
+          </Link>
+          <Link href="https://www.facebook.com/nongor.official" >
+            <RiInstagramFill size={size} className={classNameforIcon} />
           </Link>
         </div>
         <div className='flex justify-end items-center gap-4 '>

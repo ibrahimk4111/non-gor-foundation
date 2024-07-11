@@ -56,10 +56,10 @@ const NewsCardsCom: React.FC = () => {
                     </DialogContent>
                   </Dialog>
                 </div>
-                <div className=" flex items-center justify-between w-full bg-slate-50 rounded-md p-1">
-                  <h1>By: John Doe</h1>
+                <div className=" text-slate-400 flex items-center justify-between w-full bg-slate-50 rounded-md p-1">
+                  <h1>By: {item.name}</h1>
                   <p className=" font-bold blur-sm">|</p>
-                  <div className=" flex items-center gap-2"> <FcLike /> <span>78</span></div>
+                  <div className=" flex items-center gap-2"> <FcLike /> <span>{item.rate}</span></div>
                 </div>
               </div>
             </div>
