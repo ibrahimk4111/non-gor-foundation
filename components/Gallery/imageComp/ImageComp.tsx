@@ -48,7 +48,7 @@ const ImageComp: React.FC = () => {
   return (
     <>
       <LightGallery
-        elementClassNames=" grid grid-cols-3 gap-2"
+        elementClassNames=" grid grid-cols-3 gap-1"
         speed={500}
         plugins={[lgThumbnail, lgZoom]}
       >

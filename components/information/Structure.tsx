@@ -7,7 +7,7 @@ const Structure = () => {
   return (
     <>
       <Footstep>
-        <Link href={paths.home} className=" cursor-pointer hover:text-green-800 ">Home</Link> / <span className=" text-green-800 ">About</span>
+        <Link href={paths.home} className=" cursor-pointer hover:text-green-800 ">Home</Link> / <span className=" text-green-800 ">Structure</span>
       </Footstep>
       <div className=" py-20 ">
         <h2 className="text-center py-3 text-2xl font-semibold">

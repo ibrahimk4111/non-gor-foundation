@@ -28,7 +28,7 @@ const TopButton = () => {
           onClick={backToTop}
           className={` ${
             isVisible ? "block" : "hidden"
-          } w-12 h-12 p-1 bg-white text-[#00cba9] hover:scale-125 rounded-full shadow shadow-theme transition-all duration-300 ease-in`}
+          } w-10 h-10 p-1 bg-white text-[#00cba9] hover:scale-125 rounded-full shadow shadow-theme transition-all duration-300 ease-in`}
         />
       </div>
     </div>

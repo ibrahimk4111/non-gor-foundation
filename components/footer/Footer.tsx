@@ -13,7 +13,6 @@ const Footer = () => {
         {/* gallery */}
         <div>
           <h1 className=" mb-5 text-2xl font-bold">Gallery</h1>
-          
           <ImageComp />
         </div>
         
