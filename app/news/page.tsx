@@ -8,7 +8,7 @@ const NewsPage = () => {
   return (
     <div>
         <Footstep>
-          <Link href={paths.news} className=" cursor-pointer hover:text-green-800 ">Home</Link> / <span className=" text-green-800 ">News</span>
+          <Link href={paths.home} className=" cursor-pointer hover:text-green-800 ">Home</Link> / <span className=" text-green-800 ">News</span>
         </Footstep>
         <News />
     </div>

@@ -3,12 +3,19 @@ import React, { useState } from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AboutData } from "@/api/about/About";
 import Link from "next/link";
+import Footstep from "../footStep/Footstep";
+import { usePathname } from "next/navigation";
+import { paths } from "@/utils/paths";
 
 const About: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>(AboutData[0].name);
+  const urlPaths = usePathname()
 
   return (
     <div>
+      <Footstep>
+        <Link href={paths.home} className=" cursor-pointer hover:text-green-800 ">Home</Link> / <span className=" text-green-800 ">About</span>
+      </Footstep>
       <div className="text-white bg-green-700">
         <h2 className="text-center py-3 text-2xl font-semibold">About Us</h2>
       </div>
