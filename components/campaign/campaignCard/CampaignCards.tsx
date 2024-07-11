@@ -15,7 +15,7 @@ const CampaignCards = () => {
     <>
       {campaignDatas &&
         campaignDatas.map((item, index) => (
-          <div key={index} className=" rounded-lg bg-white ">
+          <div key={index} className=" rounded-lg bg-white hover:shadow-xl shadow-black">
             <div className=" h-52 overflow-hidden flex justify-center items-center rounded-md">
               <Image src={item.img} alt="campaign image" />
             </div>
