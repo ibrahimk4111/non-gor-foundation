@@ -4,13 +4,14 @@ import NewsCardsCom from "./newsCards/NewsCardsCom";
 
 const News = () => {
   return (
-    <div className=" py-10 bg-green-50 ">
+    <div className=" py-16 bg-green-50 ">
       <div className=" container mx-auto">
-        <ul className=" mb-10 flex items-center gap-2">
-          <li><Link href="/" className=" text-slate-400 hover:text-black ">Home</Link></li>
-          <li>/</li>
-          <li><Link href="#">Link</Link></li>
-        </ul>
+        <div className=" mb-10">
+          <div>
+            <h1 className=" font-semibold text-2xl ">Related News</h1>
+          </div>
+          <hr className=" bg-white " />
+        </div>
         <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 ">
           <NewsCardsCom />
         </div>

@@ -2,7 +2,7 @@ import ContactForm from "@/components/contactForm/ContactForm";
 
 const Contact: React.FC = () => {
   return (
-    <section className=" mb-10 ">
+    <section className=" py-10 ">
       <div className=" container mx-auto ">
         <div className=" grid lg:grid-cols-2 grid-cols-1 gap-2 ">
           <ContactForm />

@@ -12,7 +12,6 @@ interface propsType {
 }
 
 const Cards = ({ image, header, text, logo, button }: propsType) => {
-  console.log({image, header, text, logo})
   return (
     <div className=" group" >
       <div className=" h-44 overflow-hidden flex justify-center items-center rounded-lg">

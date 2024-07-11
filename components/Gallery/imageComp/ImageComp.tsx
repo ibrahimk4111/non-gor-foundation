@@ -48,13 +48,13 @@ const ImageComp: React.FC = () => {
   return (
     <>
       <LightGallery
-        elementClassNames=" grid lg:grid-cols-4 md:grid-cols-3 gird-cols-2 gap-2"
+        elementClassNames=" grid grid-cols-3 gap-2"
         speed={500}
         plugins={[lgThumbnail, lgZoom]}
       >
         {galleryImages.map((img, index) => (
           <a key={index} href={img.src}>
-            <Image alt={`img${index}`} src={img} className=" hover:scale-125 w-full h-full rounded-md transition-all duration-300 ease-in" />
+            <Image alt={`img${index}`} src={img} className=" hover:scale-125 w-full h-full transition-all duration-300 ease-in" />
           </a>
         ))}
       </LightGallery>
