@@ -4,8 +4,11 @@ import golden_gate from "@/public/Profile Photo logo.jpg";
 import office from "@/public/campaignImg/office.jpeg";
 import Link from "next/link";
 import { paths } from "@/utils/paths";
+import {motion} from 'framer-motion'
+import { useAnimation } from "../context/AnimationContext";
 
 const About: React.FC = () => {
+  const {parent, children} = useAnimation()
   const linkPointsClassNames =
     " h-3 w-3 bg-white group-hover:bg-green-800 border-2 border-green-700 rounded-full z-10 transition-all duration-500 ease-in";
   const linkClassNames =
@@ -16,14 +19,14 @@ const About: React.FC = () => {
         <div className=" h-full w-full rounded-md overflow-hidden " style={{ backgroundImage: `url(${office.src})`, backgroundSize:"cover", backgroundPosition: "center"}}></div>
       </div>
       <div className=" lg:col-span-7 col-span-12 md:px-5">
-        <h1 className=" text-2xl text-green-700 flex gap-5 items-center  ">
+        <div className=" text-green-700 flex gap-5 items-center  ">
           <Image
             src={golden_gate}
             alt="foundation logo"
             className=" h-14 w-auto"
           />
-          <span className=" text-4xl font-bold tracking-wider ">Nongor Foundation</span>
-        </h1>
+          <h1 className=" font-semibold tracking-wider uppercase ">Nongor Foundation</h1>
+        </div>
         <hr className=" bg-slate-300 my-3" />
         <p className=" py-2 text-justify">
           "Eternal conviction in building a prosperous society" - With this
@@ -45,41 +48,45 @@ const About: React.FC = () => {
 
 
         {/* activites in about page */}
-        <h1>
-          <span className=" text-xl font-bold tracking-wider ">Our Activites</span>
+        <h1 className=" font-semibold tracking-wider text-green-700 mt-5 uppercase">
+          Our Activities
         </h1>
         <hr className=" bg-slate-300 my-3" />
-        <section className=" relative flex justify-start items-center gap-5 ">
-          <div className=" space-y-2">
-            <div className={linkClassNames}>
+        <div className=" relative flex justify-start items-center gap-5 ">
+          <motion.div 
+            initial="hidden"
+            whileInView="show"
+            viewport={{once:true}}
+            variants={parent}
+            className=" grid grid-cols-2 gap-x-5 gap-y-1 "
+          >
+            <motion.div variants={children} className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
               <Link href={paths.activites.human_needs} scroll={true}>Human needs (Food, Housing, Clothing)</Link>
-            </div>
-            <div className={linkClassNames}>
+            </motion.div>
+            <motion.div variants={children} className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
               <Link href={paths.activites.education} scroll={true}>Education</Link>
-            </div>
-            <div className={linkClassNames}>
+            </motion.div>
+            <motion.div variants={children} className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
               <Link href={paths.activites.health} scroll={true}>Health</Link>
-            </div>
-          </div>
-          <div className=" space-y-2">
-            <div className={linkClassNames}>
+            </motion.div>
+            <motion.div variants={children} className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
               <Link href={paths.activites.training} scroll={true}>Training</Link>
-            </div>
-            <div className={linkClassNames}>
+            </motion.div>
+            <motion.div variants={children} className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
               <Link href={paths.activites.the_culture} scroll={true}>The Culture</Link>
-            </div>
-            <div className={linkClassNames}>
+            </motion.div>
+            <motion.div variants={children} className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
               <Link href={paths.activites.awareness} scroll={true}>Awareness</Link>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
           {/* <div className=" h-20 bg-slate-300 absolute top-2 left-[6px] w-[1px] "></div> */}
-        </section>
+        </div>
       </div>
     </div>
   );

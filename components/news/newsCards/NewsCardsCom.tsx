@@ -28,14 +28,14 @@ const NewsCardsCom: React.FC = () => {
 
             <div className=" relative">
               <div className=" absolute -top-10 hover:shadow-xl shadow-black space-y-3 bg-white m-4 p-4 rounded-md">
-                <h1 className=" text-green-700 font-semibold">{item.title}</h1>
+                <h4 className=" text-green-700 font-semibold">{item.title}</h4>
                 <p className=" line-clamp-6 text-sm">{item.desc}</p>
                 <div className=" flex justify-center items-center w-full ">
                   <Dialog>
                     <DialogTrigger asChild>
-                      <h1 className=" cursor-pointer hover:underline text-green-700 my-5 hover:scale-110 transition-all duration-300 ease-in text-center">
+                      <p className=" cursor-pointer hover:underline text-green-700 my-5 hover:scale-110 transition-all duration-300 ease-in text-center">
                         Read More
-                      </h1>
+                      </p>
                     </DialogTrigger>
                     <DialogContent className=" overflow-y-scroll h-[90vh] ">
                       <div className=" flex justify-center items-center rounded-md">
@@ -57,7 +57,7 @@ const NewsCardsCom: React.FC = () => {
                   </Dialog>
                 </div>
                 <div className=" text-slate-400 flex items-center justify-between w-full bg-slate-50 rounded-md p-1">
-                  <h1>By: {item.name}</h1>
+                  <h4>By: {item.name}</h4>
                   <p className=" font-bold blur-sm">|</p>
                   <div className=" flex items-center gap-2"> <FcLike /> <span>{item.rate}</span></div>
                 </div>
