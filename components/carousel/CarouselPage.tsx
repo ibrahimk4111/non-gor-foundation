@@ -1,31 +1,43 @@
-"use client";
+import { motion } from "framer-motion";
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade, Autoplay } from "swiper/modules";
 
-import * as React from "react";
-import ass from "@/public/assunnah-complex.jpg";
-import sliderShape from "@/public/slider-shape-1.png";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/effect-fade";
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Image from "next/image";
-
-import Autoplay from "embla-carousel-autoplay";
+import { carouselDatas } from "@/api/carousel/CarouselData";
 import Link from "next/link";
 import { paths } from "@/utils/paths";
-import { carouselDatas } from "@/api/carousel/CarouselData";
+import { useAnimation } from "../context/AnimationContext";
+import { useState } from "react";
+
 
 const CarouselPage: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const { context } = useAnimation();
+
   return (
     <div>
-      <Carousel plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]}>
-        <CarouselContent>
-          {carouselDatas.map((item, index) => (
-            <CarouselItem
-              key={index}
+      <Swiper
+        // install Swiper modules
+        modules={[Navigation, A11y, EffectFade, Autoplay]}
+        autoplay = {{delay: 5000, disableOnInteraction: false}}
+        effect="fade"
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
+      >
+        {carouselDatas.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div
               className=" relative flex items-center justify-center md:h-screen h-[70vh] overflow-hidden "
               style={{
                 backgroundImage: `url(${item.img.src})`,
@@ -34,32 +46,37 @@ const CarouselPage: React.FC = () => {
                 backgroundPosition: "center",
               }}
             >
-              <div className=" absolute left-0 top-0 flex justify-center items-center md:p-32 p-10 bg-gradient-to-r from-green-950 via-sky-800/90 to-transparent w-full h-full">
-                <div className=" text-white md:space-y-5 space-y-3 w-full relative">
-                  <span className=" bg-green-800/40 backdrop-blur-sm py-2 md:px-8 px-3 rounded-md md:text-base text-sm ">
+              <div className=" md:p-24 p-10 bg-black/40 absolute left-0 top-0 flex justify-center items-center w-full h-full">
+                <motion.div
+                  variants={context.parent}
+                  initial="hidden"
+                  animate={currentSlide === index ? "show" : "hidden"}
+                  className=" text-white flex flex-col gap-7 justify-center items-center w-full md:max-w-[50vw]"
+                >
+                  <motion.p
+                    variants={context.children}
+                    className="  md:text-base text-sm "
+                  >
                     {item.title}
-                  </span>
-                  <h1 className=" md:text-7xl text-5xl font-semibold flex flex-col md:gap-3 md:w-[40vw]">
-                    <span>{item.desc}</span>
-                  </h1>
-                  <div className=" flex justify-start items-center gap-10 relative w-96">
-                    <button className=" cursor-pointer md:p-5 p-2 text-white rounded-md bg-orange-500 hover:bg-orange-600 transition-all duration-300 ease-in">
-                      <Link href={paths.donate}>Donate Now</Link>
-                    </button>
-                    <Image
-                      src={sliderShape}
-                      alt="img"
-                      className=" absolute -top-10 right-0 md:block hidden"
-                    />
-                  </div>
-                </div>
+                  </motion.p>
+                  <motion.h1
+                    variants={context.children}
+                    className=" md:text-6xl text-4xl font-semibold text-center"
+                  >
+                    {item.desc}
+                  </motion.h1>
+                  <motion.p
+                    variants={context.children}
+                    className=" cursor-pointer p-2 text-white rounded-md bg-green-700 hover:bg-green-600"
+                  >
+                    <Link href={paths.donate}>Donate Now</Link>
+                  </motion.p>
+                </motion.div>
               </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        {/* <CarouselPrevious />
-        <CarouselNext /> */}
-      </Carousel>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

@@ -9,21 +9,35 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { campaignDatas } from "@/api/campaign/campaignData";
+import { motion } from "framer-motion";
+import { useAnimation } from "@/components/context/AnimationContext";
 
 const CampaignCards = () => {
+  const { context, ref, inView } = useAnimation();
   return (
-    <>
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      whileInView={inView? "show" : ""}
+      viewport={{ once: true }}
+      variants={context.parent}
+      className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10"
+    >
       {campaignDatas &&
         campaignDatas.map((item, index) => (
-          <div className=" rounded-lg bg-white ">
+          <motion.div
+            variants={context.children}
+            key={index}
+            className=" rounded-lg bg-white hover:shadow-xl shadow-black"
+          >
             <div className=" h-52 overflow-hidden flex justify-center items-center rounded-md">
               <Image src={item.img} alt="campaign image" />
             </div>
 
             <div className=" relative p-2 ">
-              <h1 className=" text-center text-green-700 my-5 ">
+              <h4 className=" font-semibold text-center text-green-700 my-5 ">
                 {item.header}
-              </h1>
+              </h4>
               <p className=" px-2 text-sm text-center line-clamp-4">
                 {item.text}
               </p>
@@ -31,9 +45,9 @@ const CampaignCards = () => {
               <div className=" flex justify-center items-center w-full ">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <h1 className=" mt-5 cursor-pointer hover:underline hover:text-green-700 hover:scale-110 transition-all duration-300 ease-in text-center">
+                    <p className=" mt-5 cursor-pointer hover:underline hover:text-green-700 hover:scale-110 transition-all duration-300 ease-in text-center">
                       Read More
-                    </h1>
+                    </p>
                   </DialogTrigger>
                   <DialogContent className=" overflow-y-scroll h-[90vh]">
                     <div className=" flex justify-center items-center rounded-md">
@@ -54,9 +68,9 @@ const CampaignCards = () => {
                 </Dialog>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-    </>
+    </motion.div>
   );
 };
 

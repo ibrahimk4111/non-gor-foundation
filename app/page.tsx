@@ -1,18 +1,19 @@
-import Gallery from "@/components/Gallery/Gallery";
+'use client'
+
 import About from "@/components/about/About";
-import Activites from "@/components/activites/Activites";
 import Campaign from "@/components/campaign/Campaign";
 import CarouselPage from "@/components/carousel/CarouselPage";
+import { AnimationProvider } from "@/components/context/AnimationContext";
+import News from "@/components/news/News";
 
 
 export default function Home() {
   return (
-    <main>
+    <AnimationProvider>
       <CarouselPage />
       <About />
-      <Activites />
       <Campaign />
-      <Gallery />
-    </main>
+      <News />
+    </AnimationProvider>
   );
 }
