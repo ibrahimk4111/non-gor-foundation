@@ -1,7 +1,6 @@
 import React from "react";
 import CampaignCards from "./campaignCard/CampaignCards";
 import Cards from "./cards/Cards";
-import { cardDatas } from "@/api/campaign/cardDatas";
 
 const Campaign = () => {
   return (
@@ -10,7 +9,7 @@ const Campaign = () => {
         <div className=" container mx-auto">
           <div className=" grid md:grid-cols-12 gap-y-5 ">
             <div className=" md:col-span-5">
-              <h1 className=" text-3xl font-semibold tracking-wider text-green-700 underline mb-5 uppercase ">
+              <h1 className=" font-semibold tracking-wider text-green-700 underline mb-5 uppercase ">
                 Current Campaign
               </h1>
               <p className=" text-justify ">
@@ -41,7 +40,7 @@ const Campaign = () => {
           <h1 className=" text-center font-semibold my-20 uppercase underline text-green-700">
             Campaigns
           </h1>
-          <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
+          <div >
             <CampaignCards />
           </div>
         </div>

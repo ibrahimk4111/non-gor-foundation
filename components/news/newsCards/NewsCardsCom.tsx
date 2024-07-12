@@ -11,13 +11,27 @@ import {
 
 import Image from "next/image";
 import { FcLike } from "react-icons/fc";
+import { motion } from "framer-motion";
+import { useAnimation } from "@/components/context/AnimationContext";
 
 const NewsCardsCom: React.FC = () => {
+  const { context, ref, inView } = useAnimation();
   return (
-    <>
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      whileInView={inView ? "show" : ""}
+      viewport={{ once: true }}
+      variants={context.parent}
+      className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 "
+    >
       {newsDatas &&
         newsDatas.map((item, index) => (
-          <div className="md:min-h-[75vh] sm:min-h-[70vh] min-h-[62vh]" key={index}>
+          <motion.div
+            variants={context.children}
+            className="md:min-h-[75vh] sm:min-h-[70vh] min-h-[62vh]"
+            key={index}
+          >
             <div className=" h-48 rounded-md overflow-hidden flex justify-center items-center ">
               <Image
                 src={item.img}
@@ -59,13 +73,16 @@ const NewsCardsCom: React.FC = () => {
                 <div className=" text-slate-400 flex items-center justify-between w-full bg-slate-50 rounded-md p-1">
                   <h4>By: {item.name}</h4>
                   <p className=" font-bold blur-sm">|</p>
-                  <div className=" flex items-center gap-2"> <FcLike /> <span>{item.rate}</span></div>
+                  <div className=" flex items-center gap-2">
+                    {" "}
+                    <FcLike /> <span>{item.rate}</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-    </>
+    </motion.div>
   );
 };
 

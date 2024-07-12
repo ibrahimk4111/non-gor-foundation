@@ -4,11 +4,11 @@ import golden_gate from "@/public/Profile Photo logo.jpg";
 import office from "@/public/campaignImg/office.jpeg";
 import Link from "next/link";
 import { paths } from "@/utils/paths";
-import {motion} from 'framer-motion'
+import {inView, motion} from 'framer-motion'
 import { useAnimation } from "../context/AnimationContext";
 
 const About: React.FC = () => {
-  const {parent, children} = useAnimation()
+  const {context, ref, inView} = useAnimation()
   const linkPointsClassNames =
     " h-3 w-3 bg-white group-hover:bg-green-800 border-2 border-green-700 rounded-full z-10 transition-all duration-500 ease-in";
   const linkClassNames =
@@ -54,33 +54,34 @@ const About: React.FC = () => {
         <hr className=" bg-slate-300 my-3" />
         <div className=" relative flex justify-start items-center gap-5 ">
           <motion.div 
+            ref={ref}
             initial="hidden"
-            whileInView="show"
+            whileInView={inView ? "show" : ""}
             viewport={{once:true}}
-            variants={parent}
+            variants={context.parent}
             className=" grid grid-cols-2 gap-x-5 gap-y-1 "
           >
-            <motion.div variants={children} className={linkClassNames}>
+            <motion.div variants={context.children} className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
               <Link href={paths.activites.human_needs} scroll={true}>Human needs (Food, Housing, Clothing)</Link>
             </motion.div>
-            <motion.div variants={children} className={linkClassNames}>
+            <motion.div variants={context.children} className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
               <Link href={paths.activites.education} scroll={true}>Education</Link>
             </motion.div>
-            <motion.div variants={children} className={linkClassNames}>
+            <motion.div variants={context.children} className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
               <Link href={paths.activites.health} scroll={true}>Health</Link>
             </motion.div>
-            <motion.div variants={children} className={linkClassNames}>
+            <motion.div variants={context.children} className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
               <Link href={paths.activites.training} scroll={true}>Training</Link>
             </motion.div>
-            <motion.div variants={children} className={linkClassNames}>
+            <motion.div variants={context.children} className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
               <Link href={paths.activites.the_culture} scroll={true}>The Culture</Link>
             </motion.div>
-            <motion.div variants={children} className={linkClassNames}>
+            <motion.div variants={context.children} className={linkClassNames}>
               <p className={linkPointsClassNames}></p>
               <Link href={paths.activites.awareness} scroll={true}>Awareness</Link>
             </motion.div>

@@ -7,7 +7,7 @@ const News = () => {
     <div className=" py-16 bg-green-50 ">
       <div className=" container mx-auto">
         <div className=" ">
-          <h1 className=" font-semibold text-3xl uppercase text-green-700 ">News Feeds</h1>
+          <h1 className=" font-semibold uppercase text-green-700 ">News Feeds</h1>
           <hr className=" bg-white " />
         </div>
         <p className=" my-10 text-justify ">
@@ -17,7 +17,7 @@ const News = () => {
           quaerat iste nobis nam! Minima amet, explicabo doloribus corrupti nam
           ipsum.
         </p>
-        <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 ">
+        <div>
           <NewsCardsCom />
         </div>
       </div>

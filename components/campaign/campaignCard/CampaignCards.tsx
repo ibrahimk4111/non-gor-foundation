@@ -9,13 +9,27 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { campaignDatas } from "@/api/campaign/campaignData";
+import { motion } from "framer-motion";
+import { useAnimation } from "@/components/context/AnimationContext";
 
 const CampaignCards = () => {
+  const { context, ref, inView } = useAnimation();
   return (
-    <>
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      whileInView={inView? "show" : ""}
+      viewport={{ once: true }}
+      variants={context.parent}
+      className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10"
+    >
       {campaignDatas &&
         campaignDatas.map((item, index) => (
-          <div key={index} className=" rounded-lg bg-white hover:shadow-xl shadow-black">
+          <motion.div
+            variants={context.children}
+            key={index}
+            className=" rounded-lg bg-white hover:shadow-xl shadow-black"
+          >
             <div className=" h-52 overflow-hidden flex justify-center items-center rounded-md">
               <Image src={item.img} alt="campaign image" />
             </div>
@@ -54,9 +68,9 @@ const CampaignCards = () => {
                 </Dialog>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-    </>
+    </motion.div>
   );
 };
 

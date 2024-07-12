@@ -3,13 +3,23 @@ import Image from "next/image";
 import { FiChevronsRight } from "react-icons/fi";
 import Link from "next/link";
 import { cardDatas } from "@/api/campaign/cardDatas";
+import { motion } from "framer-motion";
+import { useAnimation } from "@/components/context/AnimationContext";
 
 const Cards = () => {
+  const { context, ref, inView } = useAnimation();
   return (
-    <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mt-20">
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      whileInView={inView? "show": ""}
+      viewport={{ once: true }}
+      variants={context.parent}
+      className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mt-20"
+    >
       {cardDatas &&
         cardDatas.map((item, index) => (
-          <div className=" group">
+          <motion.div variants={context.children} className=" group">
             <div className=" h-44 overflow-hidden flex justify-center items-center rounded-lg">
               <Image
                 src={item.image}
@@ -40,9 +50,9 @@ const Cards = () => {
                 />
               </Link>
             </section>
-          </div>
+          </motion.div>
         ))}
-    </div>
+    </motion.div>
   );
 };
 
