@@ -9,7 +9,7 @@ const Contact = () => {
         <section>
           {/* map section */}
           <div className=" border rounded-lg p-2">
-            <h1 className=" text-xl font-semibold mb-2">Where we are ?</h1>
+            <h4 className=" text-xl font-semibold mb-2">Where we are ?</h4>
             <div className=" h-56 ">
               <iframe
                 className=" rounded-lg w-full min-h-full "
@@ -24,10 +24,10 @@ const Contact = () => {
 
           {/* contact address section */}
           <div className=" border rounded-lg p-2 flex flex-col gap-1 mt-2 ">
-            <h1 className=" text-xl font-semibold">Contact Details</h1>
+            <h4 className=" text-xl font-semibold">Contact Details</h4>
             <hr className=" h-1 " />
             <div>
-              <h1 className=" font-semibold">Address</h1>
+              <h4 className=" font-semibold">Address</h4>
               <p className=" text-sm ">Nongor Foundation,</p>
               <p className=" text-sm ">
                 Nangla Bazar, Debhata-9430, Debhata, Satkhira.
@@ -35,11 +35,11 @@ const Contact = () => {
             </div>
 
             <div>
-              <h1 className=" font-semibold">Phone</h1>
+              <h4 className=" font-semibold">Phone</h4>
               <p className=" text-sm ">+88 01720-424 282, +88 01568-777 768</p>
             </div>
             <div>
-              <h1 className=" font-semibold">Email</h1>
+              <h4 className=" font-semibold">Email</h4>
               <p className=" text-sm ">nongorfoundation@gmail.com</p>
             </div>
           </div>

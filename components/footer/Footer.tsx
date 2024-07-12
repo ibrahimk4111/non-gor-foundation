@@ -12,13 +12,13 @@ const Footer = () => {
 
         {/* gallery */}
         <div>
-          <h1 className=" mb-5 text-2xl font-bold">Gallery</h1>
+          <h4 className=" mb-5 text-2xl font-bold">Gallery</h4>
           <ImageComp />
         </div>
         
         {/* elements */}
         <div>
-          <h1 className=" mb-5 text-2xl font-bold">Elements</h1>
+          <h4 className=" mb-5 text-2xl font-bold">Elements</h4>
           
           <ul className=" space-y-3 ">
             <li className={liClassNames}><a href="#">* Out Events</a></li>
@@ -32,7 +32,7 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h1 className=" mb-5 text-2xl font-bold">Quick Links</h1>
+          <h4 className=" mb-5 text-2xl font-bold">Quick Links</h4>
           
           <ul className=" space-y-3">
             <li className={liClassNames}><a href="#">* Activities</a></li>
@@ -45,7 +45,7 @@ const Footer = () => {
         
         {/* newsletter */}
         <div>
-          <h1 className=" text-2xl font-bold">Newsletter</h1>
+          <h4 className=" text-2xl font-bold">Newsletter</h4>
           <p className=" my-5">Lorem ipsum dolor sit amet.</p>
           <form action="" className=" flex flex-col justify-start items-start gap-5">
             <input
