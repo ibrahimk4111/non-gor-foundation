@@ -84,6 +84,9 @@ const NavBar: React.FC = () => {
                     <Link href={paths.information.structure}>
                       <DropdownMenuItem>Structure</DropdownMenuItem>
                     </Link>
+                    <Link href={paths.information.faq}>
+                      <DropdownMenuItem>FAQ</DropdownMenuItem>
+                    </Link>
                   </DropdownMenuContent>
                 </DropdownMenu>
               </li>

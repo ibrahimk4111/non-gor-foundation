@@ -8,6 +8,7 @@ export const paths = {
     slogan: "/about#Slogan",
     vision: "/about#Vision",
     structure: "/structure",
+    faq: "/faq"
   },
   activites: {
     human_needs: "/activity",
