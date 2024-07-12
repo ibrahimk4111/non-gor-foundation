@@ -20,7 +20,7 @@ import { useState } from "react";
 
 const CarouselPage: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const { parent, children } = useAnimation();
+  const { context } = useAnimation();
 
   return (
     <div>
@@ -48,25 +48,25 @@ const CarouselPage: React.FC = () => {
             >
               <div className=" md:p-24 p-10 bg-black/40 absolute left-0 top-0 flex justify-center items-center w-full h-full">
                 <motion.div
-                  variants={parent}
+                  variants={context.parent}
                   initial="hidden"
                   animate={currentSlide === index ? "show" : "hidden"}
                   className=" text-white flex flex-col gap-7 justify-center items-center w-full md:max-w-[50vw]"
                 >
                   <motion.p
-                    variants={children}
+                    variants={context.children}
                     className="  md:text-base text-sm "
                   >
                     {item.title}
                   </motion.p>
                   <motion.h1
-                    variants={children}
+                    variants={context.children}
                     className=" md:text-6xl text-4xl font-semibold text-center"
                   >
                     {item.desc}
                   </motion.h1>
                   <motion.p
-                    variants={children}
+                    variants={context.children}
                     className=" cursor-pointer p-2 text-white rounded-md bg-green-700 hover:bg-green-600"
                   >
                     <Link href={paths.donate}>Donate Now</Link>

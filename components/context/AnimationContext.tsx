@@ -1,12 +1,12 @@
 "use client";
 
-import React, { createContext, useContext } from "react";
+import React, { createContext, ReactNode, useContext } from "react";
 import { Variants } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 
 // Define the props interface for the AnimationProvider
 interface AnimationProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 // Define the AnimationContextProps interface
@@ -15,9 +15,7 @@ interface AnimationContextProps {
   children: Variants;
 }
 
-const AnimationContext = createContext<AnimationContextProps | undefined>(
-  undefined
-);
+const AnimationContext = createContext<AnimationContextProps | undefined>(undefined);
 
 const animationSettings: AnimationContextProps = {
   parent:{
@@ -40,14 +38,19 @@ export const AnimationProvider: React.FC<AnimationProviderProps> = ({children}) 
   </AnimationContext.Provider>
 );
 
+const animationContext = () =>{
+  const context = useContext(AnimationContext);
+  if (!context) {
+    throw new Error("useAnimation must be used within an AnimationProvider");
+  }
+  return context;
+}
+
 export const useAnimation = () => {
   const { ref, inView } = useInView({
     threshold: 0.5,
     triggerOnce: true,
   });
-  const context = useContext(AnimationContext);
-  if (!context) {
-    throw new Error("useAnimation must be used within an AnimationProvider");
-  }
+  const context = animationContext();
   return {ref, inView, context};
 };

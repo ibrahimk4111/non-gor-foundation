@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import NewsCardsCom from "./newsCards/NewsCardsCom";
 
 const News = () => {
@@ -7,7 +6,9 @@ const News = () => {
     <div className=" py-16 bg-green-50 ">
       <div className=" container mx-auto">
         <div className=" ">
-          <h1 className=" font-semibold uppercase text-green-700 ">News Feeds</h1>
+          <h1 className=" font-semibold uppercase text-green-700 ">
+            News Feeds
+          </h1>
           <hr className=" bg-white " />
         </div>
         <p className=" my-10 text-justify ">

@@ -11,24 +11,16 @@ import {
 
 import Image from "next/image";
 import { FcLike } from "react-icons/fc";
-import { motion } from "framer-motion";
-import { useAnimation } from "@/components/context/AnimationContext";
 
 const NewsCardsCom: React.FC = () => {
-  const { context, ref, inView } = useAnimation();
+
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      whileInView={inView ? "show" : ""}
-      viewport={{ once: true }}
-      variants={context.parent}
+    <div
       className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 "
     >
       {newsDatas &&
         newsDatas.map((item, index) => (
-          <motion.div
-            variants={context.children}
+          <div
             className="md:min-h-[75vh] sm:min-h-[70vh] min-h-[62vh]"
             key={index}
           >
@@ -80,9 +72,9 @@ const NewsCardsCom: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
-    </motion.div>
+    </div>
   );
 };
 
