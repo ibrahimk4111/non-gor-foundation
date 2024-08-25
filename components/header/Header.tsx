@@ -1,12 +1,12 @@
-import NavBar from "./headerComponents/NavBar"
-import TopBar from "./headerComponents/TopBar"
+import NavBar from "./headerComponents/NavBar";
+import { Button } from "../ui/button";
 
-const Header:React.FC = () => {
+const Header: React.FC = () => {
   return (
     <div>
-        <NavBar />
+      <NavBar />
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

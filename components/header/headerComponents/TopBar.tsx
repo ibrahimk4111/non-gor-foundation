@@ -7,13 +7,13 @@ import Link from "next/link";
 import { IoLogoYoutube } from 'react-icons/io';
 
 const TopBar: React.FC = () => {
-  const classNameforIcon=' text-slate-500 hover:scale-125 hover:text-amber-800 group-hover:text-amber-800 transition-all duration-500 ease-in-out'
-  const classNameforText = ' text-slate-600 text-sm hover:underline hover:text-green-800 group-hover:text-green-800 transition-all duration-500 ease-in-out';
+  const classNameforIcon=' text-slate-300 hover:scale-125 hover:text-amber-800 group-hover:text-amber-800 transition-all duration-500 ease-in-out'
+  const classNameforText = ' text-slate-300 text-sm hover:underline hover:text-green-800 group-hover:text-green-800 transition-all duration-500 ease-in-out';
   let size = 16;
   return (
-      <div className=" w-full flex justify-between items-center gap-2 px-7 py-1">
+      <div className=" bg-green-950 w-full flex justify-between items-center gap-2 px-7 py-1">
         <div className='flex justify-start items-center gap-2 '>
-          <p className=' text-slate-600 '>Connect with us: </p>
+          <p className=' text-slate-300 '>Connect with us: </p>
           <Link href="https://api.whatsapp.com/send?phone=01917-900013&text=I have a question.">
             <AiOutlineWhatsApp size={size} className={classNameforIcon} />
           </Link>

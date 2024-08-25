@@ -21,7 +21,7 @@ const NewsCardsCom: React.FC = () => {
       {newsDatas &&
         newsDatas.map((item, index) => (
           <div
-            className="md:min-h-[75vh] sm:min-h-[70vh] min-h-[62vh]"
+            className=""
             key={index}
           >
             <div className=" h-48 rounded-md overflow-hidden flex justify-center items-center ">
@@ -32,14 +32,14 @@ const NewsCardsCom: React.FC = () => {
               />
             </div>
 
-            <div className=" relative">
+            <div className=" relative sm:min-h-[40vh] min-h-[45vh]">
               <div className=" absolute -top-10 hover:shadow-xl shadow-black space-y-3 bg-white m-4 p-4 rounded-md">
                 <h4 className=" text-green-700 font-semibold">{item.title}</h4>
                 <p className=" line-clamp-6 text-sm">{item.desc}</p>
                 <div className=" flex justify-center items-center w-full ">
                   <Dialog>
                     <DialogTrigger asChild>
-                      <p className=" cursor-pointer hover:underline text-green-700 my-5 hover:scale-110 transition-all duration-300 ease-in text-center">
+                      <p className=" cursor-pointer hover:underline text-green-700 my-2 hover:scale-110 transition-all duration-300 ease-in text-center">
                         Read More
                       </p>
                     </DialogTrigger>
@@ -66,7 +66,6 @@ const NewsCardsCom: React.FC = () => {
                   <h4>By: {item.name}</h4>
                   <p className=" font-bold blur-sm">|</p>
                   <div className=" flex items-center gap-2">
-                    {" "}
                     <FcLike /> <span>{item.rate}</span>
                   </div>
                 </div>

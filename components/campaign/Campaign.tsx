@@ -1,6 +1,6 @@
 import React from "react";
 import CampaignCards from "./campaignCard/CampaignCards";
-import Cards from "./cards/Cards";
+import Cards from "./giftcards/GiftCards";
 
 const Campaign = () => {
   return (
@@ -33,14 +33,15 @@ const Campaign = () => {
             </div>
           </div>
 
-          <div >
+          <div>
             <Cards />
           </div>
 
-          <h1 className=" text-center font-semibold my-20 uppercase underline text-green-700">
-            Campaigns
+          <h1 className=" mt-20 font-semibold tracking-wider text-green-700 uppercase">
+            Our Campaigns
           </h1>
-          <div >
+          <hr className=" bg-slate-300 mt-3 mb-10" />
+          <div>
             <CampaignCards />
           </div>
         </div>

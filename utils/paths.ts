@@ -1,5 +1,9 @@
 export const paths = {
   home: "/",
+  auth:{
+    signin: "/auth/signin",
+    signup: "/auth/signup"
+  },
   information: {
     introduction: "/about#Introduction",
     nature_of_the_organization: "/about#Nature of the organization",

@@ -31,8 +31,8 @@ const Faq = () => {
           <Accordion type="single" collapsible className="w-full ">
             {Array.from({ length: 6 }).map((_, index) => (
               <AccordionItem value={index.toString()}>
-                <AccordionTrigger>Is it accessible?</AccordionTrigger>
-                <AccordionContent>
+                <AccordionTrigger className=" bg-slate-100 ">Is it accessible?</AccordionTrigger>
+                <AccordionContent className=" p-4 bg-white ">
                   Yes. It adheres to the WAI-ARIA design pattern.
                 </AccordionContent>
               </AccordionItem>
@@ -41,8 +41,8 @@ const Faq = () => {
           <Accordion type="single" collapsible className="w-full ">
             {Array.from({ length: 6 }).map((_, index) => (
               <AccordionItem value={index.toString()}>
-                <AccordionTrigger>Is it accessible?</AccordionTrigger>
-                <AccordionContent>
+                <AccordionTrigger className=" bg-slate-100 ">Is it accessible?</AccordionTrigger>
+                <AccordionContent className=" p-4 bg-white ">
                   Yes. It adheres to the WAI-ARIA design pattern.
                 </AccordionContent>
               </AccordionItem>

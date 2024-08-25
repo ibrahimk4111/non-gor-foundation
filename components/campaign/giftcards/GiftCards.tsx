@@ -1,25 +1,27 @@
-import React, { ReactNode } from "react";
+'use client'
+
+import React from "react";
 import Image from "next/image";
 import { FiChevronsRight } from "react-icons/fi";
 import Link from "next/link";
 import { cardDatas } from "@/api/campaign/cardDatas";
 import { motion } from "framer-motion";
-import { useAnimation } from "@/components/context/AnimationContext";
+import { useCreatedContext } from "@/components/context/Context";
 
 const Cards = () => {
-  const { context, ref, inView } = useAnimation();
+  const { context, ref, inView } = useCreatedContext();
   return (
     <motion.div
       ref={ref}
       initial="hidden"
       whileInView={inView? "show": ""}
       viewport={{ once: true }}
-      variants={context.parent}
+      variants={context.parentAnimation}
       className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mt-20"
     >
       {cardDatas &&
         cardDatas.map((item, index) => (
-          <motion.div variants={context.children} className=" group">
+          <motion.div key={index} variants={context.childrenAnimation} className=" group">
             <div className=" h-44 overflow-hidden flex justify-center items-center rounded-lg">
               <Image
                 src={item.image}
