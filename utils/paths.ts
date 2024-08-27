@@ -1,8 +1,8 @@
 export const paths = {
   home: "/",
-  auth:{
+  auth: {
     signin: "/auth/signin",
-    signup: "/auth/signup"
+    signup: "/auth/signup",
   },
   information: {
     introduction: "/about#Introduction",
@@ -12,15 +12,16 @@ export const paths = {
     slogan: "/about#Slogan",
     vision: "/about#Vision",
     structure: "/structure",
-    faq: "/faq"
+    faq: "/faq",
   },
+  activity: "/activity",
   activites: {
-    human_needs: "/activity",
-    education: "/activity",
-    health: "/activity",
-    training: "/activity",
-    the_culture: "/activity",
-    awareness: "/activity",
+    human_needs: "/activity/Human needs (Food, Housing, Clothing)",
+    education: "/activity/Education Health Training The Culture",
+    health: "/activity/Health",
+    training: "/activity/Training",
+    the_culture: "/activity/The Culture",
+    awareness: "/activity/Awareness",
   },
   campaign: "/#campagin",
   news: "/news",

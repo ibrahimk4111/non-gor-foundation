@@ -20,7 +20,7 @@ const AuthComponent = () => {
   const [user, setUser] = React.useState<Boolean>(false);
 
   const navItemClassNames =
-    " cursor-pointer py-2 px-3 text-slate-500 hover:text-black bg-green-100 hover:bg-white rounded-md transition-all duration-500 ease-in-out";
+    " cursor-pointer py-2 px-3 text-slate-500 hover:text-black hover:bg-green-100 rounded-md transition-all duration-500 ease-in-out";
 
   return (
     <>

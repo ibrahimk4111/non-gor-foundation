@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import React from "react";
@@ -8,7 +8,6 @@ import Link from "next/link";
 import { paths } from "@/utils/paths";
 import { motion } from "framer-motion";
 import { useCreatedContext } from "../context/Context";
-import SearchButton from "../header/searchButton/SearchButton";
 
 const linkPointsClassNames =
   " h-3 w-3 bg-white group-hover:bg-green-800 border-2 border-green-700 rounded-full z-10 transition-all duration-500 ease-in";
@@ -132,7 +131,6 @@ const About: React.FC = () => {
           {/* <div className=" h-20 bg-slate-300 absolute top-2 left-[6px] w-[1px] "></div> */}
         </div>
       </div>
-      <SearchButton />
     </div>
   );
 };

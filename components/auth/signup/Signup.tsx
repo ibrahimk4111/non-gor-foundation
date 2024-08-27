@@ -24,19 +24,22 @@ const Signup = () => {
         {/* auto login icons */}
         <div>
           <p className=" w-full text-center ">OR</p>
-          <div className=" flex justify-center items-center gap-1 mt-5">
-            <form
-              action={async () => {
+          <div className=" flex flex-col justify-center items-center gap-1 mt-5">
+            <Button
+              onClick={async () => {
                 "use server";
                 await signIn("google", { redirectTo: "/" });
               }}
+              type="submit"
+              variant={"outline"}
+              className=" w-full "
             >
-              <Button type="submit" variant={"outline"} size={"icon"}>
-                <FcGoogle size={28} />
-              </Button>
-            </form>
-            <Button variant={"outline"} size={"icon"}>
+              <FcGoogle size={28} />
+              <span className=" ml-5 ">Sign Up with Google</span>
+            </Button>
+            <Button variant={"outline"} className=" w-full ">
               <MdFacebook size={30} fill="blue" />
+              <span className=" ml-5 ">Sign Up with Facebook</span>
             </Button>
           </div>
         </div>
