@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import Image from "next/image";
 import {
@@ -10,23 +12,23 @@ import {
 } from "@/components/ui/dialog";
 import { campaignDatas } from "@/api/campaign/campaignData";
 import { motion } from "framer-motion";
-import { useAnimation } from "@/components/context/AnimationContext";
+import { useCreatedContext } from "@/components/context/Context";
 
 const CampaignCards = () => {
-  const { context, ref, inView } = useAnimation();
+  const { context, ref, inView } = useCreatedContext();
   return (
     <motion.div
       ref={ref}
       initial="hidden"
       whileInView={inView? "show" : ""}
       viewport={{ once: true }}
-      variants={context.parent}
+      variants={context.parentAnimation}
       className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10"
     >
       {campaignDatas &&
         campaignDatas.map((item, index) => (
           <motion.div
-            variants={context.children}
+            variants={context.childrenAnimation}
             key={index}
             className=" rounded-lg bg-white hover:shadow-xl shadow-black"
           >

@@ -31,8 +31,8 @@ const DrawerNavBar: React.FC = () => {
 
   return (
     <Drawer direction="left" >
-      <DrawerTrigger>
-        <RxHamburgerMenu className=" w-12 h-12 hover:bg-slate-200 p-2  " />
+      <DrawerTrigger className=" flex justify-center items-center">
+        <RxHamburgerMenu className=" w-10 h-12 hover:bg-slate-200 p-2  " />
       </DrawerTrigger>
       <DrawerContent className=" list-none ">
         <div>
