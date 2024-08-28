@@ -166,6 +166,8 @@ const NavBar: React.FC = () => {
 
               <SearchButton />
             </ul>
+            
+            {/* auth components  */}
             <AuthComponent />
           </div>
         </div>
