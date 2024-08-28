@@ -1,5 +1,3 @@
-"use client";
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,23 +6,27 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { paths } from "@/utils/paths";
 import Link from "next/link";
-import React, { useEffect } from "react";
-import userAvatar from "@/public/activitiesLogo/Activities-5.png";
+import React from "react";
 import { RxAvatar } from "react-icons/rx";
 import { MdExitToApp } from "react-icons/md";
 import Image from "next/image";
-import { useCreatedContext } from "@/components/context/Context";
+import { auth, signOut } from "@/components/auth/auth";
+import { Button } from "@/components/ui/button";
 
-const AuthComponent = () => {
-
-  const [user, setUser] = React.useState<Boolean>(false);
-
+const AuthComponent = async (
+  props: React.ComponentPropsWithRef<typeof Button>
+) => {
   const navItemClassNames =
     " cursor-pointer py-2 px-3 text-slate-500 hover:text-black hover:bg-green-100 rounded-md transition-all duration-500 ease-in-out";
 
-  return (
-    <>
-      <ul className={`${user ? "hidden" : "flex"} justify-center items-center`}>
+  const session = await auth();
+  if (!session?.user)
+    return (
+      <ul
+        className={`${
+          session?.user ? "hidden" : "flex"
+        } justify-center items-center`}
+      >
         <li className={navItemClassNames}>
           <Link href={paths.auth.signin}>Log in</Link>
         </li>
@@ -32,22 +34,55 @@ const AuthComponent = () => {
           <Link href={paths.auth.signup}>Sign up</Link>
         </li>
       </ul>
-      <div className={`${navItemClassNames} ${!user ? "hidden" : "block"}`}>
+    );
+
+  return (
+    <>
+      <div
+        className={`${navItemClassNames} ${
+          !session?.user ? "hidden" : "block"
+        }`}
+      >
         <DropdownMenu modal={false}>
-          <DropdownMenuTrigger asChild className=" overflow-hidden h-6 w-6 ">
-            <Image src={userAvatar} alt="user avatar" />
+          <DropdownMenuTrigger
+            asChild
+            className=" overflow-hidden h-8 w-8 rounded-full "
+          >
+            <Image
+              src={
+                session.user.image ??
+                "https://source.boringavatars.com/marble/120"
+              }
+              alt="user"
+              width={500}
+              height={500}
+            />
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="">
+          <DropdownMenuContent className=" w-fit ">
             <Link href={paths.registration.volunteer}>
+              <DropdownMenuItem>{session.user.name}</DropdownMenuItem>
+            </Link>
+            <Link href="#">
               <DropdownMenuItem>
                 <RxAvatar /> <span className=" ml-2 ">Profile</span>
               </DropdownMenuItem>
             </Link>
-            <Link href={paths.registration.ordinary_member}>
-              <DropdownMenuItem className=" bg-red-50 ">
-                <MdExitToApp /> <span className=" ml-2 ">Log out</span>
-              </DropdownMenuItem>
-            </Link>
+            {/* <Link > */}
+            <DropdownMenuItem className=" text-red-500 ">
+              <MdExitToApp />
+              <form
+                action={async () => {
+                  "use server";
+                  await signOut();
+                }}
+                className="w-full"
+              >
+                <button className="w-full p-0" {...props}>
+                  Sign Out
+                </button>
+              </form>
+            </DropdownMenuItem>
+            {/* </Link> */}
           </DropdownMenuContent>
         </DropdownMenu>
       </div>

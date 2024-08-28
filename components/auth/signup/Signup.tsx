@@ -25,22 +25,21 @@ const Signup = () => {
         <div>
           <p className=" w-full text-center ">OR</p>
           <div className=" flex flex-col justify-center items-center gap-1 mt-5">
-            <Button
-              onClick={async () => {
+            <form
+              action={async () => {
                 "use server";
-                await signIn("google", { redirectTo: "/" });
+                await signIn("google");
               }}
-              type="submit"
-              variant={"outline"}
-              className=" w-full "
             >
-              <FcGoogle size={28} />
-              <span className=" ml-5 ">Sign Up with Google</span>
-            </Button>
-            <Button variant={"outline"} className=" w-full ">
+              <Button variant={"outline"} className=" w-full ">
+                <FcGoogle size={20} />
+                <span className=" ml-5 ">Sign Up with Google</span>
+              </Button>
+              {/* <Button variant={"outline"} className=" w-full ">
               <MdFacebook size={30} fill="blue" />
               <span className=" ml-5 ">Sign Up with Facebook</span>
-            </Button>
+              </Button> */}
+            </form>
           </div>
         </div>
       </div>
