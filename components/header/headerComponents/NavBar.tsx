@@ -1,5 +1,3 @@
-"use client";
-
 import Name_logo from "@/public/Nogor-Foundation.png";
 import React from "react";
 import { ChevronDown } from "lucide-react";
@@ -19,25 +17,27 @@ import { paths } from "@/utils/paths";
 import Image from "next/image";
 import TopBar from "./TopBar";
 import DrawerNavBar from "../drawerNavBar/DrawerNavBar";
-// import MiddleBar from "./MiddleBar";
+import AuthComponent from "../authComponent/AuthComponent";
+import SearchButton from "../searchButton/SearchButton";
+
+const navItemClassNames =
+  " cursor-pointer py-2 px-3 text-slate-500 hover:text-black hover:bg-green-100 rounded-md transition-all duration-500 ease-in-out";
 
 const NavBar: React.FC = () => {
-  const navItemClassNames =
-    " cursor-pointer py-2 px-3 text-slate-500 hover:text-black hover:bg-slate-200 rounded-md transition-all duration-500 ease-in-out";
-
   return (
     <div className=" border-b-2 ">
-      <div className=" flex justify-start gap-5">
-        <div className="px-5 py-2 flex gap-10 h-full w-auto ">
+      <div className=" flex justify-center items-center gap-3">
+        <div className="px-5 flex justify-start items-center gap-5 h-full ">
           <div className=" lg:hidden block">
             <DrawerNavBar />
           </div>
           <Image src={Name_logo} alt="logo" className=" h-auto md:w-96 w-60 " />
         </div>
-        <div className=" w-full hidden lg:flex flex-col justify-start">
+        <div className=" w-full hidden lg:flex flex-col">
           <TopBar />
-          <div className=" flex justify-between items-center p-2">
-            <ul className=" flex justify-start items-center p-2">
+
+          <div className=" relative flex justify-between items-center text-sm h-14 px-5 bg-green-50">
+            <ul className=" flex justify-start items-center">
               <li className={navItemClassNames}>
                 <Link href={paths.home}>Home</Link>
               </li>
@@ -133,11 +133,11 @@ const NavBar: React.FC = () => {
                 <Link href={paths.news}>News</Link>
               </li>
               <li className={navItemClassNames}>
-                <Link href={paths.contact} >Contact</Link>
+                <Link href={paths.contact}>Contact</Link>
               </li>
             </ul>
-            <ul className=" flex justify-start items-center gap-2 p-2">
-              <li >
+            <ul className=" flex justify-start items-center gap-2">
+              <li>
                 <DropdownMenu modal={false}>
                   <DropdownMenuTrigger asChild>
                     <p className=" cursor-pointer py-2 px-5 text-white rounded-md bg-green-800 hover:bg-green-700 transition-all duration-300 ease-in">
@@ -163,7 +163,12 @@ const NavBar: React.FC = () => {
               <li className=" cursor-pointer py-2 px-5 text-white rounded-md bg-green-800 hover:bg-green-700 transition-all duration-300 ease-in">
                 <Link href={paths.donate}>Donate Now</Link>
               </li>
+
+              <SearchButton />
             </ul>
+            
+            {/* auth components  */}
+            <AuthComponent />
           </div>
         </div>
       </div>

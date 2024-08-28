@@ -1,12 +1,15 @@
-import NavBar from "./headerComponents/NavBar"
-import TopBar from "./headerComponents/TopBar"
+import NavBar from "./headerComponents/NavBar";
+import { Button } from "../ui/button";
+import { auth } from "@/components/auth/auth";
+import { paths } from "@/utils/paths";
+import Link from "next/link";
 
-const Header:React.FC = () => {
+const Header = async () => {
   return (
     <div>
-        <NavBar />
+      <NavBar />
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

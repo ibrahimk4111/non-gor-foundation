@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from "framer-motion";
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
@@ -14,13 +16,13 @@ import "swiper/css/effect-fade";
 import { carouselDatas } from "@/api/carousel/CarouselData";
 import Link from "next/link";
 import { paths } from "@/utils/paths";
-import { useAnimation } from "../context/AnimationContext";
 import { useState } from "react";
+import { useCreatedContext } from "../context/Context";
 
 
 const CarouselPage: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const { context } = useAnimation();
+  const { context } = useCreatedContext()
 
   return (
     <div>
@@ -32,7 +34,6 @@ const CarouselPage: React.FC = () => {
         spaceBetween={50}
         slidesPerView={1}
         navigation
-        onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
       >
         {carouselDatas.map((item, index) => (
@@ -48,28 +49,28 @@ const CarouselPage: React.FC = () => {
             >
               <div className=" md:p-24 p-10 bg-black/40 absolute left-0 top-0 flex justify-center items-center w-full h-full">
                 <motion.div
-                  variants={context.parent}
+                  variants={context.parentAnimation}
                   initial="hidden"
                   animate={currentSlide === index ? "show" : "hidden"}
                   className=" text-white flex flex-col gap-7 justify-center items-center w-full md:max-w-[50vw]"
                 >
                   <motion.p
-                    variants={context.children}
+                    variants={context.childrenAnimation}
                     className="  md:text-base text-sm "
                   >
                     {item.title}
                   </motion.p>
                   <motion.h1
-                    variants={context.children}
+                    variants={context.childrenAnimation}
                     className=" md:text-6xl text-4xl font-semibold text-center"
                   >
                     {item.desc}
                   </motion.h1>
                   <motion.p
-                    variants={context.children}
-                    className=" cursor-pointer p-2 text-white rounded-md bg-green-700 hover:bg-green-600"
+                    variants={context.childrenAnimation}
+                    className="cursor-pointer py-2 px-5 text-white rounded-md bg-green-800 hover:bg-green-700 "
                   >
-                    <Link href={paths.donate}>Donate Now</Link>
+                    <Link href={paths.donate} >Donate Now</Link>
                   </motion.p>
                 </motion.div>
               </div>

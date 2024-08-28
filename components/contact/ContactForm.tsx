@@ -28,19 +28,19 @@ const formSchema = z.object({
   message: z.string(),
 });
 
-interface formDataType {
-  name: string;
-  email: string;
-  number: string;
-  message: string;
-}
-
 const formFieldData = [
   { fieldName: 'name', label: "Your Name", placeholder: "Latent Talent" },
   { fieldName: 'email', label: "Email", placeholder: "example@gmail.com" },
   { fieldName: 'number', label: "Phone Number", placeholder: "Phone Number" },
 ];
 
+
+interface formDataType {
+  name: string;
+  email: string;
+  number: string;
+  message: string;
+}
 const ContactForm = () => {
   const [formData, setFormData] = useState<formDataType>({
     name: "",
