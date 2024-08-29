@@ -21,7 +21,7 @@ import AuthComponent from "../authComponent/AuthComponent";
 import SearchButton from "../searchButton/SearchButton";
 
 const navItemClassNames =
-  " cursor-pointer py-2 px-3 text-slate-500 hover:text-black hover:bg-green-100 rounded-md transition-all duration-500 ease-in-out";
+  " cursor-pointer p-2 text-slate-500 hover:text-black hover:bg-green-100 rounded-md transition-all duration-500 ease-in-out";
 
 const NavBar: React.FC = () => {
   return (
@@ -36,7 +36,7 @@ const NavBar: React.FC = () => {
         <div className=" w-full hidden lg:flex flex-col">
           <TopBar />
 
-          <div className=" relative flex justify-between items-center text-sm h-14 px-5 bg-green-50">
+          <div className=" relative flex justify-between items-center text-sm h-14 bg-green-50">
             <ul className=" flex justify-start items-center">
               <li className={navItemClassNames}>
                 <Link href={paths.home}>Home</Link>
@@ -128,6 +128,9 @@ const NavBar: React.FC = () => {
 
               <li className={navItemClassNames}>
                 <Link href={paths.campaign}>Campaign</Link>
+              </li>
+              <li className={navItemClassNames}>
+                <Link href={paths.team}>Team</Link>
               </li>
               <li className={navItemClassNames}>
                 <Link href={paths.news}>News</Link>

@@ -24,6 +24,7 @@ export const paths = {
     awareness: "/activity/Awareness",
   },
   campaign: "/campaign",
+  team: "/team",
   news: "/news",
   registration: {
     volunteer: "/contact",
