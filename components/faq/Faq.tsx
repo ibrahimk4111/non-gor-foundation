@@ -8,6 +8,8 @@ import {
 import { activitesData } from "@/api/activities/Activities";
 import ActivityCard from "../activites/activitycards/ActivityCard";
 import FaqCards from "./Cards";
+import { FAQData } from "@/api/question/answer";
+import Link from "next/link";
 
 const Faq = () => {
   return (
@@ -27,23 +29,27 @@ const Faq = () => {
             ))}
         </div>
 
-        <div className=" grid md:grid-cols-2 gap-4 mt-10">
+        <div className=" mt-20 ">
           <Accordion type="single" collapsible className="w-full ">
-            {Array.from({ length: 6 }).map((_, index) => (
-              <AccordionItem value={index.toString()}>
-                <AccordionTrigger className=" bg-slate-100 ">Is it accessible?</AccordionTrigger>
-                <AccordionContent className=" p-4 bg-white ">
-                  Yes. It adheres to the WAI-ARIA design pattern.
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-          <Accordion type="single" collapsible className="w-full ">
-            {Array.from({ length: 6 }).map((_, index) => (
-              <AccordionItem value={index.toString()}>
-                <AccordionTrigger className=" bg-slate-100 ">Is it accessible?</AccordionTrigger>
-                <AccordionContent className=" p-4 bg-white ">
-                  Yes. It adheres to the WAI-ARIA design pattern.
+            {FAQData.map((item, index) => (
+              <AccordionItem key={index} value={index.toString()}>
+                <AccordionTrigger className=" uppercase bg-green-100 focus:outline outline-green-200 ">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className=" p-4 bg-white space-y-3 ">
+                  {item.answer.map((item, index) => (
+                    <p key={index} className=" text-justify p-3 ">
+                      {item}
+                    </p>
+                  ))}
+                  {item.location && (
+                    <Link href={item.location} className=" p-3  ">
+                      Location:
+                      <span className="text-green-500 hover:text-green-300 ml-5">
+                        {item.location}
+                      </span>
+                    </Link>
+                  )}
                 </AccordionContent>
               </AccordionItem>
             ))}
