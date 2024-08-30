@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import React from "react";
-import golden_gate from "@/public/Profile Photo logo.jpg";
-import office from "@/public/campaignImg/office.jpeg";
+import profileLogo from "@/public/Profile Photo logo.jpg";
+// import office from "@/public/campaignImg/office.jpeg";
 import Link from "next/link";
 import { paths } from "@/utils/paths";
 import { motion } from "framer-motion";
@@ -18,8 +18,8 @@ const About: React.FC = () => {
   const { context, ref, inView } = useCreatedContext();
 
   return (
-    <div className=" px-5 py-20 grid grid-cols-12 gap-5">
-      <div className=" lg:col-span-5 col-span-12 flex justify-center items-center">
+    <div className=" container mx-atuo py-20">
+      {/* <div className=" lg:col-span-5 col-span-12 flex justify-center items-center">
         <div
           className=" h-full w-full rounded-md overflow-hidden "
           style={{
@@ -28,11 +28,11 @@ const About: React.FC = () => {
             backgroundPosition: "center",
           }}
         ></div>
-      </div>
+      </div> */}
       <div className=" lg:col-span-7 col-span-12 md:px-5">
         <div className=" text-green-700 flex gap-5 items-center  ">
           <Image
-            src={golden_gate}
+            src={profileLogo}
             alt="foundation logo"
             className=" h-14 w-auto"
           />

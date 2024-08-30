@@ -39,7 +39,7 @@ const CarouselPage: React.FC = () => {
         {carouselDatas.map((item, index) => (
           <SwiperSlide key={index}>
             <div
-              className=" relative flex items-center justify-center md:h-screen h-[70vh] overflow-hidden "
+              className=" relative flex items-center justify-center md:h-[87vh] h-[70vh] overflow-hidden "
               style={{
                 backgroundImage: `url(${item.img.src})`,
                 backgroundSize: "cover",

@@ -17,7 +17,7 @@ export const paths = {
   activity: "/activity",
   activites: {
     human_needs: "/activity/Human needs (Food, Housing, Clothing)",
-    education: "/activity/Education Health Training The Culture",
+    education: "/activity/Education",
     health: "/activity/Health",
     training: "/activity/Training",
     the_culture: "/activity/The Culture",

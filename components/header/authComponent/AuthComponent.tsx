@@ -17,7 +17,7 @@ const AuthComponent = async (
   props: React.ComponentPropsWithRef<typeof Button>
 ) => {
   const navItemClassNames =
-    " cursor-pointer py-2 px-3 text-slate-500 hover:text-black hover:bg-green-100 rounded-md transition-all duration-500 ease-in-out";
+    " cursor-pointer py-2 px-3 text-green-800 font-semibold hover:text-black hover:bg-green-100 rounded-md transition-all duration-500 ease-in-out";
 
   const session = await auth();
   if (!session?.user)
@@ -25,7 +25,7 @@ const AuthComponent = async (
       <ul
         className={`${
           session?.user ? "hidden" : "flex"
-        } justify-center items-center`}
+        } justify-center items-center `}
       >
         <li className={navItemClassNames}>
           <Link href={paths.auth.signin}>Log in</Link>
