@@ -88,7 +88,7 @@ const NavBar: React.FC = () => {
                     <Link href={paths.information.structure}>
                       <DropdownMenuItem>Structure</DropdownMenuItem>
                     </Link>
-                    <Link href={paths.team}>
+                    <Link href={paths.information.team}>
                       <DropdownMenuItem>Team</DropdownMenuItem>
                     </Link>
                     <Link href={paths.information.faq}>

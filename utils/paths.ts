@@ -12,6 +12,7 @@ export const paths = {
     slogan: "/about#Slogan",
     vision: "/about#Vision",
     structure: "/structure",
+    team: "/team",
     faq: "/faq",
   },
   activity: "/activity",
@@ -24,7 +25,6 @@ export const paths = {
     awareness: "/activity/Awareness",
   },
   campaign: "/campaign",
-  team: "/team",
   news: "/news",
   registration: {
     volunteer: "/contact",
