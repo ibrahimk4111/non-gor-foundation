@@ -15,7 +15,7 @@ export const activitesData = [
     {
         id: 2,
         img: activityImage2,
-        header: "Education Health Training The Culture",
+        header: "Education",
         text: "Education is the root of all awareness. To assist in timely and quality basic education for all. To this point, to make education people-oriented and universal, to conduct activities at every level of education"
     },
     {

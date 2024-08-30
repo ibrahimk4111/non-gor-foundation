@@ -1,6 +1,7 @@
 import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
-import React from "react";
+import NavBar from "@/components/header/headerComponents/NavBar";
+import { LoadingSpinner } from "@/components/ui/loadingSpinner";
+import React, { Suspense } from "react";
 
 interface childrenType {
   children: React.ReactNode;
@@ -9,8 +10,8 @@ interface childrenType {
 const LayoutComponents = ({ children }: childrenType) => {
   return (
     <>
-      <Header />
-      {children}
+      <NavBar />
+      <Suspense fallback={<LoadingSpinner />}>{children}</Suspense>
       <Footer />
     </>
   );

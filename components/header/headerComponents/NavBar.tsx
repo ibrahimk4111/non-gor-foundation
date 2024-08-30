@@ -21,11 +21,11 @@ import AuthComponent from "../authComponent/AuthComponent";
 import SearchButton from "../searchButton/SearchButton";
 
 const navItemClassNames =
-  " cursor-pointer p-2 text-slate-500 hover:text-black hover:bg-green-100 rounded-md transition-all duration-500 ease-in-out";
+  " cursor-pointer p-2 text-green-800 font-semibold hover:text-black hover:bg-green-100 rounded-md transition-all duration-500 ease-in-out";
 
 const NavBar: React.FC = () => {
   return (
-    <div className=" border-b-2 ">
+    <div className=" sticky top-0 w-full bg-white z-30">
       <div className=" flex justify-center items-center gap-3">
         <div className="px-5 flex justify-start items-center gap-5 h-full ">
           <div className=" lg:hidden block">
@@ -84,6 +84,9 @@ const NavBar: React.FC = () => {
                     <Link href={paths.information.structure}>
                       <DropdownMenuItem>Structure</DropdownMenuItem>
                     </Link>
+                    <Link href={paths.team}>
+                      <DropdownMenuItem>Team</DropdownMenuItem>
+                    </Link>
                     <Link href={paths.information.faq}>
                       <DropdownMenuItem>FAQ</DropdownMenuItem>
                     </Link>
@@ -107,7 +110,7 @@ const NavBar: React.FC = () => {
                     </Link>
                     <Link href={paths.activites.education} scroll={true}>
                       <DropdownMenuItem>
-                        Education Health Training The Culture
+                        Education
                       </DropdownMenuItem>
                     </Link>
                     <Link href={paths.activites.health} scroll={true}>
@@ -129,9 +132,7 @@ const NavBar: React.FC = () => {
               <li className={navItemClassNames}>
                 <Link href={paths.campaign}>Campaign</Link>
               </li>
-              <li className={navItemClassNames}>
-                <Link href={paths.team}>Team</Link>
-              </li>
+              
               <li className={navItemClassNames}>
                 <Link href={paths.news}>News</Link>
               </li>

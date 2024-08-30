@@ -1,4 +1,4 @@
-interface MemberDataType {
+export interface MemberDataType {
   id: number;
   name: string;
   designation: string;
@@ -29,7 +29,11 @@ export const teamMembersData: MemberDataType[] = [
     name: "Md Nazmul Hossain",
     designation: "Vice President",
     contacts: {
+      email: "#",
       fb: "https://www.facebook.com/sadamataN",
+      telegram: "#",
+      twitter: "#",
+      instagram: "#",
     },
   },
   {
@@ -37,7 +41,11 @@ export const teamMembersData: MemberDataType[] = [
     name: "Md Shiful Islam",
     designation: "General Secretary",
     contacts: {
+      email: "#",
       fb: "https://www.facebook.com/shiful.islam65",
+      telegram: "#",
+      twitter: "#",
+      instagram: "#",
     },
   },
   {
@@ -45,7 +53,11 @@ export const teamMembersData: MemberDataType[] = [
     name: "Md Mohiuddin Hossain",
     designation: "Joint General Secretary",
     contacts: {
+      email: "#",
       fb: "https://www.facebook.com/mohiuddin.hossain.9277",
+      telegram: "#",
+      twitter: "#",
+      instagram: "#",
     },
   },
   {
@@ -53,7 +65,11 @@ export const teamMembersData: MemberDataType[] = [
     name: "Md Abdul Gofur",
     designation: "Cashier",
     contacts: {
+      email: "#",
       fb: "https://www.facebook.com/profile.php?id=100004169506568",
+      telegram: "#",
+      twitter: "#",
+      instagram: "#",
     },
   },
   {
@@ -61,7 +77,11 @@ export const teamMembersData: MemberDataType[] = [
     name: "Md Selim Ullah",
     designation: "Executive Member",
     contacts: {
+      email: "#",
       fb: "https://www.facebook.com/mdsalim.ullah.739",
+      telegram: "#",
+      twitter: "#",
+      instagram: "#",
     },
   },
   {
@@ -69,7 +89,11 @@ export const teamMembersData: MemberDataType[] = [
     name: "Shamima Afrin Lima",
     designation: "Executive Member",
     contacts: {
+      email: "#",
       fb: "https://www.facebook.com/shamimaafrin.lima",
+      telegram: "#",
+      twitter: "#",
+      instagram: "#",
     },
   },
 ];
