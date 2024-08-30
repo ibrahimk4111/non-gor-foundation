@@ -30,13 +30,13 @@ const DrawerNavBar: React.FC = () => {
     } rounded-md p-2 font-semibold`;
 
   return (
-    <Drawer direction="left" >
+    <Drawer direction="left">
       <DrawerTrigger className=" flex justify-center items-center">
         <RxHamburgerMenu className=" w-10 h-12 hover:bg-slate-200 p-2  " />
       </DrawerTrigger>
-      <DrawerContent className=" list-none ">
+      <DrawerContent className=" list-none min-w-60 w-auto ">
         <div>
-          <ul className=" gap-1 py-5 w-full ">
+          <ul className=" py-5 w-full ">
             <li className=" flex justify-center items-center h-10 overflow-hidden mb-5 ">
               <Image src={logoName} alt="..." className=" h-full w-auto " />
             </li>
@@ -46,10 +46,12 @@ const DrawerNavBar: React.FC = () => {
                 onClick={() => setActiveBtn("Home")}
                 className={navItemClassNames("Home")}
               >
-                <DrawerClose className=" w-full h-full ">Home</DrawerClose>
+                <DrawerClose className=" w-full h-full text-start px-1 ">
+                  Home
+                </DrawerClose>
               </li>
             </Link>
-            <Accordion type="single" collapsible>
+            <Accordion type="multiple" >
               <AccordionItem value="item-1">
                 <AccordionTrigger
                   onClick={() => setActiveBtn("information")}
@@ -58,52 +60,93 @@ const DrawerNavBar: React.FC = () => {
                   Information
                 </AccordionTrigger>
                 <AccordionContent>
-                  <Link href={paths.information.introduction}>
-                    <li>
-                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
-                        Introduction
+                  <AccordionItem value="item-2">
+                    <AccordionTrigger
+                      onClick={() => setActiveBtn("about")}
+                      className={`${navItemClassNames("about")} px-5`}
+                    >
+                      About
+                    </AccordionTrigger>
+                    <AccordionContent className=" pl-5 ">
+                      <Link href={paths.information.introduction}>
+                        <li>
+                          <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
+                            Introduction
+                          </DrawerClose>
+                        </li>
+                      </Link>
+                      <Link href={paths.information.nature_of_the_organization}>
+                        <li>
+                          <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
+                            Nature of the organization
+                          </DrawerClose>
+                        </li>
+                      </Link>
+                      <Link href={paths.information.arena_limits}>
+                        <li>
+                          <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
+                            Arena limits
+                          </DrawerClose>
+                        </li>
+                      </Link>
+                      <Link href={paths.information.aims_and_objectives}>
+                        <li>
+                          <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
+                            Aims and Objectives
+                          </DrawerClose>
+                        </li>
+                      </Link>
+                      <Link href={paths.information.slogan}>
+                        <li>
+                          <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
+                            Slogan
+                          </DrawerClose>
+                        </li>
+                      </Link>
+                      <Link href={paths.information.vision}>
+                        <li>
+                          <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
+                            Vision
+                          </DrawerClose>
+                        </li>
+                      </Link>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <Link href={paths.information.structure}>
+                    <li
+                      onClick={() => setActiveBtn("structure")}
+                      className={navItemClassNames("structure")}
+                    >
+                      <DrawerClose className=" w-full h-full text-start px-3">
+                        Structure
                       </DrawerClose>
                     </li>
                   </Link>
-                  <Link href={paths.information.nature_of_the_organization}>
-                    <li>
-                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
-                        Nature of the organization
+                  <Link href={paths.information.team}>
+                    <li
+                      onClick={() => setActiveBtn("team")}
+                      className={navItemClassNames("team")}
+                    >
+                      <DrawerClose className=" px-3 w-full h-full text-start ">
+                        Team
                       </DrawerClose>
                     </li>
                   </Link>
-                  <Link href={paths.information.arena_limits}>
-                    <li>
-                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
-                        Arena limits
-                      </DrawerClose>
-                    </li>
-                  </Link>
-                  <Link href={paths.information.aims_and_objectives}>
-                    <li>
-                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
-                        Aims and Objectives
-                      </DrawerClose>
-                    </li>
-                  </Link>
-                  <Link href={paths.information.slogan}>
-                    <li>
-                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
-                        Slogan
-                      </DrawerClose>
-                    </li>
-                  </Link>
-                  <Link href={paths.information.vision}>
-                    <li>
-                      <DrawerClose className=" w-full h-full pl-6 py-2 hover:text-green-700 text-start ">
-                        Vision
+                  <Link href={paths.information.faq}>
+                    <li
+                      onClick={() => setActiveBtn("faq")}
+                      className={navItemClassNames("faq")}
+                    >
+                      <DrawerClose className="px-3 w-full h-full text-start ">
+                        FAQ
                       </DrawerClose>
                     </li>
                   </Link>
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-2">
+              <AccordionItem value="item-3">
                 <AccordionTrigger
                   onClick={() => setActiveBtn("activites")}
                   className={navItemClassNames("activites")}
@@ -156,7 +199,7 @@ const DrawerNavBar: React.FC = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-3">
+              <AccordionItem value="item-4">
                 <AccordionTrigger
                   onClick={() => setActiveBtn("registration")}
                   className={navItemClassNames("registration")}
@@ -214,7 +257,9 @@ const DrawerNavBar: React.FC = () => {
                 onClick={() => setActiveBtn("Campaign")}
                 className={navItemClassNames("Campaign")}
               >
-                <DrawerClose className=" w-full h-full ">Campaign</DrawerClose>
+                <DrawerClose className=" w-full h-full text-start px-1 ">
+                  Campaign
+                </DrawerClose>
               </li>
             </Link>
             <Link href={paths.news}>
@@ -222,7 +267,9 @@ const DrawerNavBar: React.FC = () => {
                 onClick={() => setActiveBtn("News")}
                 className={navItemClassNames("News")}
               >
-                <DrawerClose className=" w-full h-full ">News</DrawerClose>
+                <DrawerClose className=" w-full h-full text-start px-1 ">
+                  News
+                </DrawerClose>
               </li>
             </Link>
             <Link href={paths.donate}>
@@ -230,7 +277,9 @@ const DrawerNavBar: React.FC = () => {
                 onClick={() => setActiveBtn("Volunteer")}
                 className={navItemClassNames("Volunteer")}
               >
-                <DrawerClose className=" w-full h-full ">Donate</DrawerClose>
+                <DrawerClose className=" w-full h-full text-start px-1 ">
+                  Donate
+                </DrawerClose>
               </li>
             </Link>
             <Link href={paths.contact}>
@@ -238,7 +287,9 @@ const DrawerNavBar: React.FC = () => {
                 onClick={() => setActiveBtn("Contact")}
                 className={navItemClassNames("Contact")}
               >
-                <DrawerClose className=" w-full h-full ">Contact</DrawerClose>
+                <DrawerClose className=" w-full h-full text-start px-1 ">
+                  Contact
+                </DrawerClose>
               </li>
             </Link>
           </ul>
