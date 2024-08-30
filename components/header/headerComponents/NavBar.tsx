@@ -27,10 +27,14 @@ const NavBar: React.FC = () => {
   return (
     <div className=" sticky top-0 w-full bg-white z-30">
       <div className=" flex justify-center items-center gap-3">
-        <div className="px-5 flex justify-start items-center gap-5 h-full ">
-          <div className=" lg:hidden block">
-            <DrawerNavBar />
-          </div>
+        <div className=" lg:hidden px-5 py-2 flex justify-start items-center gap-5 h-full w-full ">
+          {/* <div  lg:hidden block> */}
+          <DrawerNavBar />
+          {/* </div> */}
+          <Image src={Name_logo} alt="logo" className=" h-auto md:w-96 w-60 " />
+        </div>
+
+        <div className=" lg:flex hidden px-5 justify-start items-center gap-5 h-full ">
           <Image src={Name_logo} alt="logo" className=" h-auto md:w-96 w-60 " />
         </div>
         <div className=" w-full hidden lg:flex flex-col">
@@ -109,9 +113,7 @@ const NavBar: React.FC = () => {
                       </DropdownMenuItem>
                     </Link>
                     <Link href={paths.activites.education} scroll={true}>
-                      <DropdownMenuItem>
-                        Education
-                      </DropdownMenuItem>
+                      <DropdownMenuItem>Education</DropdownMenuItem>
                     </Link>
                     <Link href={paths.activites.health} scroll={true}>
                       <DropdownMenuItem>Health</DropdownMenuItem>
@@ -132,7 +134,7 @@ const NavBar: React.FC = () => {
               <li className={navItemClassNames}>
                 <Link href={paths.campaign}>Campaign</Link>
               </li>
-              
+
               <li className={navItemClassNames}>
                 <Link href={paths.news}>News</Link>
               </li>
@@ -170,7 +172,7 @@ const NavBar: React.FC = () => {
 
               <SearchButton />
             </ul>
-            
+
             {/* auth components  */}
             <AuthComponent />
           </div>

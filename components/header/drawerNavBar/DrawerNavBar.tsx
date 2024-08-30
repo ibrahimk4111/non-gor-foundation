@@ -36,7 +36,7 @@ const DrawerNavBar: React.FC = () => {
       </DrawerTrigger>
       <DrawerContent className=" list-none ">
         <div>
-          <ul className=" gap-1 py-5 w-full ">
+          <ul className=" py-5 w-full ">
             <li className=" flex justify-center items-center h-10 overflow-hidden mb-5 ">
               <Image src={logoName} alt="..." className=" h-full w-auto " />
             </li>
@@ -46,7 +46,7 @@ const DrawerNavBar: React.FC = () => {
                 onClick={() => setActiveBtn("Home")}
                 className={navItemClassNames("Home")}
               >
-                <DrawerClose className=" w-full h-full ">Home</DrawerClose>
+                <DrawerClose className=" w-full h-full text-start px-1 ">Home</DrawerClose>
               </li>
             </Link>
             <Accordion type="single" collapsible>
@@ -214,7 +214,7 @@ const DrawerNavBar: React.FC = () => {
                 onClick={() => setActiveBtn("Campaign")}
                 className={navItemClassNames("Campaign")}
               >
-                <DrawerClose className=" w-full h-full ">Campaign</DrawerClose>
+                <DrawerClose className=" w-full h-full text-start px-1 ">Campaign</DrawerClose>
               </li>
             </Link>
             <Link href={paths.news}>
@@ -222,7 +222,7 @@ const DrawerNavBar: React.FC = () => {
                 onClick={() => setActiveBtn("News")}
                 className={navItemClassNames("News")}
               >
-                <DrawerClose className=" w-full h-full ">News</DrawerClose>
+                <DrawerClose className=" w-full h-full text-start px-1 ">News</DrawerClose>
               </li>
             </Link>
             <Link href={paths.donate}>
@@ -230,7 +230,7 @@ const DrawerNavBar: React.FC = () => {
                 onClick={() => setActiveBtn("Volunteer")}
                 className={navItemClassNames("Volunteer")}
               >
-                <DrawerClose className=" w-full h-full ">Donate</DrawerClose>
+                <DrawerClose className=" w-full h-full text-start px-1 ">Donate</DrawerClose>
               </li>
             </Link>
             <Link href={paths.contact}>
@@ -238,7 +238,7 @@ const DrawerNavBar: React.FC = () => {
                 onClick={() => setActiveBtn("Contact")}
                 className={navItemClassNames("Contact")}
               >
-                <DrawerClose className=" w-full h-full ">Contact</DrawerClose>
+                <DrawerClose className=" w-full h-full text-start px-1 ">Contact</DrawerClose>
               </li>
             </Link>
           </ul>
