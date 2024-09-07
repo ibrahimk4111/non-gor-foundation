@@ -7,7 +7,7 @@ import React from "react";
 const page = () => {
   return (
     <div>
-      <Footstep>
+      {/* <Footstep>
         <Link
           href={paths.home}
           className=" cursor-pointer hover:text-green-800 "
@@ -15,7 +15,7 @@ const page = () => {
           Home
         </Link>
         / <span className=" text-green-800 ">Team</span>
-      </Footstep>
+      </Footstep> */}
 
       <div>
         <Team />

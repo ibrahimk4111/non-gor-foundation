@@ -10,7 +10,7 @@ const Campaign = () => {
           <div className=" grid md:grid-cols-12 gap-y-5 ">
             <div className=" md:col-span-5">
               <h1 className=" font-semibold tracking-wider text-green-700 underline mb-5 uppercase ">
-                Current Campaign
+                Our Recent Causes
               </h1>
               <p className=" text-justify ">
                 Lorem ipsum dolor sit amet consequuntur reprehenderit,

@@ -17,16 +17,16 @@ import { cn } from "@/lib/utils";
 
 const MemberInfo = ({ ...item }) => {
   const size = 14;
-  const items = "border-2 border-slate-300 rounded-full p-1 transition-all duration-300 ease-in-out text-slate-600 hover:scale-110 hover:text-green-400 group-hover:text-green-400 ";
+  const items = "border-2 border-slate-300 rounded-full p-1 transition-all duration-300 ease-in-out text-slate-600 hover:scale-110 hover:text-green-400 ";
 
   return (
-    <div key={item.id}>
-      <div className=" overflow-hidden relative flex flex-col items-center justify-center gap-5">
-        <div className=" shadow-md shadow-green-500 h-40 w-40 rounded-full overflow-hidden z-10">
+    <div key={item.id} className=" w-full lg:max-w-72">
+      <div className=" group overflow-hidden relative flex flex-col items-center justify-center gap-3">
+        <div className=" shadow-md shadow-green-500 h-20 w-20 rounded-full overflow-hidden z-10">
           <Image src={member} alt="member img" />
         </div>
-        <div className="w-full h-full bg-slate-100 absolute top-1/4 left-0"></div>
-        <div className=" py-8 z-50 bg-white w-full flex flex-col justify-center items-center gap-5">
+        {/* <div className="w-full h-full bg-slate-100 absolute top-1/4 left-0"></div> */}
+        <div className=" py-2 z-20 group-hover:bg-green-100 group-hover:shadow-md shadow-green-500 w-full flex flex-col justify-center items-center gap-2 transition duration-300 ease-in">
           <h1 className=" font-semibold text-lg uppercase ">{item.name}</h1>
           <p className=" text-green-700 text-sm  ">{item.designation}</p>
           <div className=" flex gap-2">

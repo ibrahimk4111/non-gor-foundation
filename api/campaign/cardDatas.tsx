@@ -1,5 +1,5 @@
 import campaignImage1 from "@/public/campaignImg/donate.jpg";
-import campaignImage2 from "@/public/campaignImg/volunteer.jpg";
+import campaignImage2 from "@/public/campaignImg/volunteer.webp";
 import campaignImage3 from "@/public/campaignImg/gift.jpg";
 
 import { AiFillGift } from "react-icons/ai";

@@ -26,7 +26,7 @@ const Cards = () => {
               <Image
                 src={item.image}
                 alt="campaign image"
-                className=" w-full "
+                className=" w-full brightness-110"
               />
             </div>
 
