@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import ImageComp from "../Gallery/imageComp/ImageComp";
 import { Input } from "../ui/input";
+import Image from "next/image";
+import qrCodeScanner from '@/public/QR code.jpg'
 
 const Footer = async () => {
   const liClassNames =
@@ -11,13 +13,13 @@ const Footer = async () => {
       <div className=" container mx-auto grid md:grid-cols-4 gap-10  ">
         {/* gallery */}
         <div>
-          <h4 className=" mb-5 text-2xl font-bold">Gallery</h4>
+          <h4 className=" mb-5 text-2xl font-semibold">Photo Showcase</h4>
           <ImageComp />
         </div>
 
         {/* elements */}
         <div>
-          <h4 className=" mb-5 text-2xl font-bold">Elements</h4>
+          <h4 className=" mb-5 text-2xl font-semibold">Elements</h4>
 
           <ul className=" space-y-3 ">
             <li className={liClassNames}>
@@ -43,7 +45,7 @@ const Footer = async () => {
 
         {/* Quick Links */}
         <div>
-          <h4 className=" mb-5 text-2xl font-bold">Quick Links</h4>
+          <h4 className=" mb-5 text-2xl font-semibold">Quick Links</h4>
 
           <ul className=" space-y-3">
             <li className={liClassNames}>
@@ -66,17 +68,8 @@ const Footer = async () => {
 
         {/* newsletter */}
         <div>
-          <h4 className=" text-2xl font-bold">Newsletter</h4>
-          <p className=" my-5">Lorem ipsum dolor sit amet.</p>
-          <form
-            action=""
-            className=" flex flex-col justify-start items-start gap-5"
-          >
-            <Input type="email" placeholder="example@gmail.com" />
-            <button className=" bg-green-100 text-black rounded-md hover:bg-green-800 hover:text-white hover:ring-1 p-2 transition-all duration-500 ease-in-out ">
-              subscribe
-            </button>
-          </form>
+          <h4 className=" mb-5 text-2xl font-semibold">Scan Here</h4>
+          <Image src={qrCodeScanner} alt="..." />
         </div>
       </div>
 

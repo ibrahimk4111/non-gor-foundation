@@ -1,25 +1,35 @@
 import React from "react";
 import MemberInfo from "./memberInfo";
 import { teamMembersData } from "@/api/team/teamMemberData";
+import foundationLogo from "@/public/Profile Photo logo.jpg";
+import Image from "next/image";
+import { Button } from "../ui/button";
+import Link from "next/link";
+import { paths } from "@/utils/paths";
 
 const Team = () => {
   return (
-    <div className=" container mx-auto ">
-      <h1 className=" text-center pt-20 uppercase font-semibold text-slate-500">
+    <div>
+      <h1 className=" text-center uppercase font-semibold text-slate-500 pt-10">
         Our Team Members
       </h1>
       <hr className=" h-1 mt-3" />
-
-      <div className=" flex justify-center items-center py-5">
-        <div className=" w-96 ">
+      {/* <Image src={foundationLogo} alt="..." /> */}
+      <div className=" grid lg:grid-cols-5 gap-5 p-4">
+        <div className=" flex flex-col justify-center items-center ">
           <MemberInfo {...teamMembersData[0]} />
+          <Link href={paths.information.otherMembers} className=" flex items-center justify-center my-3">
+            <Button variant={"outline"} className=" w-fit text-green-500 ring-1 ">
+              Other Members
+            </Button>
+          </Link>
         </div>
-      </div>
 
-      <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-10 gap-x-5 py-16">
-        {teamMembersData.slice(1, 7)?.map((item) => (
-          <MemberInfo key={item.id} {...item} />
-        ))}
+        <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:col-span-4 gap-5 ">
+          {teamMembersData.slice(1, 7)?.map((item) => (
+            <MemberInfo key={item.id} {...item} />
+          ))}
+        </div>
       </div>
     </div>
   );

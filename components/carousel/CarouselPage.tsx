@@ -29,7 +29,7 @@ const CarouselPage: React.FC = () => {
       <Swiper
         // install Swiper modules
         modules={[Navigation, A11y, EffectFade, Autoplay]}
-        autoplay = {{delay: 5000, disableOnInteraction: false}}
+        autoplay = {{delay: 10000, disableOnInteraction: false}}
         effect="fade"
         spaceBetween={50}
         slidesPerView={1}
@@ -52,20 +52,20 @@ const CarouselPage: React.FC = () => {
                   variants={context.parentAnimation}
                   initial="hidden"
                   animate={currentSlide === index ? "show" : "hidden"}
-                  className=" text-white flex flex-col gap-7 justify-center items-center w-full md:max-w-[50vw]"
+                  className=" text-white flex flex-col gap-7 justify-center items-center w-full md:max-w-[65vw]"
                 >
                   <motion.p
                     variants={context.childrenAnimation}
-                    className="  md:text-base text-sm "
+                    className="  md:text-6xl text-4xl font-bold "
                   >
                     {item.title}
                   </motion.p>
-                  <motion.h1
+                  <motion.p
                     variants={context.childrenAnimation}
-                    className=" md:text-6xl text-4xl font-semibold text-center"
+                    className=" text-2xl text-center tracking-wider leading-10 md:w-[70%] "
                   >
                     {item.desc}
-                  </motion.h1>
+                  </motion.p>
                   <motion.p
                     variants={context.childrenAnimation}
                     className="cursor-pointer py-2 px-5 text-white rounded-md bg-green-800 hover:bg-green-700 "

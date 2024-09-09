@@ -1,24 +1,30 @@
-import campaignImage1 from '@/public/campaignImg/seminar.jpeg'
-import campaignImage2 from '@/public/campaignImg/plantation.jpeg'
-import campaignImage3 from '@/public/campaignImg/office.jpeg'
+import campaignImage1 from "@/public/campaignImg/seminar.jpeg";
+import campaignImage2 from "@/public/campaignImg/plantation.jpeg";
+import campaignImage3 from "@/public/campaignImg/office.jpeg";
 
 export const carouselDatas = [
-    {
-        id: 1,
-        img: campaignImage1,
-        title: "Self-supporting project-2",
-        desc : "Construction of rich libra."
-    },
-    {
-        id: 2,
-        img: campaignImage2,
-        title: "Construction of rich libraryproject",
-        desc : "With the motto 'Education is the "
-    },
-    {
-        id: 3,
-        img: campaignImage3,
-        title: "Administer medication as per ",
-        desc : "Healthy life peaceful mind. All efforts"
-    }
-]
+  {
+    id: 1,
+    img: campaignImage1,
+    title: "Nature of the organization.",
+    desc: "It is a non-political, non-profit and voluntary social welfare organization.",
+  },
+  {
+    id: 2,
+    img: campaignImage2,
+    title: "Aims and Objectives",
+    desc: "Implementing welfare work and building a prosperous society in the service of humanity through mutual cooperation.",
+  },
+  {
+    id: 3,
+    img: campaignImage3,
+    title: "Slogan",
+    desc: "Eternal conviction in building a prosperous society.",
+  },
+  {
+    id: 3,
+    img: campaignImage3,
+    title: "Vision",
+    desc: "Establishing non-discrimination, caste, class and gender equality-based society which will be environment dependent.",
+  },
+];
