@@ -24,7 +24,10 @@ const SearchButton = () => {
           <Button
             variant={"outline"}
             size={"icon"}
-            onClick={() => setExpanded((prev) => !prev)}
+            onClick={(e) => {
+              e.preventDefault();
+              setExpanded((prev) => !prev);
+            }}
             type="submit"
             className=" h-full border-t-0 border-b-0 rounded-none "
           >
@@ -33,7 +36,10 @@ const SearchButton = () => {
           <Button
             variant={"outline"}
             size={"icon"}
-            onClick={() => setExpanded((prev) => !prev)}
+            onClick={(e) => {
+              e.preventDefault();
+              setExpanded((prev) => !prev);
+            }}
             className=" h-full border-t-0 border-b-0 rounded-none "
           >
             <XIcon className=" w-full h-5 " />
@@ -43,7 +49,10 @@ const SearchButton = () => {
       <Button
         variant={"outline"}
         size={"icon"}
-        onClick={() => setExpanded((prev) => !prev)}
+        onClick={(e) => {
+          e.preventDefault();
+          setExpanded((prev) => !prev);
+        }}
         className=" bg-green-200 "
       >
         <SearchIcon className=" w-5 h-5" />
