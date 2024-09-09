@@ -8,7 +8,7 @@ import { Button } from "../ui/button";
 const Team = () => {
   return (
     <div>
-      <h1 className=" text-center uppercase font-semibold text-slate-500">
+      <h1 className=" text-center uppercase font-semibold text-slate-500 pt-10">
         Our Team Members
       </h1>
       <hr className=" h-1 mt-3" />
@@ -17,13 +17,13 @@ const Team = () => {
         <div className=" flex flex-col justify-center items-center ">
           <MemberInfo {...teamMembersData[0]} />
           <div className=" flex items-center justify-center my-3">
-            <Button variant={"outline"} className=" w-fit ">
+            <Button variant={"outline"} className=" w-fit text-green-500 ring-1 ">
               Other Members
             </Button>
           </div>
         </div>
 
-        <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:col-span-4 gap-3 ">
+        <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:col-span-4 gap-5 ">
           {teamMembersData.slice(1, 7)?.map((item) => (
             <MemberInfo key={item.id} {...item} />
           ))}

@@ -3,27 +3,21 @@ import {
   RiFacebookFill,
   RiInstagramFill,
   RiTelegramFill,
-  RiThreadsFill,
   RiTwitterXLine,
 } from "react-icons/ri";
 
 import Image from "next/image";
-import member from "@/public/member-img.jpg";
 import Link from "next/link";
-import { AiOutlineWhatsApp } from "react-icons/ai";
-import { MemberDataType, teamMembersData } from "@/api/team/teamMemberData";
 import { MdOutlineEmail } from "react-icons/md";
-import { cn } from "@/lib/utils";
 
 const MemberInfo = ({ ...item }) => {
   const size = 14;
   const items = "border-2 border-slate-300 rounded-full p-1 transition-all duration-300 ease-in-out text-slate-600 hover:scale-110 hover:text-green-400 ";
-
   return (
     <div key={item.id} className=" w-full lg:max-w-72">
       <div className=" group overflow-hidden relative flex flex-col items-center justify-center gap-3">
         <div className=" shadow-md shadow-green-500 h-20 w-20 rounded-full overflow-hidden z-10">
-          <Image src={member} alt="member img" />
+          <Image src={item.img} alt="member img" />
         </div>
         {/* <div className="w-full h-full bg-slate-100 absolute top-1/4 left-0"></div> */}
         <div className=" py-2 z-20 group-hover:bg-green-100 group-hover:shadow-md shadow-green-500 w-full flex flex-col justify-center items-center gap-2 transition duration-300 ease-in">

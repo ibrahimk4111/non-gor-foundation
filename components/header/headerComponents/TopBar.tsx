@@ -40,7 +40,7 @@ const TopBar: React.FC = () => {
           </Link>
           <Link href='mailto:nongorfoundation@gmail.com?subject= feedback &body=Hello! welcome to Nongor Foundation.🙂' className='group flex items-center gap-2 '>
             <MdMail size={size} className={classNameforIcon}/>
-            <span className={classNameforText}>nongorfoundation@gmail.com</span>
+            <span className={classNameforText}>nongorfoundation21@gmail.com</span>
           </Link>
         </div>
       </div>

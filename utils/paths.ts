@@ -13,7 +13,7 @@ export const paths = {
     vision: "/about#Vision",
     structure: "/structure",
     team: "/team",
-    faq: "/faq",
+    faq: "/faq", 
   },
   activity: "/activity",
   activites: {
