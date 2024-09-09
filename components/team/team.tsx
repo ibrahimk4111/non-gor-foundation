@@ -4,6 +4,8 @@ import { teamMembersData } from "@/api/team/teamMemberData";
 import foundationLogo from "@/public/Profile Photo logo.jpg";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import Link from "next/link";
+import { paths } from "@/utils/paths";
 
 const Team = () => {
   return (
@@ -16,11 +18,11 @@ const Team = () => {
       <div className=" grid lg:grid-cols-5 gap-5 p-4">
         <div className=" flex flex-col justify-center items-center ">
           <MemberInfo {...teamMembersData[0]} />
-          <div className=" flex items-center justify-center my-3">
+          <Link href={paths.information.otherMembers} className=" flex items-center justify-center my-3">
             <Button variant={"outline"} className=" w-fit text-green-500 ring-1 ">
               Other Members
             </Button>
-          </div>
+          </Link>
         </div>
 
         <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:col-span-4 gap-5 ">

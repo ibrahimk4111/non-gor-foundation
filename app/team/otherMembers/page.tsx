@@ -1,8 +1,11 @@
+import OtherMembers from '@/components/team/otherMembers'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+      <OtherMembers />
+    </div>
   )
 }
 
