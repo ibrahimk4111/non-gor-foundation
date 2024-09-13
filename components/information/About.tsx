@@ -9,8 +9,7 @@ import { paths } from "@/utils/paths";
 
 const About: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>(AboutData[0].name);
-  const urlPaths = usePathname();
-
+  
   return (
     <div>
       <Footstep>
@@ -38,6 +37,7 @@ const About: React.FC = () => {
                   </div>
                 ))}
               </Tabs>
+              
               <section className="lg:col-span-9 col-span-12 lg:border-l lg:px-5 overflow-auto">
                 <div className="bg-white rounded-md p-3">
                   {AboutData.map(
