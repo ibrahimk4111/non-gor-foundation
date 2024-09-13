@@ -47,7 +47,7 @@ const About: React.FC = () => {
                           <h1 className=" text-2xl text-green-600 mb-5 ">
                             {data.name}
                           </h1>
-                          <p id={data.name}>{data.description}</p>
+                          <p id={data.name} className=" text-justify ">{data.description}</p>
                         </div>
                       )
                   )}
