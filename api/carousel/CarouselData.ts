@@ -1,6 +1,7 @@
-import campaignImage1 from "@/public/campaignImg/seminar.jpeg";
-import campaignImage2 from "@/public/campaignImg/plantation.jpeg";
-import campaignImage3 from "@/public/campaignImg/office.jpeg";
+import campaignImage1 from "@/public/campaignImg/volunteer.webp";
+import campaignImage2 from "@/public/campaignImg/seminar.jpeg";
+import campaignImage3 from "@/public/campaignImg/plantation.jpeg";
+import campaignImage4 from "@/public/campaignImg/office.jpeg";
 
 export const carouselDatas = [
   {
@@ -22,8 +23,8 @@ export const carouselDatas = [
     desc: "Eternal conviction in building a prosperous society.",
   },
   {
-    id: 3,
-    img: campaignImage3,
+    id: 4,
+    img: campaignImage4,
     title: "Vision",
     desc: "Establishing non-discrimination, caste, class and gender equality-based society which will be environment dependent.",
   },

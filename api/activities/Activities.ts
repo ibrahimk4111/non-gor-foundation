@@ -32,13 +32,13 @@ export const activitesData = [
     },
     {
         id: 5,
-        img: activityImage5,
+        img: activityImage6,
         header: "The Culture",
         text: "Culture is the mirror of society. To play a relentless role in establishing tasteful culture and developing healthy culture through modern and up-to-date changes in social culture"
     },
     {
         id: 6,
-        img: activityImage6,
+        img: activityImage5,
         header: "Awareness",
         text: "The prosperity of the society in the awareness of the citizens. To formulate and implement far-reaching plans on contemporary issues to create mutual awareness among the socialized people to bring dynamism to the socio-economic condition"
     }

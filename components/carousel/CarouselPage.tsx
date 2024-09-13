@@ -52,17 +52,17 @@ const CarouselPage: React.FC = () => {
                   variants={context.parentAnimation}
                   initial="hidden"
                   animate={currentSlide === index ? "show" : "hidden"}
-                  className=" text-white flex flex-col gap-7 justify-center items-center w-full md:max-w-[65vw]"
+                  className=" md:mt-60 text-white flex flex-col gap-7 justify-center items-center w-full md:max-w-[65vw]"
                 >
-                  <motion.p
+                  <motion.h1
                     variants={context.childrenAnimation}
-                    className="  md:text-6xl text-4xl font-bold "
+                    className="  md:text-5xl text-3xl font-bold text-center "
                   >
                     {item.title}
-                  </motion.p>
+                  </motion.h1>
                   <motion.p
                     variants={context.childrenAnimation}
-                    className=" text-2xl text-center tracking-wider leading-10 md:w-[70%] "
+                    className=" text-2xl md:font-semibold text-center md:w-[70%] "
                   >
                     {item.desc}
                   </motion.p>
